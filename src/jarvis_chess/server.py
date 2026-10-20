@@ -3,7 +3,7 @@
 The engine and the rules produce every fact; the language model only narrates them, and any
 claim it makes can be checked with check_claims. Tools:
   recent_games      latest games from Lichess or Chess.com (public APIs)
-  review_game       full engine review: per-side accuracy, graded mistakes, key moments with facts
+  review_game       full engine review: per-side average centipawn loss, graded mistakes, key moments with facts
   analyse_position  top engine lines plus rule-computed facts for one position
   check_claims      verify a commentator's claims about a position
 """

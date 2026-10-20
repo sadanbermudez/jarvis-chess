@@ -73,8 +73,11 @@ def facts(board: chess.Board) -> dict:
         label = f"{who} {NAMES[piece.piece_type]} on {chess.square_name(sq)}"
         if not board.attackers(piece.color, sq):
             hanging.append(label)
-        elif min(VALUES[board.piece_at(a).piece_type] for a in attackers) < VALUES[piece.piece_type]:
-            attacked_by_lower.append(label)
+        else:
+            # A king can never capture a defended piece, so only other pieces can win material here.
+            capturers = [VALUES[board.piece_at(a).piece_type] for a in attackers if board.piece_at(a).piece_type != chess.KING]
+            if capturers and min(capturers) < VALUES[piece.piece_type]:
+                attacked_by_lower.append(label)
         if board.is_pinned(piece.color, sq):
             pinned.append(f"{NAMES[piece.piece_type]} {chess.square_name(sq)}")
     material = sum(VALUES[p.piece_type] * (1 if p.color else -1) for p in board.piece_map().values())
