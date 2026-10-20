@@ -25,7 +25,15 @@ def _stop_server_engine():
     server.shutdown()
 
 
-engine_missing = pytest.mark.skipif(not __import__("pathlib").Path(analysis.DEFAULT_ENGINE).exists(), reason="Stockfish not installed")
+def _have_engine():
+    try:
+        analysis.engine_path()
+        return True
+    except FileNotFoundError:
+        return False
+
+
+engine_missing = pytest.mark.skipif(not _have_engine(), reason="Stockfish not installed")
 
 
 def test_hanging_piece():
