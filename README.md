@@ -17,14 +17,14 @@ Many projects pair an LLM with Stockfish to explain games. They share one weakne
 | `recent_games` | Latest games from Lichess or Chess.com (public APIs, no token) |
 | `review_game` | Per-side average centipawn loss; inaccuracies, mistakes and blunders graded by Lichess's winning-chances method; key moments with move played, best move, best line and the facts of the position |
 | `analyse_position` | Top engine lines and rule-computed facts for a FEN: hanging pieces, pieces attacked by a cheaper piece, pins, checks, mate in one, material |
-| `check_claims` | Verdicts on a commentator's claims (hanging, pinned, mate in one, best move, advantage, material, check) and the share that held |
+| `check_claims` | Verdicts on a commentator's claims (hanging, attacked by a cheaper piece, pinned, mate in one, best move, advantage, material, check) and the share that held |
 
 The server's instructions tell the model to say only what the tools report and to verify anything else with `check_claims`.
 
 ## Measured
 
 - Review of a 39-ply blitz game: 6.5 s with Stockfish 19 at 0.15 s per move, on an AMD Ryzen AI Max+ 392 laptop.
-- 8 tests on positions with unambiguous answers (hanging piece, defended piece attacked by a pawn, pin, back-rank mate, Scholar's mate blunder, claim scoring).
+- 9 tests on positions with unambiguous answers (hanging piece, defended piece attacked by a pawn, a defended piece attacked only by a king, pin, back-rank mate, Scholar's mate blunder, claim scoring).
 
 ## Design
 

@@ -166,7 +166,7 @@ A flat 300 centipawn rule would call all three 300 centipawn moves blunders and 
 
 **Context.** Chess analysis is full of judgment calls. A test that asserts a judgment call breaks when the engine version or time budget changes.
 
-**Decision.** `tests/test_chess.py` uses minimal positions where the correct answer is forced by the rules: a queen attacking an undefended knight (`HANGING`), a defended knight attacked by a pawn (`CHEAPER`, which must not be called hanging), a knight pinned to its king by a rook (`PIN`), a back-rank mate (`BACK_RANK`, only `Ra8#`), and Scholar's mate (`SCHOLAR`), where 3...Nf6 is a blunder by any standard. Engine tests accept a set of best moves (`g6`, `Qe7`, `Qf6`) instead of one. Tests that need Stockfish are marked `skipif` when no engine is found. 8 tests in total.
+**Decision.** `tests/test_chess.py` uses minimal positions where the correct answer is forced by the rules: a queen attacking an undefended knight (`HANGING`), a defended knight attacked by a pawn (`CHEAPER`, which must not be called hanging), a knight pinned to its king by a rook (`PIN`), a defended rook attacked only by a king (`KING_ONLY`, which must not be called attacked by a cheaper piece), a back-rank mate (`BACK_RANK`, only `Ra8#`), and Scholar's mate (`SCHOLAR`), where 3...Nf6 is a blunder by any standard. Engine tests accept a set of best moves (`g6`, `Qe7`, `Qf6`) instead of one. Tests that need Stockfish are marked `skipif` when no engine is found. 9 tests in total.
 
 **Why.** If a test fails, the code is wrong, not the chess. Positions with very few pieces isolate the one rule under test. The `CHEAPER` case guards the distinction between "hanging" and "attacked by a cheaper piece", which is exactly the kind of claim a model gets wrong. Accepting several defences to Qxf7 keeps the test stable across engine versions and time limits. The skip marker lets the rule tests run on a machine without Stockfish.
 
@@ -174,13 +174,13 @@ A flat 300 centipawn rule would call all three 300 centipawn moves blunders and 
 
 **Trade-offs.** Clean positions do not exercise the hard cases: x-rays, pinned defenders, exchanges, discovered attacks. A test run without Stockfish silently skips the two engine tests, which is why CI installs it (decision 10).
 
-**Check it yourself.** `tests/test_chess.py`, constants at the top. `pytest -v` lists 8 tests.
+**Check it yourself.** `tests/test_chess.py`, constants at the top. `pytest -v` lists 9 tests.
 
 ---
 
 ### 10. CI installs Stockfish from apt and points to it with `STOCKFISH_PATH`
 
-**Context.** Two of the 8 tests need a real engine, and they skip without one. A green CI run that skipped them would prove little.
+**Context.** Two of the 9 tests need a real engine, and they skip without one. A green CI run that skipped them would prove little.
 
 **Decision.** `.github/workflows/ci.yml` runs on every push and pull request on `ubuntu-24.04` with Python 3.11, installs Stockfish with `apt-get install -y stockfish`, installs the package in editable mode with `pytest==9.1.1`, and sets `STOCKFISH_PATH=/usr/games/stockfish` for the test step. `analysis.engine_path()` resolves the engine in a fixed order: `STOCKFISH_PATH`, then the local Windows default path if it exists, then `stockfish` on `PATH`.
 
@@ -198,7 +198,7 @@ A flat 300 centipawn rule would call all three 300 centipawn moves blunders and 
 
 - **The faithfulness eval has not been run.** The checker exists and is tested, but there is no published number yet for how often a model's chess statements are true. That eval (model comments on key moments, checkable claims through `check_claims`, the rest labelled by a FIDE Master) is the first item in the README's "Next" section and the point of the project.
 - **`facts()` is a static, one-move view.** "Hanging" means attacked with zero defenders. It does not resolve exchange sequences, x-ray defenders, pinned defenders or overloaded pieces, so a piece can be listed as safe and still be lost, or listed as hanging when taking it loses. Pins are only absolute pins to the king.
-- **King attackers create false "attacked by a cheaper piece" facts.** The king has value 0 in `VALUES`, so a defended piece attacked only by the enemy king is reported as attacked by a cheaper piece, even though the king cannot legally capture a defended piece. Reproduced with FEN `8/8/8/8/8/3qk3/3r4/3K4 w - - 0 1`, where `facts()` reports `Black rook on d2`. The fix is to exclude the king from that comparison.
+- **Fixed: king attackers.** A defended piece attacked only by the enemy king used to be reported as attacked by a cheaper piece (the king has value 0 in `VALUES`, but cannot capture a defended piece). `facts()` now ignores the king when comparing attacker values; `test_king_is_not_a_cheaper_attacker` covers it with FEN `8/8/8/8/8/3qk3/3r4/3K4 w - - 0 1`.
 - **`checks_available` is cut to the first 8 checks**, so a "there is a check with X" claim can be true without appearing in that list.
 - **Average centipawn loss ignores mate-scored moves** (decision 3), so it understates the cost of missed mates.
 - **Shallow, hardware-dependent search** (decision 7). Grades near a threshold can change between machines.
