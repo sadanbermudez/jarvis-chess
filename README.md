@@ -1,5 +1,7 @@
 # jarvis-chess
 
+[![tests](https://github.com/sadanbermudez/jarvis-chess/actions/workflows/ci.yml/badge.svg)](https://github.com/sadanbermudez/jarvis-chess/actions/workflows/ci.yml)
+
 An MCP server that lets an AI assistant review chess games without making things up. Stockfish and the rules of chess produce every fact; the language model only narrates them, and anything it wants to claim can be checked first.
 
 Built for Jarvis, my local assistant, and for a specific reader: me, a FIDE Master who notices immediately when an "AI coach" invents a tactic.
