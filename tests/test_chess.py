@@ -11,6 +11,7 @@ HANGING = "4k3/8/8/4n3/8/8/4Q3/4K3 w - - 0 1"        # Qe2 attacks an undefended
 CHEAPER = "4k3/8/3p4/4n3/3P4/8/8/4K3 w - - 0 1"      # Ne5 defended by d6, attacked by pawn d4
 PIN = "4k3/4n3/8/8/8/8/8/4R1K1 w - - 0 1"            # Ne7 pinned to Ke8 by Re1
 BACK_RANK = "6k1/5ppp/8/8/8/8/8/R5K1 w - - 0 1"      # Ra8#
+KING_ONLY = "8/8/8/8/8/3qk3/3r4/3K4 w - - 0 1"      # Rd2 defended by Qd3, attacked only by Kd1
 SCHOLAR = """[Event "test"]
 [White "A"]
 [Black "B"]
@@ -46,6 +47,13 @@ def test_defended_piece_attacked_by_cheaper_is_not_hanging():
     f = facts(chess.Board(CHEAPER))
     assert f["hanging_pieces"] == []
     assert f["attacked_by_a_cheaper_piece"] == ["Black knight on e5"]
+
+
+def test_king_is_not_a_cheaper_attacker():
+    # A king cannot capture a defended piece, so it must not count as "attacked by a cheaper piece".
+    f = facts(chess.Board(KING_ONLY))
+    assert f["attacked_by_a_cheaper_piece"] == []
+    assert f["hanging_pieces"] == []
 
 
 def test_pin_and_mate_in_one():
