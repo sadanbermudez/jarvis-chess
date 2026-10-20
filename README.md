@@ -26,6 +26,10 @@ The server's instructions tell the model to say only what the tools report and t
 - Review of a 39-ply blitz game: 6.5 s with Stockfish 19 at 0.15 s per move, on an AMD Ryzen AI Max+ 392 laptop.
 - 8 tests on positions with unambiguous answers (hanging piece, defended piece attacked by a pawn, pin, back-rank mate, Scholar's mate blunder, claim scoring).
 
+## Design
+
+[docs/DECISIONS.md](docs/DECISIONS.md) explains each design decision (engine and rules as the only source of facts, the three-valued claim checker, Lichess's winning-chances grading, the engine lifecycle), with trade-offs, known limits and how to check each claim.
+
 ## Run
 
 ```
