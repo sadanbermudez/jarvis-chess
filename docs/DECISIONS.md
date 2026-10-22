@@ -196,7 +196,7 @@ A flat 300 centipawn rule would call all three 300 centipawn moves blunders and 
 
 ## Known limits and what comes next
 
-- **The faithfulness eval has not been run.** The checker exists and is tested, but there is no published number yet for how often a model's chess statements are true. That eval (model comments on key moments, checkable claims through `check_claims`, the rest labelled by a FIDE Master) is the first item in the README's "Next" section and the point of the project.
+- **The faithfulness eval has one run.** `evals/faithfulness-report.md`: 22 key moments, one local model, claims extracted by the model itself, free-text statements not yet labelled by hand. A first number, not a settled one.
 - **`facts()` is a static, one-move view.** "Hanging" means attacked with zero defenders. It does not resolve exchange sequences, x-ray defenders, pinned defenders or overloaded pieces, so a piece can be listed as safe and still be lost, or listed as hanging when taking it loses. Pins are only absolute pins to the king.
 - **Fixed: king attackers.** A defended piece attacked only by the enemy king used to be reported as attacked by a cheaper piece (the king has value 0 in `VALUES`, but cannot capture a defended piece). `facts()` now ignores the king when comparing attacker values; `test_king_is_not_a_cheaper_attacker` covers it with FEN `8/8/8/8/8/3qk3/3r4/3K4 w - - 0 1`.
 - **`checks_available` is cut to the first 8 checks**, so a "there is a check with X" claim can be true without appearing in that list.
@@ -212,7 +212,7 @@ A flat 300 centipawn rule would call all three 300 centipawn moves blunders and 
 Kaggle's 2025 text-only LLM chess exhibition (per the project research) was won by a model at an estimated 1686 rating, and another lost games on illegal moves. That is far below the level of the intended reader, a FIDE Master. The rules and Stockfish are exact and cheap, so the model is given the one job it is good at: turning structured facts into language.
 
 **How do you know the model's commentary is actually faithful?**
-Not yet measured, and the README says so. What exists is the instrument: `check_claims` turns each checkable statement into true, false or "cannot check", and `score()` gives the share that held. The next step is to run it over a model's commentary on real key moments and report that share together with how many claims were checkable.
+Measured once, on a small sample. `check_claims` turns each checkable statement into true, false or "cannot check", and `score()` gives the share that held. The first run (`evals/faithfulness-report.md`, 22 key moments, Qwen3.6-35B-A3B) found 52 of 67 checkable claims true with the review in context and 27 of 41 without it. The model extracted its own claims and the free-text statements are not yet labelled, so this is a first number, reported next to how many claims were checkable.
 
 **Why winning chances instead of centipawns?**
 Centipawns are linear and the game result is not. With the Lichess curve in `win_chances()`, a 200 centipawn swing from +1 to -1 is a 0.364 drop (blunder), while a 300 centipawn swing from +10 to +7 is a 0.092 drop (no grade). That matches how a strong player judges a move: did it change the likely result.

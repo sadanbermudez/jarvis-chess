@@ -24,7 +24,8 @@ The server's instructions tell the model to say only what the tools report and t
 ## Measured
 
 - Review of a 39-ply blitz game: 6.5 s with Stockfish 19 at 0.15 s per move, on an AMD Ryzen AI Max+ 392 laptop.
-- 9 tests on positions with unambiguous answers (hanging piece, defended piece attacked by a pawn, a defended piece attacked only by a king, pin, back-rank mate, Scholar's mate blunder, claim scoring).
+- 9 tests on positions with unambiguous answers (hanging piece, defended piece attacked by a pawn, a defended piece attacked only by a king, pin, back-rank mate, Scholar's mate blunder, claim scoring), plus 5 tests for the faithfulness eval's reply parser.
+- Faithfulness, first run ([report](evals/faithfulness-report.md)): Qwen3.6-35B-A3B commenting on 22 key moments from 5 of my Lichess games. Given the review, 52 of its 67 checkable claims were true (0.776); given only the position, 27 of 41 (0.659). Without the best-move claims, which mostly repeat the move the prompt gave it: 32 of 45 (0.711) against 8 of 21 (0.381). 204 other statements wait for my hand labels.
 
 ## Design
 
@@ -45,7 +46,7 @@ jarvis-chess --http          # Streamable HTTP on 127.0.0.1:8772
 
 ## Next
 
-- A faithfulness eval: the local model comments on key moments, every checkable claim goes through `check_claims`, and I label the rest. The output is one number per model: the share of its chess statements that are true.
+- Faithfulness eval, next steps: label the free-text statements by hand, audit the model's own claim extraction, and run the same frozen set on other models.
 - Maia-2 for "what would a human at this rating play" next to Stockfish's best move.
 - An interactive board on my site replaying a reviewed game with each AI claim marked true or false.
 
