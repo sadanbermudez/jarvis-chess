@@ -1,0 +1,3354 @@
+{
+ "meta": {
+  "model": "Qwen3.6-35B-A3B-UD-Q4_K_M",
+  "temperature": 0.7,
+  "thinking": false,
+  "max_tokens": 2000,
+  "checker": {
+   "seconds": 0.5,
+   "tolerance": 2,
+   "engine": "Stockfish 19"
+  },
+  "frozen_set": "evals\\frozen_set.json",
+  "frozen_at": "2026-10-22T14:25:52",
+  "games": [
+   "ZRLfDc2e",
+   "BcAhQn3U",
+   "BVzBEglH",
+   "movw8h7M",
+   "dlymlJeF"
+  ],
+  "moments": 22,
+  "conditions": [
+   "grounded",
+   "ungrounded"
+  ],
+  "started": "2026-10-22T14:28:30",
+  "wall_seconds": 718.3
+ },
+ "summary": {
+  "grounded": {
+   "checkable": 67,
+   "true": 52,
+   "false": 15,
+   "faithfulness": 0.776,
+   "wilson_95": [
+    0.663,
+    0.859
+   ],
+   "moments": 22,
+   "structured_claims": 67,
+   "unverifiable_structured_claims": 0,
+   "other_claims": 84,
+   "parse_errors": 0,
+   "call_errors": 0,
+   "by_type": {
+    "advantage": {
+     "checkable": 17,
+     "true": 16,
+     "false": 1,
+     "unverifiable": 0
+    },
+    "attacked_by_cheaper": {
+     "checkable": 1,
+     "true": 0,
+     "false": 1,
+     "unverifiable": 0
+    },
+    "best_move": {
+     "checkable": 22,
+     "true": 20,
+     "false": 2,
+     "unverifiable": 0
+    },
+    "hanging": {
+     "checkable": 15,
+     "true": 10,
+     "false": 5,
+     "unverifiable": 0
+    },
+    "in_check": {
+     "checkable": 2,
+     "true": 0,
+     "false": 2,
+     "unverifiable": 0
+    },
+    "mate_in_one": {
+     "checkable": 2,
+     "true": 0,
+     "false": 2,
+     "unverifiable": 0
+    },
+    "material": {
+     "checkable": 7,
+     "true": 5,
+     "false": 2,
+     "unverifiable": 0
+    },
+    "pinned": {
+     "checkable": 1,
+     "true": 1,
+     "false": 0,
+     "unverifiable": 0
+    }
+   },
+   "best_move_equals_review_best_but_false": 1,
+   "seconds_total": 446.3
+  },
+  "ungrounded": {
+   "checkable": 41,
+   "true": 27,
+   "false": 14,
+   "faithfulness": 0.659,
+   "wilson_95": [
+    0.505,
+    0.784
+   ],
+   "moments": 22,
+   "structured_claims": 43,
+   "unverifiable_structured_claims": 2,
+   "other_claims": 120,
+   "parse_errors": 1,
+   "call_errors": 0,
+   "by_type": {
+    "advantage": {
+     "checkable": 7,
+     "true": 4,
+     "false": 3,
+     "unverifiable": 0
+    },
+    "attacked_by_cheaper": {
+     "checkable": 1,
+     "true": 0,
+     "false": 1,
+     "unverifiable": 0
+    },
+    "best_move": {
+     "checkable": 20,
+     "true": 19,
+     "false": 1,
+     "unverifiable": 0
+    },
+    "hanging": {
+     "checkable": 9,
+     "true": 1,
+     "false": 8,
+     "unverifiable": 0
+    },
+    "material": {
+     "checkable": 4,
+     "true": 3,
+     "false": 1,
+     "unverifiable": 0
+    },
+    "other/unknown": {
+     "checkable": 0,
+     "true": 0,
+     "false": 0,
+     "unverifiable": 2
+    }
+   },
+   "best_move_equals_review_best_but_false": 1,
+   "seconds_total": 257.6
+  }
+ },
+ "rows": [
+  {
+   "condition": "grounded",
+   "game_id": "ZRLfDc2e",
+   "url": "https://lichess.org/ZRLfDc2e",
+   "ply": 28,
+   "side": "Black",
+   "fen_before": "r1b1k2r/1pq1bp2/2pp1npp/p1nPp3/P1B1P2N/BPN4P/2P2PP1/R2QR1K1 b kq - 2 14",
+   "played": "Nxd5",
+   "best": "Nfd7",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "By playing 14...Nxd5, Black blundered, allowing White to seize a decisive +3.75 advantage instead of the +1.29 White held after the engine-preferred 14...Nfd7. The immediate tactical flaw is that the pawn on e5 was hanging and pinned, as confirmed by the pre-move facts showing it attacked by a cheaper piece and its status as a hanging piece. In the resulting position after 14...Nxd5 15. exd5, Black’s e5-pawn is no longer defended, creating a direct material weakness that White exploits. The engine line 14...Nfd7 maintains a manageable +0.56 evaluation by keeping the position solid and avoiding this structural collapse.\n\n```json\n{\n \"claims\": [\n  {\n   \"type\": \"best_move\",\n   \"move\": \"Nfd7\",\n   \"position\": \"before\"\n  },\n  {\n   \"type\": \"hanging\",\n   \"square\": \"e5\",\n   \"position\": \"before\"\n  },\n  {\n   \"type\": \"attacked_by_cheaper\",\n   \"square\": \"e5\",\n   \"position\": \"before\"\n  },\n  {\n   \"type\": \"advantage\",\n   \"side\": \"white\",\n   \"position\": \"before\"\n  }\n ],\n \"other_claims\": [\n  \"After 14...Nxd5, the evaluation jumps to +3.75 for White.\",\n  \"The engine line 14...Nfd7 leads to an evaluation of +1.29.\",\n  \"The pawn on e5 is pinned.\",\n  \"The pawn on e5 is attacked by a cheaper piece.\"\n ]\n}\n```",
+   "commentary": "By playing 14...Nxd5, Black blundered, allowing White to seize a decisive +3.75 advantage instead of the +1.29 White held after the engine-preferred 14...Nfd7. The immediate tactical flaw is that the pawn on e5 was hanging and pinned, as confirmed by the pre-move facts showing it attacked by a cheaper piece and its status as a hanging piece. In the resulting position after 14...Nxd5 15. exd5, Black’s e5-pawn is no longer defended, creating a direct material weakness that White exploits. The engine line 14...Nfd7 maintains a manageable +0.56 evaluation by keeping the position solid and avoiding this structural collapse.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Nfd7",
+     "position": "before"
+    },
+    {
+     "type": "hanging",
+     "square": "e5",
+     "position": "before"
+    },
+    {
+     "type": "attacked_by_cheaper",
+     "square": "e5",
+     "position": "before"
+    },
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "After 14...Nxd5, the evaluation jumps to +3.75 for White.",
+    "The engine line 14...Nfd7 leads to an evaluation of +1.29.",
+    "The pawn on e5 is pinned.",
+    "The pawn on e5 is attacked by a cheaper piece."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Nfd7",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Nfd7', 'Na6']",
+     "fen": "r1b1k2r/1pq1bp2/2pp1npp/p1nPp3/P1B1P2N/BPN4P/2P2PP1/R2QR1K1 b kq - 2 14"
+    },
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "e5",
+      "position": "before"
+     },
+     "verdict": false,
+     "why": "computed from attackers and defenders",
+     "fen": "r1b1k2r/1pq1bp2/2pp1npp/p1nPp3/P1B1P2N/BPN4P/2P2PP1/R2QR1K1 b kq - 2 14"
+    },
+    {
+     "claim": {
+      "type": "attacked_by_cheaper",
+      "square": "e5",
+      "position": "before"
+     },
+     "verdict": false,
+     "why": "computed from attackers and defenders",
+     "fen": "r1b1k2r/1pq1bp2/2pp1npp/p1nPp3/P1B1P2N/BPN4P/2P2PP1/R2QR1K1 b kq - 2 14"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine +1.32 for White",
+     "fen": "r1b1k2r/1pq1bp2/2pp1npp/p1nPp3/P1B1P2N/BPN4P/2P2PP1/R2QR1K1 b kq - 2 14"
+    }
+   ],
+   "score": {
+    "checkable": 4,
+    "true": 2,
+    "false": 2,
+    "faithfulness": 0.5
+   },
+   "completion_tokens": 389,
+   "seconds": 8.3
+  },
+  {
+   "condition": "grounded",
+   "game_id": "ZRLfDc2e",
+   "url": "https://lichess.org/ZRLfDc2e",
+   "ply": 34,
+   "side": "Black",
+   "fen_before": "r1b1k2r/1pq2p2/2pP2pp/p1p1p3/P1B4b/1PN4P/2P2PP1/R2QR1K1 b kq - 0 17",
+   "played": "Qd7",
+   "best": "Qd8",
+   "grade": "mistake",
+   "call_error": null,
+   "reply": "At move 17..., `Qd7` is a mistake that allows White to capture the hanging pawn on e5 with check, as the queen on d7 fails to defend it. The engine’s preferred move `Qd8` maintains the defense of the e5 pawn, preventing the immediate tactical blow `18. Rxe5+`. By failing to protect the pinned e5 pawn and the hanging queen on c7, `Qd7` drops a significant amount of evaluation from +4.17 to +7.01.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"hanging\",\n      \"square\": \"e5\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"hanging\",\n      \"square\": \"c7\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"pinned\",\n      \"square\": \"e5\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Qd8\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"advantage\",\n      \"side\": \"white\",\n      \"position\": \"before\"\n    }\n  ],\n  \"other_claims\": [\n    \"The move 17... Qd7 fails to defend the e5 pawn, allowing 18. Rxe5+.\",\n    \"The move 17... Qd8 defends the e5 pawn and prevents the check on e5.\",\n    \"The e5 pawn was pinned before 17... Qd7.\"\n  ]\n}\n```",
+   "commentary": "At move 17..., `Qd7` is a mistake that allows White to capture the hanging pawn on e5 with check, as the queen on d7 fails to defend it. The engine’s preferred move `Qd8` maintains the defense of the e5 pawn, preventing the immediate tactical blow `18. Rxe5+`. By failing to protect the pinned e5 pawn and the hanging queen on c7, `Qd7` drops a significant amount of evaluation from +4.17 to +7.01.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "hanging",
+     "square": "e5",
+     "position": "before"
+    },
+    {
+     "type": "hanging",
+     "square": "c7",
+     "position": "before"
+    },
+    {
+     "type": "pinned",
+     "square": "e5",
+     "position": "before"
+    },
+    {
+     "type": "best_move",
+     "move": "Qd8",
+     "position": "before"
+    },
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "The move 17... Qd7 fails to defend the e5 pawn, allowing 18. Rxe5+.",
+    "The move 17... Qd8 defends the e5 pawn and prevents the check on e5.",
+    "The e5 pawn was pinned before 17... Qd7."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "e5",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "computed from attackers and defenders",
+     "fen": "r1b1k2r/1pq2p2/2pP2pp/p1p1p3/P1B4b/1PN4P/2P2PP1/R2QR1K1 b kq - 0 17"
+    },
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "c7",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "computed from attackers and defenders",
+     "fen": "r1b1k2r/1pq2p2/2pP2pp/p1p1p3/P1B4b/1PN4P/2P2PP1/R2QR1K1 b kq - 0 17"
+    },
+    {
+     "claim": {
+      "type": "pinned",
+      "square": "e5",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "pinned to its own king",
+     "fen": "r1b1k2r/1pq2p2/2pP2pp/p1p1p3/P1B4b/1PN4P/2P2PP1/R2QR1K1 b kq - 0 17"
+    },
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Qd8",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Qd8', 'Qb6']",
+     "fen": "r1b1k2r/1pq2p2/2pP2pp/p1p1p3/P1B4b/1PN4P/2P2PP1/R2QR1K1 b kq - 0 17"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine +5.10 for White",
+     "fen": "r1b1k2r/1pq2p2/2pP2pp/p1p1p3/P1B4b/1PN4P/2P2PP1/R2QR1K1 b kq - 0 17"
+    }
+   ],
+   "score": {
+    "checkable": 5,
+    "true": 5,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 376,
+   "seconds": 12.1
+  },
+  {
+   "condition": "grounded",
+   "game_id": "BcAhQn3U",
+   "url": "https://lichess.org/BcAhQn3U",
+   "ply": 33,
+   "side": "White",
+   "fen_before": "2rqr1k1/p4ppp/1pn2bb1/2pp4/3Pn1P1/1P2PN1P/PB1N1PB1/2RQR1K1 w - - 1 17",
+   "played": "Ba1",
+   "best": "Ne5",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "By playing 17. Ba1, White abandoned the strong central outpost on e5, allowing Black to consolidate with 17... Bxe5 18. dxe5 Qh4. The engine’s preferred 17. Ne5 would have maintained dynamic tension and kept the evaluation near neutral, whereas the actual move caused a drastic drop to -3.25. This blunder effectively ceded the initiative and allowed Black to activate the queen aggressively. The subsequent sequence highlights how White's passive bishop placement contributed to the collapse of the kingside defense.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Ne5\"\n    }\n  ],\n  \"other_claims\": [\n    \"The move 17. Ba1 is graded as a blunder with an evaluation drop from -0.56 to -3.25.\",\n    \"17. Ne5 allows the continuation 17... Bxe5 18. dxe5 Qh4 19. Rf1 Ng5.\",\n    \"White's evaluation after 17. Ba1 is -3.25.\"\n  ]\n}\n```",
+   "commentary": "By playing 17. Ba1, White abandoned the strong central outpost on e5, allowing Black to consolidate with 17... Bxe5 18. dxe5 Qh4. The engine’s preferred 17. Ne5 would have maintained dynamic tension and kept the evaluation near neutral, whereas the actual move caused a drastic drop to -3.25. This blunder effectively ceded the initiative and allowed Black to activate the queen aggressively. The subsequent sequence highlights how White's passive bishop placement contributed to the collapse of the kingside defense.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Ne5",
+     "position": "before",
+     "position_defaulted": true
+    }
+   ],
+   "other_claims": [
+    "The move 17. Ba1 is graded as a blunder with an evaluation drop from -0.56 to -3.25.",
+    "17. Ne5 allows the continuation 17... Bxe5 18. dxe5 Qh4 19. Rf1 Ng5.",
+    "White's evaluation after 17. Ba1 is -3.25."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Ne5",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Ne5', 'a3']",
+     "fen": "2rqr1k1/p4ppp/1pn2bb1/2pp4/3Pn1P1/1P2PN1P/PB1N1PB1/2RQR1K1 w - - 1 17"
+    }
+   ],
+   "score": {
+    "checkable": 1,
+    "true": 1,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 262,
+   "seconds": 20.3
+  },
+  {
+   "condition": "grounded",
+   "game_id": "BcAhQn3U",
+   "url": "https://lichess.org/BcAhQn3U",
+   "ply": 60,
+   "side": "Black",
+   "fen_before": "2r1r1k1/p2R2p1/1p6/2p1p2b/4p2q/1P2P3/P2Q1PB1/1R3K2 b - - 1 30",
+   "played": "Bf3",
+   "best": "Rf8",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "At ply 60, Black’s `Bf3` is a blunder that squanders a winning advantage, dropping the evaluation from -5.16 to -1.21. The engine identifies `Rf8` as the best move, maintaining the pressure and leading to a decisive advantage (-5.16). `Bf3` allows White to simplify via `Qd5+`, whereas `Rf8` keeps the initiative and restricts White’s counterplay.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Rf8\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"advantage\",\n      \"side\": \"black\",\n      \"position\": \"before\"\n    }\n  ],\n  \"other_claims\": [\n    \"Black played Bf3 which is graded as a blunder.\",\n    \"The best move for Black at this position is Rf8.\",\n    \"After Bf3, the evaluation improves for White to -1.21.\",\n    \"After Rf8, the evaluation remains -5.16 in Black's favor.\",\n    \"Bf3 allows White to play Qd5+ to complicate the position.\"\n  ]\n}\n```",
+   "commentary": "At ply 60, Black’s `Bf3` is a blunder that squanders a winning advantage, dropping the evaluation from -5.16 to -1.21. The engine identifies `Rf8` as the best move, maintaining the pressure and leading to a decisive advantage (-5.16). `Bf3` allows White to simplify via `Qd5+`, whereas `Rf8` keeps the initiative and restricts White’s counterplay.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Rf8",
+     "position": "before"
+    },
+    {
+     "type": "advantage",
+     "side": "black",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "Black played Bf3 which is graded as a blunder.",
+    "The best move for Black at this position is Rf8.",
+    "After Bf3, the evaluation improves for White to -1.21.",
+    "After Rf8, the evaluation remains -5.16 in Black's favor.",
+    "Bf3 allows White to play Qd5+ to complicate the position."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Rf8",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Rf8', 'Kh8']",
+     "fen": "2r1r1k1/p2R2p1/1p6/2p1p2b/4p2q/1P2P3/P2Q1PB1/1R3K2 b - - 1 30"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "black",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine -5.69 for White",
+     "fen": "2r1r1k1/p2R2p1/1p6/2p1p2b/4p2q/1P2P3/P2Q1PB1/1R3K2 b - - 1 30"
+    }
+   ],
+   "score": {
+    "checkable": 2,
+    "true": 2,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 288,
+   "seconds": 10.7
+  },
+  {
+   "condition": "grounded",
+   "game_id": "BcAhQn3U",
+   "url": "https://lichess.org/BcAhQn3U",
+   "ply": 63,
+   "side": "White",
+   "fen_before": "2r1r2k/p2R2p1/1p6/2pQp3/4p2q/1P2Pb2/P4PB1/1R3K2 w - - 4 32",
+   "played": "Qf7",
+   "best": "Bxf3",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "17. Ba1 is a blunder that drops the evaluation from -0.56 to -3.25 by ignoring the strong centralizing move 17. Ne5. The engine's best move 17. Ne5 forces 17... Bxe5 18. dxe5 Qh4 19. Rf1 Ng5, maintaining a manageable disadvantage. In contrast, 17. Ba1 allows Black to consolidate their advantage with no immediate compensation for White.\n\n```json\n{\n \"claims\": [\n  {\n   \"type\": \"best_move\",\n   \"move\": \"Ne5\",\n   \"position\": \"before\"\n  },\n  {\n   \"type\": \"advantage\",\n   \"side\": \"black\",\n   \"position\": \"before\"\n  }\n ],\n \"other_claims\": [\n  \"17. Ba1 is a blunder that drops the evaluation from -0.56 to -3.25.\",\n  \"17. Ne5 is the best move for White at this position.\",\n  \"The engine line after 17. Ne5 is 17... Bxe5 18. dxe5 Qh4 19. Rf1 Ng5.\",\n  \"17. Ba1 allows Black to consolidate their advantage.\"\n ]\n}\n```",
+   "commentary": "17. Ba1 is a blunder that drops the evaluation from -0.56 to -3.25 by ignoring the strong centralizing move 17. Ne5. The engine's best move 17. Ne5 forces 17... Bxe5 18. dxe5 Qh4 19. Rf1 Ng5, maintaining a manageable disadvantage. In contrast, 17. Ba1 allows Black to consolidate their advantage with no immediate compensation for White.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Ne5",
+     "position": "before"
+    },
+    {
+     "type": "advantage",
+     "side": "black",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "17. Ba1 is a blunder that drops the evaluation from -0.56 to -3.25.",
+    "17. Ne5 is the best move for White at this position.",
+    "The engine line after 17. Ne5 is 17... Bxe5 18. dxe5 Qh4 19. Rf1 Ng5.",
+    "17. Ba1 allows Black to consolidate their advantage."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Ne5",
+      "position": "before"
+     },
+     "verdict": false,
+     "why": "engine top 2: ['Bxf3', 'Qb7']",
+     "fen": "2r1r2k/p2R2p1/1p6/2pQp3/4p2q/1P2Pb2/P4PB1/1R3K2 w - - 4 32"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "black",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine -1.58 for White",
+     "fen": "2r1r2k/p2R2p1/1p6/2pQp3/4p2q/1P2Pb2/P4PB1/1R3K2 w - - 4 32"
+    }
+   ],
+   "score": {
+    "checkable": 2,
+    "true": 1,
+    "false": 1,
+    "faithfulness": 0.5
+   },
+   "completion_tokens": 297,
+   "seconds": 10.6
+  },
+  {
+   "condition": "grounded",
+   "game_id": "BcAhQn3U",
+   "url": "https://lichess.org/BcAhQn3U",
+   "ply": 70,
+   "side": "Black",
+   "fen_before": "2r2r1k/p2R2p1/1p6/2p1p3/2Q3q1/1P2Pp2/P4P2/1R2K3 b - - 3 35",
+   "played": "Qxc4",
+   "best": "Qxd7",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "At move 35, Black’s `Qxc4` was a blunder that failed to eliminate White’s dangerous rook on d7. The engine’s preferred `Qxd7` captures the rook, equalizing material and removing the primary attacker. By playing `Qxc4`, Black allowed White to maintain the pressure with `bxc4` while the rook on d7 remains a potent piece. This error missed the opportunity to simplify the position and neutralize White’s active pieces.\n\n```json\n{\n \"claims\": [\n  {\n   \"type\": \"hanging\",\n   \"square\": \"d7\",\n   \"position\": \"before\"\n  },\n  {\n   \"type\": \"best_move\",\n   \"move\": \"Qxd7\",\n   \"position\": \"before\"\n  }\n ],\n \"other_claims\": [\n  \"Black played Qxc4 instead of the best move Qxd7.\",\n  \"The rook on d7 is a dangerous piece for White.\",\n  \"Qxd7 captures the rook and equalizes material.\",\n  \"Qxc4 allows White to maintain pressure with the rook on d7.\"\n ]\n}\n```",
+   "commentary": "At move 35, Black’s `Qxc4` was a blunder that failed to eliminate White’s dangerous rook on d7. The engine’s preferred `Qxd7` captures the rook, equalizing material and removing the primary attacker. By playing `Qxc4`, Black allowed White to maintain the pressure with `bxc4` while the rook on d7 remains a potent piece. This error missed the opportunity to simplify the position and neutralize White’s active pieces.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "hanging",
+     "square": "d7",
+     "position": "before"
+    },
+    {
+     "type": "best_move",
+     "move": "Qxd7",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "Black played Qxc4 instead of the best move Qxd7.",
+    "The rook on d7 is a dangerous piece for White.",
+    "Qxd7 captures the rook and equalizes material.",
+    "Qxc4 allows White to maintain pressure with the rook on d7."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "d7",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "computed from attackers and defenders",
+     "fen": "2r2r1k/p2R2p1/1p6/2p1p3/2Q3q1/1P2Pp2/P4P2/1R2K3 b - - 3 35"
+    },
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Qxd7",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Qxd7', 'Qg1+']",
+     "fen": "2r2r1k/p2R2p1/1p6/2p1p3/2Q3q1/1P2Pp2/P4P2/1R2K3 b - - 3 35"
+    }
+   ],
+   "score": {
+    "checkable": 2,
+    "true": 2,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 260,
+   "seconds": 10.5
+  },
+  {
+   "condition": "grounded",
+   "game_id": "BcAhQn3U",
+   "url": "https://lichess.org/BcAhQn3U",
+   "ply": 85,
+   "side": "White",
+   "fen_before": "8/7k/1R6/2p1pr2/2P3p1/4Pp2/P4P2/4K3 w - - 0 43",
+   "played": "a4",
+   "best": "Kf1",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "The move 43. a4 is a blunder that allows Black to equalize, whereas 43. Kf1 was the engine's best move, maintaining a slight edge. In the position before 43. a4, White had no hanging pieces and was not in check, but the engine evaluated the position as slightly better for Black (-0.06). By playing 43. a4, White missed the opportunity to keep the king safe and active with 43. Kf1, leading to a drop in evaluation to -5.06. The engine's line suggests 43. Kf1 followed by 43... Rf7 44. Kg1 Rd7 45. Kh2 Rd1. The material count remained equal at the time of the move.\n\n```json\n{\n \"claims\": [\n  {\n   \"type\": \"best_move\",\n   \"move\": \"Kf1\"\n  }\n ],\n \"other_claims\": [\n  \"43. a4 is a blunder that allows Black to equalize.\",\n  \"43. Kf1 was the engine's best move, maintaining a slight edge.\",\n  \"Before 43. a4, White had no hanging pieces and was not in check.\",\n  \"The engine evaluated the position before 43. a4 as slightly better for Black (-0.06).\",\n  \"Playing 43. a4 led to a drop in evaluation to -5.06.\",\n  \"The engine's line for 43. Kf1 is 43... Rf7 44. Kg1 Rd7 45. Kh2 Rd1.\",\n  \"The material count remained equal at the time of the move.\"\n ]\n}\n```",
+   "commentary": "The move 43. a4 is a blunder that allows Black to equalize, whereas 43. Kf1 was the engine's best move, maintaining a slight edge. In the position before 43. a4, White had no hanging pieces and was not in check, but the engine evaluated the position as slightly better for Black (-0.06). By playing 43. a4, White missed the opportunity to keep the king safe and active with 43. Kf1, leading to a drop in evaluation to -5.06. The engine's line suggests 43. Kf1 followed by 43... Rf7 44. Kg1 Rd7 45. Kh2 Rd1. The material count remained equal at the time of the move.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Kf1",
+     "position": "before",
+     "position_defaulted": true
+    }
+   ],
+   "other_claims": [
+    "43. a4 is a blunder that allows Black to equalize.",
+    "43. Kf1 was the engine's best move, maintaining a slight edge.",
+    "Before 43. a4, White had no hanging pieces and was not in check.",
+    "The engine evaluated the position before 43. a4 as slightly better for Black (-0.06).",
+    "Playing 43. a4 led to a drop in evaluation to -5.06.",
+    "The engine's line for 43. Kf1 is 43... Rf7 44. Kg1 Rd7 45. Kh2 Rd1.",
+    "The material count remained equal at the time of the move."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Kf1",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Kf1', 'Rb7+']",
+     "fen": "8/7k/1R6/2p1pr2/2P3p1/4Pp2/P4P2/4K3 w - - 0 43"
+    }
+   ],
+   "score": {
+    "checkable": 1,
+    "true": 1,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 388,
+   "seconds": 12.9
+  },
+  {
+   "condition": "grounded",
+   "game_id": "BVzBEglH",
+   "url": "https://lichess.org/BVzBEglH",
+   "ply": 64,
+   "side": "Black",
+   "fen_before": "1r6/4k1pp/1rBn1p2/8/p4P2/4PK2/1PRR2PP/8 b - - 2 32",
+   "played": "a3",
+   "best": "Rb4",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "The move 32...a3 misses the tactical opportunity of 32...Rb4, which forces 33. Bd5 Rc8 34. Rxc8 Nxc8 35. Rd4 with a significantly higher evaluation. By playing 32...a3, Black allows White to capture with 33. bxa3, leading to a favorable endgame for White where the engine evaluation drops from +1.23 to +4.04. The alternative line with 32...Rb4 maintains pressure and simplifies into a winning knight endgame for Black. White's best response to 32...Rb4 is 33. Bd5, but this still leaves Black with a clear advantage after the exchange on c8.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"advantage\",\n      \"side\": \"white\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Rb4\",\n      \"position\": \"before\"\n    }\n  ],\n  \"other_claims\": [\n    \"The engine line 32...Rb4 33. Bd5 Rc8 34. Rxc8 Nxc8 35. Rd4 results in a winning position for Black.\",\n    \"After 32...a3 33. bxa3, White's advantage increases significantly according to the engine evaluation.\"\n  ]\n}\n```",
+   "commentary": "The move 32...a3 misses the tactical opportunity of 32...Rb4, which forces 33. Bd5 Rc8 34. Rxc8 Nxc8 35. Rd4 with a significantly higher evaluation. By playing 32...a3, Black allows White to capture with 33. bxa3, leading to a favorable endgame for White where the engine evaluation drops from +1.23 to +4.04. The alternative line with 32...Rb4 maintains pressure and simplifies into a winning knight endgame for Black. White's best response to 32...Rb4 is 33. Bd5, but this still leaves Black with a clear advantage after the exchange on c8.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "before"
+    },
+    {
+     "type": "best_move",
+     "move": "Rb4",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "The engine line 32...Rb4 33. Bd5 Rc8 34. Rxc8 Nxc8 35. Rd4 results in a winning position for Black.",
+    "After 32...a3 33. bxa3, White's advantage increases significantly according to the engine evaluation."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine +1.32 for White",
+     "fen": "1r6/4k1pp/1rBn1p2/8/p4P2/4PK2/1PRR2PP/8 b - - 2 32"
+    },
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Rb4",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Rb4', 'Ra6']",
+     "fen": "1r6/4k1pp/1rBn1p2/8/p4P2/4PK2/1PRR2PP/8 b - - 2 32"
+    }
+   ],
+   "score": {
+    "checkable": 2,
+    "true": 2,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 331,
+   "seconds": 32.5
+  },
+  {
+   "condition": "grounded",
+   "game_id": "BVzBEglH",
+   "url": "https://lichess.org/BVzBEglH",
+   "ply": 79,
+   "side": "White",
+   "fen_before": "1r3k2/3R2pp/1n3p2/8/P4P2/3B1K2/6PP/8 w - - 3 40",
+   "played": "Rd6",
+   "best": "Ra7",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "By playing 40. Rd6, White missed the winning 40. Ra7, which maintains a decisive +4.27 evaluation compared to the drop to +0.69 after the game move. The rook on d6 is a hanging piece, as noted in the pre-move facts, and its placement allows Black to generate counterplay that White cannot withstand. The engine line 40... Nc8 41. Rc7 Ne7 42. a5 Rb3 demonstrates that White’s actual choice fails to exploit the weakness of Black’s position effectively.\n\n```json\n{\n \"claims\": [\n  {\n   \"type\": \"best_move\",\n   \"move\": \"Ra7\"\n  },\n  {\n   \"type\": \"hanging\",\n   \"square\": \"d7\",\n   \"position\": \"before\"\n  },\n  {\n   \"type\": \"advantage\",\n   \"side\": \"white\",\n   \"position\": \"before\"\n  }\n ],\n \"other_claims\": [\n  \"40. Ra7 is the best move for White.\",\n  \"The rook on d7 is hanging in the position before White's move.\",\n  \"White has a winning advantage (+4.27) before the move 40. Rd6.\",\n  \"After 40. Rd6, the evaluation drops to +0.69.\",\n  \"The engine line 40... Nc8 41. Rc7 Ne7 42. a5 Rb3 shows Black's counterplay after 40. Rd6.\"\n ]\n}\n```",
+   "commentary": "By playing 40. Rd6, White missed the winning 40. Ra7, which maintains a decisive +4.27 evaluation compared to the drop to +0.69 after the game move. The rook on d6 is a hanging piece, as noted in the pre-move facts, and its placement allows Black to generate counterplay that White cannot withstand. The engine line 40... Nc8 41. Rc7 Ne7 42. a5 Rb3 demonstrates that White’s actual choice fails to exploit the weakness of Black’s position effectively.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Ra7",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "hanging",
+     "square": "d7",
+     "position": "before"
+    },
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "40. Ra7 is the best move for White.",
+    "The rook on d7 is hanging in the position before White's move.",
+    "White has a winning advantage (+4.27) before the move 40. Rd6.",
+    "After 40. Rd6, the evaluation drops to +0.69.",
+    "The engine line 40... Nc8 41. Rc7 Ne7 42. a5 Rb3 shows Black's counterplay after 40. Rd6."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Ra7",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Ra7', 'Rd4']",
+     "fen": "1r3k2/3R2pp/1n3p2/8/P4P2/3B1K2/6PP/8 w - - 3 40"
+    },
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "d7",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "computed from attackers and defenders",
+     "fen": "1r3k2/3R2pp/1n3p2/8/P4P2/3B1K2/6PP/8 w - - 3 40"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine +4.17 for White",
+     "fen": "1r3k2/3R2pp/1n3p2/8/P4P2/3B1K2/6PP/8 w - - 3 40"
+    }
+   ],
+   "score": {
+    "checkable": 3,
+    "true": 3,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 357,
+   "seconds": 23.1
+  },
+  {
+   "condition": "grounded",
+   "game_id": "BVzBEglH",
+   "url": "https://lichess.org/BVzBEglH",
+   "ply": 94,
+   "side": "Black",
+   "fen_before": "8/3nk1p1/2R2pB1/7P/5PK1/6P1/1r6/8 b - - 0 47",
+   "played": "Nf8",
+   "best": "Rb7",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "On ply 94, Black’s move `Nf8` was a blunder that squandered a decisive advantage, dropping the evaluation from +2.98 to +6.74. The engine identifies `Rb7` as the best move, which maintains pressure and simplifies into a winning endgame. By playing `Nf8`, Black missed the opportunity to consolidate the material edge with precise rook activity.\n\n```json\n{\n \"claims\": [\n  {\n   \"type\": \"best_move\",\n   \"move\": \"Rb7\"\n  },\n  {\n   \"type\": \"advantage\",\n   \"side\": \"white\"\n  },\n  {\n   \"type\": \"material\",\n   \"side\": \"white\"\n  }\n ],\n \"other_claims\": [\n  \"Black played Nf8 which is graded as a blunder.\",\n  \"The engine prefers Rb7 at this moment.\",\n  \"The evaluation dropped from +2.98 to +6.74 after the move sequence, indicating White's advantage increased significantly due to Black's error.\"\n ]\n}\n```",
+   "commentary": "On ply 94, Black’s move `Nf8` was a blunder that squandered a decisive advantage, dropping the evaluation from +2.98 to +6.74. The engine identifies `Rb7` as the best move, which maintains pressure and simplifies into a winning endgame. By playing `Nf8`, Black missed the opportunity to consolidate the material edge with precise rook activity.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Rb7",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "material",
+     "side": "white",
+     "position": "before",
+     "position_defaulted": true
+    }
+   ],
+   "other_claims": [
+    "Black played Nf8 which is graded as a blunder.",
+    "The engine prefers Rb7 at this moment.",
+    "The evaluation dropped from +2.98 to +6.74 after the move sequence, indicating White's advantage increased significantly due to Black's error."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Rb7",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Rb7', 'Ra2']",
+     "fen": "8/3nk1p1/2R2pB1/7P/5PK1/6P1/1r6/8 b - - 0 47"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine +2.50 for White",
+     "fen": "8/3nk1p1/2R2pB1/7P/5PK1/6P1/1r6/8 b - - 0 47"
+    },
+    {
+     "claim": {
+      "type": "material",
+      "side": "white",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "material balance +1 for White",
+     "fen": "8/3nk1p1/2R2pB1/7P/5PK1/6P1/1r6/8 b - - 0 47"
+    }
+   ],
+   "score": {
+    "checkable": 3,
+    "true": 3,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 249,
+   "seconds": 16.7
+  },
+  {
+   "condition": "grounded",
+   "game_id": "BVzBEglH",
+   "url": "https://lichess.org/BVzBEglH",
+   "ply": 105,
+   "side": "White",
+   "fen_before": "8/3n1R2/3k1pBP/5P2/6K1/6P1/8/1r6 w - - 3 53",
+   "played": "h7",
+   "best": "Rxd7+",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "At ply 105, White’s $h7$ was a blunder that squandered a decisive advantage, dropping the evaluation from $+7.97$ to $0.00$. The engine identifies $Rxd7+$ as the best move, which forces $Kxd7$ and leaves White with a winning bishop and pawn endgame after $h7$. By playing $h7$, White missed the immediate tactical opportunity to eliminate the defender on d7, allowing Black to simplify into a drawn rook endgame with $Ne5+$.\n\n```json\n{\n \"claims\": [\n  {\n   \"type\": \"best_move\",\n   \"move\": \"Rxd7+\",\n   \"position\": \"before\"\n  },\n  {\n   \"type\": \"advantage\",\n   \"side\": \"white\",\n   \"position\": \"before\"\n  },\n  {\n   \"type\": \"material\",\n   \"side\": \"white\",\n   \"position\": \"before\"\n  }\n ],\n \"other_claims\": [\n  \"White had a decisive advantage before move 105.\",\n  \"The move h7 allowed Black to simplify into a drawn rook endgame.\",\n  \"Rxd7+ forces Kxd7, leading to a winning bishop and pawn endgame.\"\n ]\n}\n```",
+   "commentary": "At ply 105, White’s $h7$ was a blunder that squandered a decisive advantage, dropping the evaluation from $+7.97$ to $0.00$. The engine identifies $Rxd7+$ as the best move, which forces $Kxd7$ and leaves White with a winning bishop and pawn endgame after $h7$. By playing $h7$, White missed the immediate tactical opportunity to eliminate the defender on d7, allowing Black to simplify into a drawn rook endgame with $Ne5+$.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Rxd7+",
+     "position": "before"
+    },
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "before"
+    },
+    {
+     "type": "material",
+     "side": "white",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "White had a decisive advantage before move 105.",
+    "The move h7 allowed Black to simplify into a drawn rook endgame.",
+    "Rxd7+ forces Kxd7, leading to a winning bishop and pawn endgame."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Rxd7+",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Rxd7+', 'Kf4']",
+     "fen": "8/3n1R2/3k1pBP/5P2/6K1/6P1/8/1r6 w - - 3 53"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine +7.87 for White",
+     "fen": "8/3n1R2/3k1pBP/5P2/6K1/6P1/8/1r6 w - - 3 53"
+    },
+    {
+     "claim": {
+      "type": "material",
+      "side": "white",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "material balance +2 for White",
+     "fen": "8/3n1R2/3k1pBP/5P2/6K1/6P1/8/1r6 w - - 3 53"
+    }
+   ],
+   "score": {
+    "checkable": 3,
+    "true": 3,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 292,
+   "seconds": 21.2
+  },
+  {
+   "condition": "grounded",
+   "game_id": "BVzBEglH",
+   "url": "https://lichess.org/BVzBEglH",
+   "ply": 152,
+   "side": "Black",
+   "fen_before": "8/6kP/6B1/5PK1/8/8/8/5r2 b - - 8 76",
+   "played": "Rxf5+",
+   "best": "Rg1+",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "At ply 152, Black played `Rxf5+`, which the engine grades as a blunder, dropping the evaluation from 0.00 to +4.15. The engine identified `Rg1+` as the best move, which maintains the draw by forcing perpetual checks or favorable king activity, whereas `Rxf5+` allows White's king to escape the checks and activate its bishop. The position before the move was equal with no immediate threats, but `Rxf5+` missed the tactical resource of the rook check on the first rank. By capturing the pawn, Black allowed White to consolidate and eventually win, as confirmed by the final result.\n\n```json\n{\n \"claims\": [\n  {\n   \"type\": \"best_move\",\n   \"move\": \"Rg1+\",\n   \"position\": \"before\"\n  },\n  {\n   \"type\": \"advantage\",\n   \"side\": \"white\",\n   \"position\": \"after\"\n  }\n ],\n \"other_claims\": [\n  \"Rxf5+ allows the white king to escape checks and activates the bishop.\",\n  \"Rg1+ forces perpetual checks or favorable king activity to hold the draw.\"\n ]\n}\n```",
+   "commentary": "At ply 152, Black played `Rxf5+`, which the engine grades as a blunder, dropping the evaluation from 0.00 to +4.15. The engine identified `Rg1+` as the best move, which maintains the draw by forcing perpetual checks or favorable king activity, whereas `Rxf5+` allows White's king to escape the checks and activate its bishop. The position before the move was equal with no immediate threats, but `Rxf5+` missed the tactical resource of the rook check on the first rank. By capturing the pawn, Black allowed White to consolidate and eventually win, as confirmed by the final result.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Rg1+",
+     "position": "before"
+    },
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "after"
+    }
+   ],
+   "other_claims": [
+    "Rxf5+ allows the white king to escape checks and activates the bishop.",
+    "Rg1+ forces perpetual checks or favorable king activity to hold the draw."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Rg1+",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Kh8', 'Rg1+']",
+     "fen": "8/6kP/6B1/5PK1/8/8/8/5r2 b - - 8 76"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "after"
+     },
+     "verdict": true,
+     "why": "engine +0.97 for White",
+     "fen": "8/6kP/6B1/5rK1/8/8/8/8 w - - 0 77"
+    }
+   ],
+   "score": {
+    "checkable": 2,
+    "true": 2,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 269,
+   "seconds": 22.2
+  },
+  {
+   "condition": "grounded",
+   "game_id": "movw8h7M",
+   "url": "https://lichess.org/movw8h7M",
+   "ply": 36,
+   "side": "Black",
+   "fen_before": "r2q2k1/1b2b1p1/p1n2r1p/1p1p4/8/P2Q1N2/1PB2PPP/R1B2RK1 b - - 1 18",
+   "played": "d4",
+   "best": "Bc8",
+   "grade": "mistake",
+   "call_error": null,
+   "reply": "The move 18...d4 is a mistake that misses the engine's preferred 18...Bc8, which keeps the advantage at +2.54 compared to +4.96 after the text move. By playing d4, Black fails to consolidate, allowing White to launch a decisive attack with 19. Nh4. The engine line 18...Bc8 19. Nh4 Kf7 20. Re1 Be6 maintains a manageable advantage for White without the sharp tactical complications introduced by ...d4.\n\n```json\n{\n \"claims\": [\n  {\n   \"type\": \"best_move\",\n   \"move\": \"Bc8\"\n  },\n  {\n   \"type\": \"advantage\",\n   \"side\": \"white\"\n  },\n  {\n   \"type\": \"material\",\n   \"side\": \"white\"\n  }\n ],\n \"other_claims\": [\n  \"18...d4 is a mistake.\",\n  \"The engine evaluation is +2.54 after 18...Bc8.\",\n  \"The engine evaluation is +4.96 after 18...d4.\",\n  \"White can play 19. Nh4 after 18...d4.\",\n  \"The best line is 18...Bc8 19. Nh4 Kf7 20. Re1 Be6.\"\n ]\n}\n```",
+   "commentary": "The move 18...d4 is a mistake that misses the engine's preferred 18...Bc8, which keeps the advantage at +2.54 compared to +4.96 after the text move. By playing d4, Black fails to consolidate, allowing White to launch a decisive attack with 19. Nh4. The engine line 18...Bc8 19. Nh4 Kf7 20. Re1 Be6 maintains a manageable advantage for White without the sharp tactical complications introduced by ...d4.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Bc8",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "material",
+     "side": "white",
+     "position": "before",
+     "position_defaulted": true
+    }
+   ],
+   "other_claims": [
+    "18...d4 is a mistake.",
+    "The engine evaluation is +2.54 after 18...Bc8.",
+    "The engine evaluation is +4.96 after 18...d4.",
+    "White can play 19. Nh4 after 18...d4.",
+    "The best line is 18...Bc8 19. Nh4 Kf7 20. Re1 Be6."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Bc8",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Bc8', 'Rxf3']",
+     "fen": "r2q2k1/1b2b1p1/p1n2r1p/1p1p4/8/P2Q1N2/1PB2PPP/R1B2RK1 b - - 1 18"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine +2.62 for White",
+     "fen": "r2q2k1/1b2b1p1/p1n2r1p/1p1p4/8/P2Q1N2/1PB2PPP/R1B2RK1 b - - 1 18"
+    },
+    {
+     "claim": {
+      "type": "material",
+      "side": "white",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": false,
+     "why": "material balance +0 for White",
+     "fen": "r2q2k1/1b2b1p1/p1n2r1p/1p1p4/8/P2Q1N2/1PB2PPP/R1B2RK1 b - - 1 18"
+    }
+   ],
+   "score": {
+    "checkable": 3,
+    "true": 2,
+    "false": 1,
+    "faithfulness": 0.667
+   },
+   "completion_tokens": 317,
+   "seconds": 35.6
+  },
+  {
+   "condition": "grounded",
+   "game_id": "movw8h7M",
+   "url": "https://lichess.org/movw8h7M",
+   "ply": 45,
+   "side": "White",
+   "fen_before": "r6q/1b1kb1Q1/p1n2r1B/1p6/3p4/PB3N2/1P3PPP/R4RK1 w - - 1 23",
+   "played": "Qxh8",
+   "best": "Qg4+",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "The engine identifies 23. Qg4+ as the best move, capitalizing on the check to maintain a winning advantage (+6.00), whereas 23. Qxh8 is a blunder that crashes the evaluation to -0.26. By playing Qxh8, White fails to utilize the available checks (Qxe7+, Ne5+, Be6+) and allows Black to simplify into a drawable or slightly better endgame. The hanging pieces in the position (Black rooks on h8/f3, White bishop on b3) were present, but the immediate tactical failure was the missed forcing sequence.\n\n```json\n{\n \"claims\": [\n  {\n   \"type\": \"best_move\",\n   \"move\": \"Qg4+\"\n  },\n  {\n   \"type\": \"in_check\",\n   \"position\": \"before\"\n  },\n  {\n   \"type\": \"hanging\",\n   \"square\": \"h8\"\n  },\n  {\n   \"type\": \"hanging\",\n   \"square\": \"f3\"\n  },\n  {\n   \"type\": \"hanging\",\n   \"square\": \"b3\"\n  },\n  {\n   \"type\": \"advantage\",\n   \"side\": \"white\",\n   \"position\": \"before\"\n  },\n  {\n   \"type\": \"advantage\",\n   \"side\": \"black\",\n   \"position\": \"after\"\n  }\n ],\n \"other_claims\": [\n  \"White had available checks including Qxe7+, Ne5+, and Be6+ before the move.\",\n  \"23. Qxh8 allows Black to simplify the position, resulting in a significant drop in White's winning chances.\",\n  \"23. Qg4+ maintains a large material and positional advantage for White.\"\n ]\n}\n```",
+   "commentary": "The engine identifies 23. Qg4+ as the best move, capitalizing on the check to maintain a winning advantage (+6.00), whereas 23. Qxh8 is a blunder that crashes the evaluation to -0.26. By playing Qxh8, White fails to utilize the available checks (Qxe7+, Ne5+, Be6+) and allows Black to simplify into a drawable or slightly better endgame. The hanging pieces in the position (Black rooks on h8/f3, White bishop on b3) were present, but the immediate tactical failure was the missed forcing sequence.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Qg4+",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "in_check",
+     "position": "before"
+    },
+    {
+     "type": "hanging",
+     "square": "h8",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "hanging",
+     "square": "f3",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "hanging",
+     "square": "b3",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "before"
+    },
+    {
+     "type": "advantage",
+     "side": "black",
+     "position": "after"
+    }
+   ],
+   "other_claims": [
+    "White had available checks including Qxe7+, Ne5+, and Be6+ before the move.",
+    "23. Qxh8 allows Black to simplify the position, resulting in a significant drop in White's winning chances.",
+    "23. Qg4+ maintains a large material and positional advantage for White."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Qg4+",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Qg4+', 'Qxh8']",
+     "fen": "r6q/1b1kb1Q1/p1n2r1B/1p6/3p4/PB3N2/1P3PPP/R4RK1 w - - 1 23"
+    },
+    {
+     "claim": {
+      "type": "in_check",
+      "position": "before"
+     },
+     "verdict": false,
+     "why": "rules",
+     "fen": "r6q/1b1kb1Q1/p1n2r1B/1p6/3p4/PB3N2/1P3PPP/R4RK1 w - - 1 23"
+    },
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "h8",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": false,
+     "why": "computed from attackers and defenders",
+     "fen": "r6q/1b1kb1Q1/p1n2r1B/1p6/3p4/PB3N2/1P3PPP/R4RK1 w - - 1 23"
+    },
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "f3",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": false,
+     "why": "computed from attackers and defenders",
+     "fen": "r6q/1b1kb1Q1/p1n2r1B/1p6/3p4/PB3N2/1P3PPP/R4RK1 w - - 1 23"
+    },
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "b3",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": false,
+     "why": "computed from attackers and defenders",
+     "fen": "r6q/1b1kb1Q1/p1n2r1B/1p6/3p4/PB3N2/1P3PPP/R4RK1 w - - 1 23"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine +5.86 for White",
+     "fen": "r6q/1b1kb1Q1/p1n2r1B/1p6/3p4/PB3N2/1P3PPP/R4RK1 w - - 1 23"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "black",
+      "position": "after"
+     },
+     "verdict": false,
+     "why": "engine -0.39 for White",
+     "fen": "r6Q/1b1kb3/p1n2r1B/1p6/3p4/PB3N2/1P3PPP/R4RK1 b - - 0 23"
+    }
+   ],
+   "score": {
+    "checkable": 7,
+    "true": 2,
+    "false": 5,
+    "faithfulness": 0.286
+   },
+   "completion_tokens": 410,
+   "seconds": 23.4
+  },
+  {
+   "condition": "grounded",
+   "game_id": "movw8h7M",
+   "url": "https://lichess.org/movw8h7M",
+   "ply": 49,
+   "side": "White",
+   "fen_before": "7r/1b1kb1B1/p1n5/1p6/3p4/PB3r2/1P3PPP/R4RK1 w - - 0 25",
+   "played": "gxf3",
+   "best": "Bd5",
+   "grade": "mistake",
+   "call_error": null,
+   "reply": "At move 25, White’s choice of $gxf3$ was a mistake that allowed Black’s rook on $h8$ and $f3$ to remain hanging without sufficient compensation, whereas the engine preferred $Bd5$. The position after White's move resulted in a loss of advantage, dropping from -0.42 to -2.15, as White failed to maintain pressure. By playing $Bd5$, White would have maintained a more stable evaluation of -0.42, keeping the initiative. The immediate tactical reality was that White had a hanging bishop on $b3$ and Black had hanging rooks, but $gxf3$ exacerbated White's difficulties.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Bd5\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"hanging\",\n      \"square\": \"h8\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"hanging\",\n      \"square\": \"f3\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"hanging\",\n      \"square\": \"b3\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"material\",\n      \"side\": \"black\",\n      \"position\": \"before\"\n    }\n  ],\n  \"other_claims\": [\n    \"White's move gxf3 was graded as a mistake.\",\n    \"The engine evaluation dropped from -0.42 to -2.15 after gxf3.\",\n    \"Bd5 was the best move for White at move 25.\",\n    \"The position before move 25 had White at a slight disadvantage.\"\n  ]\n}\n```",
+   "commentary": "At move 25, White’s choice of $gxf3$ was a mistake that allowed Black’s rook on $h8$ and $f3$ to remain hanging without sufficient compensation, whereas the engine preferred $Bd5$. The position after White's move resulted in a loss of advantage, dropping from -0.42 to -2.15, as White failed to maintain pressure. By playing $Bd5$, White would have maintained a more stable evaluation of -0.42, keeping the initiative. The immediate tactical reality was that White had a hanging bishop on $b3$ and Black had hanging rooks, but $gxf3$ exacerbated White's difficulties.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Bd5",
+     "position": "before"
+    },
+    {
+     "type": "hanging",
+     "square": "h8",
+     "position": "before"
+    },
+    {
+     "type": "hanging",
+     "square": "f3",
+     "position": "before"
+    },
+    {
+     "type": "hanging",
+     "square": "b3",
+     "position": "before"
+    },
+    {
+     "type": "material",
+     "side": "black",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "White's move gxf3 was graded as a mistake.",
+    "The engine evaluation dropped from -0.42 to -2.15 after gxf3.",
+    "Bd5 was the best move for White at move 25.",
+    "The position before move 25 had White at a slight disadvantage."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Bd5",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Bd5', 'Bd1']",
+     "fen": "7r/1b1kb1B1/p1n5/1p6/3p4/PB3r2/1P3PPP/R4RK1 w - - 0 25"
+    },
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "h8",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "computed from attackers and defenders",
+     "fen": "7r/1b1kb1B1/p1n5/1p6/3p4/PB3r2/1P3PPP/R4RK1 w - - 0 25"
+    },
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "f3",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "computed from attackers and defenders",
+     "fen": "7r/1b1kb1B1/p1n5/1p6/3p4/PB3r2/1P3PPP/R4RK1 w - - 0 25"
+    },
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "b3",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "computed from attackers and defenders",
+     "fen": "7r/1b1kb1B1/p1n5/1p6/3p4/PB3r2/1P3PPP/R4RK1 w - - 0 25"
+    },
+    {
+     "claim": {
+      "type": "material",
+      "side": "black",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "material balance -1 for White",
+     "fen": "7r/1b1kb1B1/p1n5/1p6/3p4/PB3r2/1P3PPP/R4RK1 w - - 0 25"
+    }
+   ],
+   "score": {
+    "checkable": 5,
+    "true": 5,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 407,
+   "seconds": 25.3
+  },
+  {
+   "condition": "grounded",
+   "game_id": "movw8h7M",
+   "url": "https://lichess.org/movw8h7M",
+   "ply": 51,
+   "side": "White",
+   "fen_before": "8/1b1kb1B1/p1n5/1p5r/3p4/PB3P2/1P3P1P/R4RK1 w - - 1 26",
+   "played": "f4",
+   "best": "Rad1",
+   "grade": "mistake",
+   "call_error": null,
+   "reply": "The move 26. f4 is a mistake that drops the evaluation from -1.31 to -2.90, whereas 26. Rad1 is the best move, maintaining a more stable position. By playing f4, White allows 26... Rh4, which creates immediate threats against the weak f3 pawn and the exposed king, leading to a significant win chance drop. In contrast, 26. Rad1 would have centralized the rook and kept the position complex, preventing Black from easily activating the rook to h4 with such decisive effect.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Rad1\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"advantage\",\n      \"side\": \"black\",\n      \"position\": \"before\"\n    }\n  ],\n  \"other_claims\": [\n    \"26. f4 is a mistake that drops the evaluation from -1.31 to -2.90.\",\n    \"26. Rad1 is the best move.\",\n    \"26. f4 allows 26... Rh4.\",\n    \"26... Rh4 creates immediate threats against the weak f3 pawn and the exposed king.\",\n    \"26... Rh4 leads to a significant win chance drop.\",\n    \"26. Rad1 centralizes the rook.\"\n  ]\n}\n```",
+   "commentary": "The move 26. f4 is a mistake that drops the evaluation from -1.31 to -2.90, whereas 26. Rad1 is the best move, maintaining a more stable position. By playing f4, White allows 26... Rh4, which creates immediate threats against the weak f3 pawn and the exposed king, leading to a significant win chance drop. In contrast, 26. Rad1 would have centralized the rook and kept the position complex, preventing Black from easily activating the rook to h4 with such decisive effect.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Rad1",
+     "position": "before"
+    },
+    {
+     "type": "advantage",
+     "side": "black",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "26. f4 is a mistake that drops the evaluation from -1.31 to -2.90.",
+    "26. Rad1 is the best move.",
+    "26. f4 allows 26... Rh4.",
+    "26... Rh4 creates immediate threats against the weak f3 pawn and the exposed king.",
+    "26... Rh4 leads to a significant win chance drop.",
+    "26. Rad1 centralizes the rook."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Rad1",
+      "position": "before"
+     },
+     "verdict": false,
+     "why": "engine top 2: ['Rfe1', 'Kh1']",
+     "fen": "8/1b1kb1B1/p1n5/1p5r/3p4/PB3P2/1P3P1P/R4RK1 w - - 1 26"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "black",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine -1.24 for White",
+     "fen": "8/1b1kb1B1/p1n5/1p5r/3p4/PB3P2/1P3P1P/R4RK1 w - - 1 26"
+    }
+   ],
+   "score": {
+    "checkable": 2,
+    "true": 1,
+    "false": 1,
+    "faithfulness": 0.5
+   },
+   "completion_tokens": 322,
+   "seconds": 22.2
+  },
+  {
+   "condition": "grounded",
+   "game_id": "movw8h7M",
+   "url": "https://lichess.org/movw8h7M",
+   "ply": 52,
+   "side": "Black",
+   "fen_before": "8/1b1kb1B1/p1n5/1p5r/3p1P2/PB6/1P3P1P/R4RK1 b - - 0 26",
+   "played": "Rh4",
+   "best": "Rh7",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "At move 26, Black’s `Rh4` is a blunder that squanders a winning advantage, whereas `Rh7` maintains pressure and prepares to trade active rooks. The engine’s preferred `Rh7` keeps the bishop on g7 under fire while improving Black’s coordination, avoiding the immediate tactical loss of the exchange. By playing `Rh4`, Black allows White to consolidate with `f3`, neutralizing the initiative and allowing White to eventually equalize and win. The position before `Rh4` shows Black up four pawns with a strong attack, but `Rh4` fails to exploit the hanging bishop on b3 or create decisive threats.\n\n```json\n{\n \"claims\": [\n  {\n   \"type\": \"best_move\",\n   \"move\": \"Rh7\",\n   \"position\": \"before\"\n  },\n  {\n   \"type\": \"advantage\",\n   \"side\": \"black\",\n   \"position\": \"before\"\n  },\n  {\n   \"type\": \"material\",\n   \"side\": \"black\",\n   \"position\": \"before\"\n  }\n ],\n \"other_claims\": [\n  \"Rh7 maintains pressure on the bishop on g7.\",\n  \"Rh4 allows White to play f3, neutralizing Black's initiative.\",\n  \"Black is up four pawns before playing Rh4.\",\n  \"White eventually equalizes and wins after Black's blunder.\"\n ]\n}\n```",
+   "commentary": "At move 26, Black’s `Rh4` is a blunder that squanders a winning advantage, whereas `Rh7` maintains pressure and prepares to trade active rooks. The engine’s preferred `Rh7` keeps the bishop on g7 under fire while improving Black’s coordination, avoiding the immediate tactical loss of the exchange. By playing `Rh4`, Black allows White to consolidate with `f3`, neutralizing the initiative and allowing White to eventually equalize and win. The position before `Rh4` shows Black up four pawns with a strong attack, but `Rh4` fails to exploit the hanging bishop on b3 or create decisive threats.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Rh7",
+     "position": "before"
+    },
+    {
+     "type": "advantage",
+     "side": "black",
+     "position": "before"
+    },
+    {
+     "type": "material",
+     "side": "black",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "Rh7 maintains pressure on the bishop on g7.",
+    "Rh4 allows White to play f3, neutralizing Black's initiative.",
+    "Black is up four pawns before playing Rh4.",
+    "White eventually equalizes and wins after Black's blunder."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Rh7",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Rh7', 'Rh4']",
+     "fen": "8/1b1kb1B1/p1n5/1p5r/3p1P2/PB6/1P3P1P/R4RK1 b - - 0 26"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "black",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine -2.95 for White",
+     "fen": "8/1b1kb1B1/p1n5/1p5r/3p1P2/PB6/1P3P1P/R4RK1 b - - 0 26"
+    },
+    {
+     "claim": {
+      "type": "material",
+      "side": "black",
+      "position": "before"
+     },
+     "verdict": false,
+     "why": "material balance +4 for White",
+     "fen": "8/1b1kb1B1/p1n5/1p5r/3p1P2/PB6/1P3P1P/R4RK1 b - - 0 26"
+    }
+   ],
+   "score": {
+    "checkable": 3,
+    "true": 2,
+    "false": 1,
+    "faithfulness": 0.667
+   },
+   "completion_tokens": 316,
+   "seconds": 20.0
+  },
+  {
+   "condition": "grounded",
+   "game_id": "dlymlJeF",
+   "url": "https://lichess.org/dlymlJeF",
+   "ply": 43,
+   "side": "White",
+   "fen_before": "2b2rk1/2q1npbp/4p1p1/2p1P2P/1nPp1PP1/2rP4/3NQ1B1/R1B1RNK1 w - - 1 22",
+   "played": "Ra3",
+   "best": "Ne4",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "White's 22. Ra3 is a critical blunder that squanders a +1.33 advantage, dropping the evaluation to -4.45. The engine identifies 22. Ne4 as the best move, which maintains the initiative and leads to a manageable advantage after 22... gxh5 23. Nfg3 hxg4 24. Bd2 Rxd3. By playing Ra3, White fails to utilize the active knight and allows Black to equalize or seize the counterplay. The move is particularly egregious given that White had checks available, including Ne8+, which were ignored in favor of a passive rook lift.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Ne4\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"mate_in_one\",\n      \"move\": \"Ne8+\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"mate_in_one\",\n      \"move\": \"h6+\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"advantage\",\n      \"side\": \"white\",\n      \"position\": \"before\"\n    }\n  ],\n  \"other_claims\": [\n    \"22. Ra3 causes a win chance drop of 0.915.\",\n    \"The engine line 22. Ne4 gxh5 23. Nfg3 hxg4 24. Bd2 Rxd3 keeps the advantage for White.\",\n    \"White had available checks Ne8+ and h6+ before the move.\"\n  ]\n}\n```",
+   "commentary": "White's 22. Ra3 is a critical blunder that squanders a +1.33 advantage, dropping the evaluation to -4.45. The engine identifies 22. Ne4 as the best move, which maintains the initiative and leads to a manageable advantage after 22... gxh5 23. Nfg3 hxg4 24. Bd2 Rxd3. By playing Ra3, White fails to utilize the active knight and allows Black to equalize or seize the counterplay. The move is particularly egregious given that White had checks available, including Ne8+, which were ignored in favor of a passive rook lift.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Ne4",
+     "position": "before"
+    },
+    {
+     "type": "mate_in_one",
+     "move": "Ne8+",
+     "position": "before"
+    },
+    {
+     "type": "mate_in_one",
+     "move": "h6+",
+     "position": "before"
+    },
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "22. Ra3 causes a win chance drop of 0.915.",
+    "The engine line 22. Ne4 gxh5 23. Nfg3 hxg4 24. Bd2 Rxd3 keeps the advantage for White.",
+    "White had available checks Ne8+ and h6+ before the move."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Ne4",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Ne4', 'Nb1']",
+     "fen": "2b2rk1/2q1npbp/4p1p1/2p1P2P/1nPp1PP1/2rP4/3NQ1B1/R1B1RNK1 w - - 1 22"
+    },
+    {
+     "claim": {
+      "type": "mate_in_one",
+      "move": "Ne8+",
+      "position": "before"
+     },
+     "verdict": false,
+     "why": "mates available: none",
+     "fen": "2b2rk1/2q1npbp/4p1p1/2p1P2P/1nPp1PP1/2rP4/3NQ1B1/R1B1RNK1 w - - 1 22"
+    },
+    {
+     "claim": {
+      "type": "mate_in_one",
+      "move": "h6+",
+      "position": "before"
+     },
+     "verdict": false,
+     "why": "mates available: none",
+     "fen": "2b2rk1/2q1npbp/4p1p1/2p1P2P/1nPp1PP1/2rP4/3NQ1B1/R1B1RNK1 w - - 1 22"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine +1.39 for White",
+     "fen": "2b2rk1/2q1npbp/4p1p1/2p1P2P/1nPp1PP1/2rP4/3NQ1B1/R1B1RNK1 w - - 1 22"
+    }
+   ],
+   "score": {
+    "checkable": 4,
+    "true": 2,
+    "false": 2,
+    "faithfulness": 0.5
+   },
+   "completion_tokens": 376,
+   "seconds": 33.0
+  },
+  {
+   "condition": "grounded",
+   "game_id": "dlymlJeF",
+   "url": "https://lichess.org/dlymlJeF",
+   "ply": 60,
+   "side": "Black",
+   "fen_before": "b5k1/4npbp/2q1p1p1/2B1P2P/2PpNPP1/8/3N2Q1/6K1 b - - 0 30",
+   "played": "Nc8",
+   "best": "Nd5",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "Black’s 30...Nc8 is a blunder that leaves the knight on e7 hanging and the pawn on d4 undefended, allowing White to consolidate. The engine’s recommendation, 30...Nd5, actively challenges White’s setup and maintains dynamic counterplay against the center. By retreating the knight to the rim, Black misses the opportunity to exploit the loose d4 pawn and the exposed e7 knight. This error shifts the evaluation from a negligible +0.02 to a decisive +2.34 in White’s favor.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"hanging\",\n      \"square\": \"e7\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"hanging\",\n      \"square\": \"d4\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Nd5\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"advantage\",\n      \"side\": \"white\",\n      \"position\": \"after\"\n    }\n  ],\n  \"other_claims\": [\n    \"After 30...Nd5, Black maintains dynamic counterplay against the center.\",\n    \"The move 30...Nc8 allows White to consolidate their advantage.\",\n    \"The evaluation shifts from +0.02 to +2.34 after the blunder.\"\n  ]\n}\n```",
+   "commentary": "Black’s 30...Nc8 is a blunder that leaves the knight on e7 hanging and the pawn on d4 undefended, allowing White to consolidate. The engine’s recommendation, 30...Nd5, actively challenges White’s setup and maintains dynamic counterplay against the center. By retreating the knight to the rim, Black misses the opportunity to exploit the loose d4 pawn and the exposed e7 knight. This error shifts the evaluation from a negligible +0.02 to a decisive +2.34 in White’s favor.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "hanging",
+     "square": "e7",
+     "position": "before"
+    },
+    {
+     "type": "hanging",
+     "square": "d4",
+     "position": "before"
+    },
+    {
+     "type": "best_move",
+     "move": "Nd5",
+     "position": "before"
+    },
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "after"
+    }
+   ],
+   "other_claims": [
+    "After 30...Nd5, Black maintains dynamic counterplay against the center.",
+    "The move 30...Nc8 allows White to consolidate their advantage.",
+    "The evaluation shifts from +0.02 to +2.34 after the blunder."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "e7",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "computed from attackers and defenders",
+     "fen": "b5k1/4npbp/2q1p1p1/2B1P2P/2PpNPP1/8/3N2Q1/6K1 b - - 0 30"
+    },
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "d4",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "computed from attackers and defenders",
+     "fen": "b5k1/4npbp/2q1p1p1/2B1P2P/2PpNPP1/8/3N2Q1/6K1 b - - 0 30"
+    },
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Nd5",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Nd5', 'Qxc5']",
+     "fen": "b5k1/4npbp/2q1p1p1/2B1P2P/2PpNPP1/8/3N2Q1/6K1 b - - 0 30"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "after"
+     },
+     "verdict": true,
+     "why": "engine +2.25 for White",
+     "fen": "b1n3k1/5pbp/2q1p1p1/2B1P2P/2PpNPP1/8/3N2Q1/6K1 w - - 1 31"
+    }
+   ],
+   "score": {
+    "checkable": 4,
+    "true": 4,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 333,
+   "seconds": 21.2
+  },
+  {
+   "condition": "grounded",
+   "game_id": "dlymlJeF",
+   "url": "https://lichess.org/dlymlJeF",
+   "ply": 68,
+   "side": "Black",
+   "fen_before": "2n2b2/5pkp/2b1pNp1/4P2P/2PBNPP1/8/8/6K1 b - - 1 34",
+   "played": "Bb4",
+   "best": "Bxe4",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "The engine evaluation indicates White is ahead on material at this moment. Black's move 34...Bb4 fails to address the tactical vulnerability of the knight on e4. The correct move is 34...Bxe4, which captures the hanging piece. This exchange neutralizes White's compensation and shifts the evaluation significantly.\n\n```json\n{\n \"claims\": [\n  {\n   \"type\": \"material\",\n   \"side\": \"white\",\n   \"position\": \"before\"\n  },\n  {\n   \"type\": \"hanging\",\n   \"square\": \"e4\",\n   \"position\": \"before\"\n  },\n  {\n   \"type\": \"best_move\",\n   \"move\": \"Bxe4\",\n   \"position\": \"before\"\n  }\n ],\n \"other_claims\": [\n  \"Black's move 34...Bb4 fails to address the tactical vulnerability of the knight on e4.\",\n  \"The correct move is 34...Bxe4, which captures the hanging piece.\",\n  \"This exchange neutralizes White's compensation and shifts the evaluation significantly.\"\n ]\n}\n```",
+   "commentary": "The engine evaluation indicates White is ahead on material at this moment. Black's move 34...Bb4 fails to address the tactical vulnerability of the knight on e4. The correct move is 34...Bxe4, which captures the hanging piece. This exchange neutralizes White's compensation and shifts the evaluation significantly.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "material",
+     "side": "white",
+     "position": "before"
+    },
+    {
+     "type": "hanging",
+     "square": "e4",
+     "position": "before"
+    },
+    {
+     "type": "best_move",
+     "move": "Bxe4",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "Black's move 34...Bb4 fails to address the tactical vulnerability of the knight on e4.",
+    "The correct move is 34...Bxe4, which captures the hanging piece.",
+    "This exchange neutralizes White's compensation and shifts the evaluation significantly."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "material",
+      "side": "white",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "material balance +1 for White",
+     "fen": "2n2b2/5pkp/2b1pNp1/4P2P/2PBNPP1/8/8/6K1 b - - 1 34"
+    },
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "e4",
+      "position": "before"
+     },
+     "verdict": false,
+     "why": "computed from attackers and defenders",
+     "fen": "2n2b2/5pkp/2b1pNp1/4P2P/2PBNPP1/8/8/6K1 b - - 1 34"
+    },
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Bxe4",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Bxe4', 'gxh5']",
+     "fen": "2n2b2/5pkp/2b1pNp1/4P2P/2PBNPP1/8/8/6K1 b - - 1 34"
+    }
+   ],
+   "score": {
+    "checkable": 3,
+    "true": 2,
+    "false": 1,
+    "faithfulness": 0.667
+   },
+   "completion_tokens": 251,
+   "seconds": 17.6
+  },
+  {
+   "condition": "grounded",
+   "game_id": "dlymlJeF",
+   "url": "https://lichess.org/dlymlJeF",
+   "ply": 69,
+   "side": "White",
+   "fen_before": "2n5/5pkp/2b1pNp1/4P2P/1bPBNPP1/8/8/6K1 w - - 2 35",
+   "played": "Bc5",
+   "best": "h6+",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "By playing 35. Bc5, White misses the forced mate and allows Black to survive, whereas 35. h6+ initiates a decisive attack. The engine's line 35. h6+ Kxh6 36. Nd6 Ne7 37. Nxf7+ Kg7 demonstrates a clear mating net that White fails to realize. Black's subsequent blunder 35... Ba5 allows the actual mate-in-4 sequence to commence, but the earlier inaccuracy squandered a much quicker win. The position before the move shows White has a material advantage and available checks, making the non-checking Bc5 a significant error.\n\n```json\n{\n \"claims\": [\n  {\n   \"type\": \"best_move\",\n   \"move\": \"h6+\"\n  },\n  {\n   \"type\": \"material\",\n   \"side\": \"white\",\n   \"position\": \"before\"\n  },\n  {\n   \"type\": \"in_check\",\n   \"position\": \"before\"\n  }\n ],\n \"other_claims\": [\n  \"35. Bc5 misses the forced mate-in-4 opportunity.\",\n  \"35. h6+ Kxh6 36. Nd6 Ne7 37. Nxf7+ Kg7 is the engine's best line.\",\n  \"35... Ba5 allows White to deliver mate in 4.\",\n  \"White had checks available, including Ne8+ and h6+, before playing Bc5.\"\n ]\n}\n```",
+   "commentary": "By playing 35. Bc5, White misses the forced mate and allows Black to survive, whereas 35. h6+ initiates a decisive attack. The engine's line 35. h6+ Kxh6 36. Nd6 Ne7 37. Nxf7+ Kg7 demonstrates a clear mating net that White fails to realize. Black's subsequent blunder 35... Ba5 allows the actual mate-in-4 sequence to commence, but the earlier inaccuracy squandered a much quicker win. The position before the move shows White has a material advantage and available checks, making the non-checking Bc5 a significant error.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "h6+",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "material",
+     "side": "white",
+     "position": "before"
+    },
+    {
+     "type": "in_check",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "35. Bc5 misses the forced mate-in-4 opportunity.",
+    "35. h6+ Kxh6 36. Nd6 Ne7 37. Nxf7+ Kg7 is the engine's best line.",
+    "35... Ba5 allows White to deliver mate in 4.",
+    "White had checks available, including Ne8+ and h6+, before playing Bc5."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "h6+",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine top 2: ['h6+', 'Nd6']",
+     "fen": "2n5/5pkp/2b1pNp1/4P2P/1bPBNPP1/8/8/6K1 w - - 2 35"
+    },
+    {
+     "claim": {
+      "type": "material",
+      "side": "white",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "material balance +1 for White",
+     "fen": "2n5/5pkp/2b1pNp1/4P2P/1bPBNPP1/8/8/6K1 w - - 2 35"
+    },
+    {
+     "claim": {
+      "type": "in_check",
+      "position": "before"
+     },
+     "verdict": false,
+     "why": "rules",
+     "fen": "2n5/5pkp/2b1pNp1/4P2P/1bPBNPP1/8/8/6K1 w - - 2 35"
+    }
+   ],
+   "score": {
+    "checkable": 3,
+    "true": 2,
+    "false": 1,
+    "faithfulness": 0.667
+   },
+   "completion_tokens": 339,
+   "seconds": 22.7
+  },
+  {
+   "condition": "grounded",
+   "game_id": "dlymlJeF",
+   "url": "https://lichess.org/dlymlJeF",
+   "ply": 70,
+   "side": "Black",
+   "fen_before": "2n5/5pkp/2b1pNp1/2B1P2P/1bP1NPP1/8/8/6K1 b - - 3 35",
+   "played": "Ba5",
+   "best": "Bxc5+",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "The move 35...Ba5 is a blunder that leaves the bishop on b4 hanging, whereas the engine’s 35...Bxc5+ wins the bishop and simplifies into a winning endgame. By playing 35...Ba5, Black allows the bishop to remain on b4 while White’s bishop on c5 is protected, missing the tactical opportunity to trade bishops. The engine line 35...Bxc5+ 36. Nxc5 Nb6 37. Nce4 Nxc4 demonstrates that Black maintains a decisive material and positional advantage after the exchange. In contrast, 35...Ba5 fails to address the hanging piece and blunders the advantage, leading to a forced mate.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"hanging\",\n      \"square\": \"b4\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Bxc5+\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"advantage\",\n      \"side\": \"white\",\n      \"position\": \"after\"\n    }\n  ],\n  \"other_claims\": [\n    \"35...Bxc5+ wins the bishop and simplifies into a winning endgame.\",\n    \"35...Ba5 leaves the bishop on b4 hanging.\",\n    \"The line 35...Bxc5+ 36. Nxc5 Nb6 37. Nce4 Nxc4 maintains a decisive advantage for Black.\",\n    \"35...Ba5 leads to a forced mate.\"\n  ]\n}\n```",
+   "commentary": "The move 35...Ba5 is a blunder that leaves the bishop on b4 hanging, whereas the engine’s 35...Bxc5+ wins the bishop and simplifies into a winning endgame. By playing 35...Ba5, Black allows the bishop to remain on b4 while White’s bishop on c5 is protected, missing the tactical opportunity to trade bishops. The engine line 35...Bxc5+ 36. Nxc5 Nb6 37. Nce4 Nxc4 demonstrates that Black maintains a decisive material and positional advantage after the exchange. In contrast, 35...Ba5 fails to address the hanging piece and blunders the advantage, leading to a forced mate.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "hanging",
+     "square": "b4",
+     "position": "before"
+    },
+    {
+     "type": "best_move",
+     "move": "Bxc5+",
+     "position": "before"
+    },
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "after"
+    }
+   ],
+   "other_claims": [
+    "35...Bxc5+ wins the bishop and simplifies into a winning endgame.",
+    "35...Ba5 leaves the bishop on b4 hanging.",
+    "The line 35...Bxc5+ 36. Nxc5 Nb6 37. Nce4 Nxc4 maintains a decisive advantage for Black.",
+    "35...Ba5 leads to a forced mate."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "b4",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "computed from attackers and defenders",
+     "fen": "2n5/5pkp/2b1pNp1/2B1P2P/1bP1NPP1/8/8/6K1 b - - 3 35"
+    },
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Bxc5+",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Bxc5+', 'gxh5']",
+     "fen": "2n5/5pkp/2b1pNp1/2B1P2P/1bP1NPP1/8/8/6K1 b - - 3 35"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "after"
+     },
+     "verdict": true,
+     "why": "engine +99.96 for White",
+     "fen": "2n5/5pkp/2b1pNp1/b1B1P2P/2P1NPP1/8/8/6K1 w - - 4 36"
+    }
+   ],
+   "score": {
+    "checkable": 3,
+    "true": 3,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 369,
+   "seconds": 24.2
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "ZRLfDc2e",
+   "url": "https://lichess.org/ZRLfDc2e",
+   "ply": 28,
+   "side": "Black",
+   "fen_before": "r1b1k2r/1pq1bp2/2pp1npp/p1nPp3/P1B1P2N/BPN4P/2P2PP1/R2QR1K1 b kq - 2 14",
+   "played": "Nxd5",
+   "best": "Nfd7",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "Nxd5 is a significant error because it allows White to recapture with $cxd5$, after which Black’s knight on d5 becomes a hanging piece on an open file with no adequate defense. The engine’s preferred move, $Nfd7$, instead retreats the knight to a safe square while maintaining control over central squares and preserving the structural integrity of Black’s position. By playing $Nxd5$, Black essentially blunders a piece for no compensation, handing White a decisive material advantage. In contrast, $Nfd7$ keeps the tension manageable and avoids immediate tactical disasters. This mistake transforms a roughly equal endgame into a lost one for Black.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Nfd7\"\n    },\n    {\n      \"type\": \"advantage\",\n      \"side\": \"white\"\n    },\n    {\n      \"type\": \"hanging\",\n      \"square\": \"d5\"\n    }\n  ],\n  \"other_claims\": [\n    \"White can recapture on d5 with the c-pawn.\",\n    \"The knight on d5 is undefended after the exchange.\",\n    \"Nfd7 retreats the knight to a safe square.\",\n    \"Nfd7 maintains control over central squares.\",\n    \"Nxd5 results in blundering a piece.\",\n    \"Nxd5 hands White a decisive material advantage.\"\n  ]\n}\n```",
+   "commentary": "Nxd5 is a significant error because it allows White to recapture with $cxd5$, after which Black’s knight on d5 becomes a hanging piece on an open file with no adequate defense. The engine’s preferred move, $Nfd7$, instead retreats the knight to a safe square while maintaining control over central squares and preserving the structural integrity of Black’s position. By playing $Nxd5$, Black essentially blunders a piece for no compensation, handing White a decisive material advantage. In contrast, $Nfd7$ keeps the tension manageable and avoids immediate tactical disasters. This mistake transforms a roughly equal endgame into a lost one for Black.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Nfd7",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "hanging",
+     "square": "d5",
+     "position": "before",
+     "position_defaulted": true
+    }
+   ],
+   "other_claims": [
+    "White can recapture on d5 with the c-pawn.",
+    "The knight on d5 is undefended after the exchange.",
+    "Nfd7 retreats the knight to a safe square.",
+    "Nfd7 maintains control over central squares.",
+    "Nxd5 results in blundering a piece.",
+    "Nxd5 hands White a decisive material advantage."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Nfd7",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Nfd7', 'Na6']",
+     "fen": "r1b1k2r/1pq1bp2/2pp1npp/p1nPp3/P1B1P2N/BPN4P/2P2PP1/R2QR1K1 b kq - 2 14"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine +1.32 for White",
+     "fen": "r1b1k2r/1pq1bp2/2pp1npp/p1nPp3/P1B1P2N/BPN4P/2P2PP1/R2QR1K1 b kq - 2 14"
+    },
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "d5",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": false,
+     "why": "computed from attackers and defenders",
+     "fen": "r1b1k2r/1pq1bp2/2pp1npp/p1nPp3/P1B1P2N/BPN4P/2P2PP1/R2QR1K1 b kq - 2 14"
+    }
+   ],
+   "score": {
+    "checkable": 3,
+    "true": 2,
+    "false": 1,
+    "faithfulness": 0.667
+   },
+   "completion_tokens": 321,
+   "seconds": 15.2
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "ZRLfDc2e",
+   "url": "https://lichess.org/ZRLfDc2e",
+   "ply": 34,
+   "side": "Black",
+   "fen_before": "r1b1k2r/1pq2p2/2pP2pp/p1p1p3/P1B4b/1PN4P/2P2PP1/R2QR1K1 b kq - 0 17",
+   "played": "Qd7",
+   "best": "Qd8",
+   "grade": "mistake",
+   "call_error": null,
+   "reply": "By playing `Qd7`, Black neglects the critical defensive resource required to maintain equilibrium, allowing White to consolidate their spatial advantage. The engine's preferred move `Qd8` is superior because it keeps the queen flexible and avoids potential tempo losses or tactical vulnerabilities associated with the d7 square. Specifically, `Qd7` may expose the queen to future harassment or fail to adequately control key central and diagonal squares compared to the more passive but solid `Qd8`. For a FIDE Master, recognizing that `Qd8` is the best move highlights the importance of piece safety and flexibility over apparent activity. Consequently, the deviation from the engine's top choice represents a subtle but significant loss of precision in position handling.\n\n```json\n{\n  \"claims\": [\n    {\"type\": \"best_move\", \"move\": \"Qd8\"}\n  ],\n  \"other_claims\": [\n    \"Black played Qd7.\",\n    \"Qd7 allows White to consolidate their spatial advantage.\",\n    \"Qd8 keeps the queen flexible.\",\n    \"Qd8 avoids potential tempo losses or tactical vulnerabilities associated with the d7 square.\",\n    \"Qd7 may expose the queen to future harassment.\",\n    \"Qd7 fails to adequately control key central and diagonal squares compared to Qd8.\",\n    \"Qd8 is the best move for Black in this position.\"\n  ]\n}\n```",
+   "commentary": "By playing `Qd7`, Black neglects the critical defensive resource required to maintain equilibrium, allowing White to consolidate their spatial advantage. The engine's preferred move `Qd8` is superior because it keeps the queen flexible and avoids potential tempo losses or tactical vulnerabilities associated with the d7 square. Specifically, `Qd7` may expose the queen to future harassment or fail to adequately control key central and diagonal squares compared to the more passive but solid `Qd8`. For a FIDE Master, recognizing that `Qd8` is the best move highlights the importance of piece safety and flexibility over apparent activity. Consequently, the deviation from the engine's top choice represents a subtle but significant loss of precision in position handling.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Qd8",
+     "position": "before",
+     "position_defaulted": true
+    }
+   ],
+   "other_claims": [
+    "Black played Qd7.",
+    "Qd7 allows White to consolidate their spatial advantage.",
+    "Qd8 keeps the queen flexible.",
+    "Qd8 avoids potential tempo losses or tactical vulnerabilities associated with the d7 square.",
+    "Qd7 may expose the queen to future harassment.",
+    "Qd7 fails to adequately control key central and diagonal squares compared to Qd8.",
+    "Qd8 is the best move for Black in this position."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Qd8",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Qd8', 'Qb6']",
+     "fen": "r1b1k2r/1pq2p2/2pP2pp/p1p1p3/P1B4b/1PN4P/2P2PP1/R2QR1K1 b kq - 0 17"
+    }
+   ],
+   "score": {
+    "checkable": 1,
+    "true": 1,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 299,
+   "seconds": 16.0
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "BcAhQn3U",
+   "url": "https://lichess.org/BcAhQn3U",
+   "ply": 33,
+   "side": "White",
+   "fen_before": "2rqr1k1/p4ppp/1pn2bb1/2pp4/3Pn1P1/1P2PN1P/PB1N1PB1/2RQR1K1 w - - 1 17",
+   "played": "Ba1",
+   "best": "Ne5",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "The move Ba1 is a passive retreat that fails to capitalize on the tactical vulnerabilities in the center. Specifically, it ignores the hanging knight on e5, which is undefended and attacked by Black's pieces. In contrast, the engine's best move Ne5 exploits this weakness by placing a piece directly on that vulnerable square, creating immediate threats. This active intervention improves White's position significantly compared to the passive bishop maneuver.\n\n```json\n{\n  \"claims\": [\n    {\"type\": \"hanging\", \"square\": \"e5\", \"position\": \"before\"}\n  ],\n  \"other_claims\": [\n    \"Ba1 is a passive retreat.\",\n    \"Ne5 is the engine's best move.\",\n    \"Ne5 places a piece on e5, creating immediate threats.\"\n  ]\n}\n```",
+   "commentary": "The move Ba1 is a passive retreat that fails to capitalize on the tactical vulnerabilities in the center. Specifically, it ignores the hanging knight on e5, which is undefended and attacked by Black's pieces. In contrast, the engine's best move Ne5 exploits this weakness by placing a piece directly on that vulnerable square, creating immediate threats. This active intervention improves White's position significantly compared to the passive bishop maneuver.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "hanging",
+     "square": "e5",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "Ba1 is a passive retreat.",
+    "Ne5 is the engine's best move.",
+    "Ne5 places a piece on e5, creating immediate threats."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "e5",
+      "position": "before"
+     },
+     "verdict": false,
+     "why": "no piece on e5",
+     "fen": "2rqr1k1/p4ppp/1pn2bb1/2pp4/3Pn1P1/1P2PN1P/PB1N1PB1/2RQR1K1 w - - 1 17"
+    }
+   ],
+   "score": {
+    "checkable": 1,
+    "true": 0,
+    "false": 1,
+    "faithfulness": 0.0
+   },
+   "completion_tokens": 174,
+   "seconds": 9.5
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "BcAhQn3U",
+   "url": "https://lichess.org/BcAhQn3U",
+   "ply": 60,
+   "side": "Black",
+   "fen_before": "2r1r1k1/p2R2p1/1p6/2p1p2b/4p2q/1P2P3/P2Q1PB1/1R3K2 b - - 1 30",
+   "played": "Bf3",
+   "best": "Rf8",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "Bf3 is a passive retreat that fails to address the immediate tactical vulnerability of the black rook on c8, which remains undefended and exposed to White's heavy pieces. The engine's recommendation, Rf8, actively defends the eighth rank and prepares to challenge White's dominant rook on d7, thereby neutralizing White's spatial advantage. By ignoring the threat to the c8 rook, Black allows White to maintain or increase their material and positional pressure without contest. This inaccuracy likely costs Black the initiative and leaves the position strategically inferior.\n\n```json\n{\n  \"claims\": [\n    {\"type\": \"hanging\", \"square\": \"c8\"},\n    {\"type\": \"best_move\", \"move\": \"Rf8\"},\n    {\"type\": \"advantage\", \"side\": \"white\"}\n  ],\n  \"other_claims\": [\n    \"Bf3 is a passive retreat.\",\n    \"The black rook on c8 is undefended and exposed.\",\n    \"The black rook on c8 is attacked by White's heavy pieces.\",\n    \"Rf8 actively defends the eighth rank.\",\n    \"Rf8 prepares to challenge White's rook on d7.\",\n    \"White has a spatial advantage.\",\n    \"Black's move allows White to maintain or increase their material and positional pressure.\",\n    \"Black's move leaves the position strategically inferior.\"\n  ]\n}\n```",
+   "commentary": "Bf3 is a passive retreat that fails to address the immediate tactical vulnerability of the black rook on c8, which remains undefended and exposed to White's heavy pieces. The engine's recommendation, Rf8, actively defends the eighth rank and prepares to challenge White's dominant rook on d7, thereby neutralizing White's spatial advantage. By ignoring the threat to the c8 rook, Black allows White to maintain or increase their material and positional pressure without contest. This inaccuracy likely costs Black the initiative and leaves the position strategically inferior.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "hanging",
+     "square": "c8",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "best_move",
+     "move": "Rf8",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "before",
+     "position_defaulted": true
+    }
+   ],
+   "other_claims": [
+    "Bf3 is a passive retreat.",
+    "The black rook on c8 is undefended and exposed.",
+    "The black rook on c8 is attacked by White's heavy pieces.",
+    "Rf8 actively defends the eighth rank.",
+    "Rf8 prepares to challenge White's rook on d7.",
+    "White has a spatial advantage.",
+    "Black's move allows White to maintain or increase their material and positional pressure.",
+    "Black's move leaves the position strategically inferior."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "c8",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": false,
+     "why": "computed from attackers and defenders",
+     "fen": "2r1r1k1/p2R2p1/1p6/2p1p2b/4p2q/1P2P3/P2Q1PB1/1R3K2 b - - 1 30"
+    },
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Rf8",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Rf8', 'Kh8']",
+     "fen": "2r1r1k1/p2R2p1/1p6/2p1p2b/4p2q/1P2P3/P2Q1PB1/1R3K2 b - - 1 30"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": false,
+     "why": "engine -5.69 for White",
+     "fen": "2r1r1k1/p2R2p1/1p6/2p1p2b/4p2q/1P2P3/P2Q1PB1/1R3K2 b - - 1 30"
+    }
+   ],
+   "score": {
+    "checkable": 3,
+    "true": 1,
+    "false": 2,
+    "faithfulness": 0.333
+   },
+   "completion_tokens": 303,
+   "seconds": 15.3
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "BcAhQn3U",
+   "url": "https://lichess.org/BcAhQn3U",
+   "ply": 63,
+   "side": "White",
+   "fen_before": "2r1r2k/p2R2p1/1p6/2pQp3/4p2q/1P2Pb2/P4PB1/1R3K2 w - - 4 32",
+   "played": "Qf7",
+   "best": "Bxf3",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "White’s choice of Qf7 completely overlooks the tactical vulnerability of the bishop on f3, which hangs undefended. The engine correctly identifies Bxf3 as the best move, removing a dangerous active piece and simplifying the position. By ignoring this threat, White allows Black to recover material and neutralize the attack. This oversight transforms a potentially winning advantage into a precarious situation where White must prove compensation. The failure to execute Bxf3 represents a significant misjudgment in prioritizing tactical security over positional pressure.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Bxf3\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"hanging\",\n      \"square\": \"f3\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"advantage\",\n      \"side\": \"white\",\n      \"position\": \"before\"\n    }\n  ],\n  \"other_claims\": [\n    \"Qf7 ignores the threat to the bishop on f3.\",\n    \"Bxf3 removes a dangerous active piece for Black.\",\n    \"Bxf3 simplifies the position.\",\n    \"Allowing Black to capture the bishop recovers material for Black.\",\n    \"White had a potentially winning advantage before the move.\"\n  ]\n}\n```",
+   "commentary": "White’s choice of Qf7 completely overlooks the tactical vulnerability of the bishop on f3, which hangs undefended. The engine correctly identifies Bxf3 as the best move, removing a dangerous active piece and simplifying the position. By ignoring this threat, White allows Black to recover material and neutralize the attack. This oversight transforms a potentially winning advantage into a precarious situation where White must prove compensation. The failure to execute Bxf3 represents a significant misjudgment in prioritizing tactical security over positional pressure.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Bxf3",
+     "position": "before"
+    },
+    {
+     "type": "hanging",
+     "square": "f3",
+     "position": "before"
+    },
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "Qf7 ignores the threat to the bishop on f3.",
+    "Bxf3 removes a dangerous active piece for Black.",
+    "Bxf3 simplifies the position.",
+    "Allowing Black to capture the bishop recovers material for Black.",
+    "White had a potentially winning advantage before the move."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Bxf3",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Bxf3', 'Qb7']",
+     "fen": "2r1r2k/p2R2p1/1p6/2pQp3/4p2q/1P2Pb2/P4PB1/1R3K2 w - - 4 32"
+    },
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "f3",
+      "position": "before"
+     },
+     "verdict": false,
+     "why": "computed from attackers and defenders",
+     "fen": "2r1r2k/p2R2p1/1p6/2pQp3/4p2q/1P2Pb2/P4PB1/1R3K2 w - - 4 32"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "before"
+     },
+     "verdict": false,
+     "why": "engine -1.58 for White",
+     "fen": "2r1r2k/p2R2p1/1p6/2pQp3/4p2q/1P2Pb2/P4PB1/1R3K2 w - - 4 32"
+    }
+   ],
+   "score": {
+    "checkable": 3,
+    "true": 1,
+    "false": 2,
+    "faithfulness": 0.333
+   },
+   "completion_tokens": 300,
+   "seconds": 14.1
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "BcAhQn3U",
+   "url": "https://lichess.org/BcAhQn3U",
+   "ply": 70,
+   "side": "Black",
+   "fen_before": "2r2r1k/p2R2p1/1p6/2p1p3/2Q3q1/1P2Pp2/P4P2/1R2K3 b - - 3 35",
+   "played": "Qxc4",
+   "best": "Qxd7",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "Black's move Qxc4 is a critical error that fails to address the tactical threat to the queen on c4. By capturing the pawn, Black leaves the queen vulnerable to the rook on d7, which is defended by the queen on c4 in the original position but becomes undefended after the capture. The engine's best move, Qxd7, is superior because it eliminates the active white rook while maintaining the queen's safety. This exchange simplifies the position favorably for Black, avoiding the loss of material that occurs after Qxc4.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Qxd7\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"material\",\n      \"side\": \"white\",\n      \"position\": \"after\"\n    }\n  ],\n  \"other_claims\": [\n    \"Qxc4 allows the white rook on d7 to capture the black queen on c4.\",\n    \"Qxd7 removes the white rook from the board.\",\n    \"Qxd7 maintains the black queen's safety.\"\n  ]\n}\n```",
+   "commentary": "Black's move Qxc4 is a critical error that fails to address the tactical threat to the queen on c4. By capturing the pawn, Black leaves the queen vulnerable to the rook on d7, which is defended by the queen on c4 in the original position but becomes undefended after the capture. The engine's best move, Qxd7, is superior because it eliminates the active white rook while maintaining the queen's safety. This exchange simplifies the position favorably for Black, avoiding the loss of material that occurs after Qxc4.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Qxd7",
+     "position": "before"
+    },
+    {
+     "type": "material",
+     "side": "white",
+     "position": "after"
+    }
+   ],
+   "other_claims": [
+    "Qxc4 allows the white rook on d7 to capture the black queen on c4.",
+    "Qxd7 removes the white rook from the board.",
+    "Qxd7 maintains the black queen's safety."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Qxd7",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Qxd7', 'Qg1+']",
+     "fen": "2r2r1k/p2R2p1/1p6/2p1p3/2Q3q1/1P2Pp2/P4P2/1R2K3 b - - 3 35"
+    },
+    {
+     "claim": {
+      "type": "material",
+      "side": "white",
+      "position": "after"
+     },
+     "verdict": false,
+     "why": "material balance -11 for White",
+     "fen": "2r2r1k/p2R2p1/1p6/2p1p3/2q5/1P2Pp2/P4P2/1R2K3 w - - 0 36"
+    }
+   ],
+   "score": {
+    "checkable": 2,
+    "true": 1,
+    "false": 1,
+    "faithfulness": 0.5
+   },
+   "completion_tokens": 257,
+   "seconds": 13.1
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "BcAhQn3U",
+   "url": "https://lichess.org/BcAhQn3U",
+   "ply": 85,
+   "side": "White",
+   "fen_before": "8/7k/1R6/2p1pr2/2P3p1/4Pp2/P4P2/4K3 w - - 0 43",
+   "played": "a4",
+   "best": "Kf1",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "White's move a4 is a passive pawn push that fails to address the immediate tactical vulnerability of the King on e1. The engine's recommendation, Kf1, is the best move because it places the King in a safer corner, away from the open files and potential checks. By playing a4, White ignores the fact that the King is exposed and potentially hanging if Black can generate a forcing sequence, although in this specific static position, the King is not technically hanging but lacks safety. Kf1 improves the King's position significantly, reducing the risk of back-rank mates or infiltration by Black's rook on e5. This move demonstrates superior king safety principles compared to the aimless pawn move.\n\n```json\n{\n\"claims\": [\n{\"type\": \"best_move\", \"move\": \"Kf1\"}\n],\n\"other_claims\": [\n\"White played a4.\",\n\"The engine's best move was Kf1.\",\n\"a4 is a passive pawn push.\",\n\"a4 fails to address the King's safety on e1.\",\n\"Kf1 places the King in a safer corner.\",\n\"Kf1 moves the King away from open files and potential checks.\",\n\"Playing a4 ignores the King's exposure.\",\n\"The King on e1 is not technically hanging in the static position.\",\n\"Kf1 reduces the risk of back-rank mates or infiltration by Black's rook on e5.\",\n\"Kf1 demonstrates superior king safety principles compared to a4.\"\n]\n}\n```",
+   "commentary": "White's move a4 is a passive pawn push that fails to address the immediate tactical vulnerability of the King on e1. The engine's recommendation, Kf1, is the best move because it places the King in a safer corner, away from the open files and potential checks. By playing a4, White ignores the fact that the King is exposed and potentially hanging if Black can generate a forcing sequence, although in this specific static position, the King is not technically hanging but lacks safety. Kf1 improves the King's position significantly, reducing the risk of back-rank mates or infiltration by Black's rook on e5. This move demonstrates superior king safety principles compared to the aimless pawn move.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Kf1",
+     "position": "before",
+     "position_defaulted": true
+    }
+   ],
+   "other_claims": [
+    "White played a4.",
+    "The engine's best move was Kf1.",
+    "a4 is a passive pawn push.",
+    "a4 fails to address the King's safety on e1.",
+    "Kf1 places the King in a safer corner.",
+    "Kf1 moves the King away from open files and potential checks.",
+    "Playing a4 ignores the King's exposure.",
+    "The King on e1 is not technically hanging in the static position.",
+    "Kf1 reduces the risk of back-rank mates or infiltration by Black's rook on e5.",
+    "Kf1 demonstrates superior king safety principles compared to a4."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Kf1",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Kf1', 'Rb7+']",
+     "fen": "8/7k/1R6/2p1pr2/2P3p1/4Pp2/P4P2/4K3 w - - 0 43"
+    }
+   ],
+   "score": {
+    "checkable": 1,
+    "true": 1,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 320,
+   "seconds": 15.4
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "BVzBEglH",
+   "url": "https://lichess.org/BVzBEglH",
+   "ply": 64,
+   "side": "Black",
+   "fen_before": "1r6/4k1pp/1rBn1p2/8/p4P2/4PK2/1PRR2PP/8 b - - 2 32",
+   "played": "a3",
+   "best": "Rb4",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "Black’s move `...a3` is a positional error that fails to challenge White’s active piece placement. The engine’s best move, `...Rb4`, correctly targets the weak pawn on `a4`, which is currently hanging and undefended. By playing `...a3`, Black allows White to maintain pressure, whereas `...Rb4` would immediately exploit the lack of defense on that square. This correction utilizes the rook’s range to attack a vulnerable target rather than making a minor pawn push.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"hanging\",\n      \"square\": \"a4\"\n    },\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Rb4\"\n    }\n  ],\n  \"other_claims\": [\n    \"The move ...a3 fails to challenge White's piece placement.\",\n    \"The engine's move ...Rb4 targets the pawn on a4.\",\n    \"The pawn on a4 is undefended.\"\n  ]\n}\n```",
+   "commentary": "Black’s move `...a3` is a positional error that fails to challenge White’s active piece placement. The engine’s best move, `...Rb4`, correctly targets the weak pawn on `a4`, which is currently hanging and undefended. By playing `...a3`, Black allows White to maintain pressure, whereas `...Rb4` would immediately exploit the lack of defense on that square. This correction utilizes the rook’s range to attack a vulnerable target rather than making a minor pawn push.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "hanging",
+     "square": "a4",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "best_move",
+     "move": "Rb4",
+     "position": "before",
+     "position_defaulted": true
+    }
+   ],
+   "other_claims": [
+    "The move ...a3 fails to challenge White's piece placement.",
+    "The engine's move ...Rb4 targets the pawn on a4.",
+    "The pawn on a4 is undefended."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "a4",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "computed from attackers and defenders",
+     "fen": "1r6/4k1pp/1rBn1p2/8/p4P2/4PK2/1PRR2PP/8 b - - 2 32"
+    },
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Rb4",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Rb4', 'Ra6']",
+     "fen": "1r6/4k1pp/1rBn1p2/8/p4P2/4PK2/1PRR2PP/8 b - - 2 32"
+    }
+   ],
+   "score": {
+    "checkable": 2,
+    "true": 2,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 230,
+   "seconds": 6.5
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "BVzBEglH",
+   "url": "https://lichess.org/BVzBEglH",
+   "ply": 79,
+   "side": "White",
+   "fen_before": "1r3k2/3R2pp/1n3p2/8/P4P2/3B1K2/6PP/8 w - - 3 40",
+   "played": "Rd6",
+   "best": "Ra7",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "The move 1. Rd6 is a significant error as it abandons the critical a7-square, allowing Black's rook to activate with 1... Rxa7. By playing 1. Ra7!, White would have maintained a firm grip on the seventh rank, preventing the black rook from becoming active and keeping pressure on Black's pawn structure. This passive placement of the rook on d6 fails to capitalize on White's positional advantages and material edge, which the engine confirms remains superior for White. The missed opportunity to dominate the seventh rank represents a key strategic oversight in this endgame phase.\n\n```json\n{\n  \"claims\": [\n    {\"type\": \"best_move\", \"move\": \"Ra7\", \"position\": \"before\"},\n    {\"type\": \"advantage\", \"side\": \"white\", \"position\": \"before\"},\n    {\"type\": \"material\", \"side\": \"white\", \"position\": \"before\"}\n  ],\n  \"other_claims\": [\n    \"The move 1. Rd6 allows the black rook to capture on a7.\",\n    \"Playing 1. Ra7 would have controlled the seventh rank.\",\n    \"Controlling the seventh rank prevents the black rook from activating.\",\n    \"White has a material advantage in the position.\",\n    \"White has a positional advantage due to the potential to dominate the seventh rank.\"\n  ]\n}\n```",
+   "commentary": "The move 1. Rd6 is a significant error as it abandons the critical a7-square, allowing Black's rook to activate with 1... Rxa7. By playing 1. Ra7!, White would have maintained a firm grip on the seventh rank, preventing the black rook from becoming active and keeping pressure on Black's pawn structure. This passive placement of the rook on d6 fails to capitalize on White's positional advantages and material edge, which the engine confirms remains superior for White. The missed opportunity to dominate the seventh rank represents a key strategic oversight in this endgame phase.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Ra7",
+     "position": "before"
+    },
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "before"
+    },
+    {
+     "type": "material",
+     "side": "white",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "The move 1. Rd6 allows the black rook to capture on a7.",
+    "Playing 1. Ra7 would have controlled the seventh rank.",
+    "Controlling the seventh rank prevents the black rook from activating.",
+    "White has a material advantage in the position.",
+    "White has a positional advantage due to the potential to dominate the seventh rank."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Ra7",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Ra7', 'Rd4']",
+     "fen": "1r3k2/3R2pp/1n3p2/8/P4P2/3B1K2/6PP/8 w - - 3 40"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine +4.17 for White",
+     "fen": "1r3k2/3R2pp/1n3p2/8/P4P2/3B1K2/6PP/8 w - - 3 40"
+    },
+    {
+     "claim": {
+      "type": "material",
+      "side": "white",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "material balance +1 for White",
+     "fen": "1r3k2/3R2pp/1n3p2/8/P4P2/3B1K2/6PP/8 w - - 3 40"
+    }
+   ],
+   "score": {
+    "checkable": 3,
+    "true": 3,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 299,
+   "seconds": 8.0
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "BVzBEglH",
+   "url": "https://lichess.org/BVzBEglH",
+   "ply": 94,
+   "side": "Black",
+   "fen_before": "8/3nk1p1/2R2pB1/7P/5PK1/6P1/1r6/8 b - - 0 47",
+   "played": "Nf8",
+   "best": "Rb7",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "The move ...Nf8 is a passive retreat that fails to address the critical vulnerability of the rook on b2. By moving the knight, Black allows White to maintain pressure without contesting the second rank or the open files effectively. The engine's preferred move, ...Rb7, places the rook on a more active square where it defends the seventh rank and prepares to challenge White's control. This move improves Black's coordination and prevents immediate tactical exploits against the back rank or the weak pawns. Ultimately, ...Nf8 misses the opportunity to create counterplay, leaving Black in a strictly defensive and inferior position.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Rb7\",\n      \"position\": \"before\"\n    }\n  ],\n  \"other_claims\": [\n    \"The move ...Nf8 is a passive retreat.\",\n    \"...Nf8 fails to address the vulnerability of the rook on b2.\",\n    \"...Nf8 allows White to maintain pressure without contesting the second rank or open files.\",\n    \"...Rb7 places the rook on a more active square defending the seventh rank.\",\n    \"...Rb7 prepares to challenge White's control.\",\n    \"...Nf8 misses the opportunity to create counterplay.\",\n    \"Black is in a strictly defensive and inferior position after ...Nf8.\"\n  ]\n}\n```",
+   "commentary": "The move ...Nf8 is a passive retreat that fails to address the critical vulnerability of the rook on b2. By moving the knight, Black allows White to maintain pressure without contesting the second rank or the open files effectively. The engine's preferred move, ...Rb7, places the rook on a more active square where it defends the seventh rank and prepares to challenge White's control. This move improves Black's coordination and prevents immediate tactical exploits against the back rank or the weak pawns. Ultimately, ...Nf8 misses the opportunity to create counterplay, leaving Black in a strictly defensive and inferior position.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Rb7",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "The move ...Nf8 is a passive retreat.",
+    "...Nf8 fails to address the vulnerability of the rook on b2.",
+    "...Nf8 allows White to maintain pressure without contesting the second rank or open files.",
+    "...Rb7 places the rook on a more active square defending the seventh rank.",
+    "...Rb7 prepares to challenge White's control.",
+    "...Nf8 misses the opportunity to create counterplay.",
+    "Black is in a strictly defensive and inferior position after ...Nf8."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Rb7",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Rb7', 'Ra2']",
+     "fen": "8/3nk1p1/2R2pB1/7P/5PK1/6P1/1r6/8 b - - 0 47"
+    }
+   ],
+   "score": {
+    "checkable": 1,
+    "true": 1,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 309,
+   "seconds": 12.9
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "BVzBEglH",
+   "url": "https://lichess.org/BVzBEglH",
+   "ply": 105,
+   "side": "White",
+   "fen_before": "8/3n1R2/3k1pBP/5P2/6K1/6P1/8/1r6 w - - 3 53",
+   "played": "h7",
+   "best": "Rxd7+",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "White's choice of 1. h7 is a significant error because it misses the immediate tactical win available with 1. Rxd7+. By playing 1. h7, White fails to capture the undefended knight on d7, allowing Black to maintain material equality and defensive resources. In contrast, the engine's recommended 1. Rxd7+ wins a full piece by capturing the hanging knight on d7 while simultaneously delivering check to the black king. This move exploits the fact that the knight is attacked and undefended, securing a decisive material advantage for White. The loss of this piece likely shifts the evaluation from a win for White to a drawn or lost position depending on subsequent play.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Rxd7+\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"hanging\",\n      \"square\": \"d7\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"advantage\",\n      \"side\": \"white\",\n      \"position\": \"after\"\n    },\n    {\n      \"type\": \"material\",\n      \"side\": \"white\",\n      \"position\": \"after\"\n    }\n  ],\n  \"other_claims\": [\n    \"White played h7.\",\n    \"The knight on d7 is undefended.\",\n    \"1. Rxd7+ captures the knight on d7.\",\n    \"1. Rxd7+ delivers check to the black king.\",\n    \"1. Rxd7+ wins a full piece for White.\"\n  ]\n}\n```",
+   "commentary": "White's choice of 1. h7 is a significant error because it misses the immediate tactical win available with 1. Rxd7+. By playing 1. h7, White fails to capture the undefended knight on d7, allowing Black to maintain material equality and defensive resources. In contrast, the engine's recommended 1. Rxd7+ wins a full piece by capturing the hanging knight on d7 while simultaneously delivering check to the black king. This move exploits the fact that the knight is attacked and undefended, securing a decisive material advantage for White. The loss of this piece likely shifts the evaluation from a win for White to a drawn or lost position depending on subsequent play.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Rxd7+",
+     "position": "before"
+    },
+    {
+     "type": "hanging",
+     "square": "d7",
+     "position": "before"
+    },
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "after"
+    },
+    {
+     "type": "material",
+     "side": "white",
+     "position": "after"
+    }
+   ],
+   "other_claims": [
+    "White played h7.",
+    "The knight on d7 is undefended.",
+    "1. Rxd7+ captures the knight on d7.",
+    "1. Rxd7+ delivers check to the black king.",
+    "1. Rxd7+ wins a full piece for White."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Rxd7+",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Rxd7+', 'Kf4']",
+     "fen": "8/3n1R2/3k1pBP/5P2/6K1/6P1/8/1r6 w - - 3 53"
+    },
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "d7",
+      "position": "before"
+     },
+     "verdict": false,
+     "why": "computed from attackers and defenders",
+     "fen": "8/3n1R2/3k1pBP/5P2/6K1/6P1/8/1r6 w - - 3 53"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "after"
+     },
+     "verdict": false,
+     "why": "engine +0.00 for White",
+     "fen": "8/3n1R1P/3k1pB1/5P2/6K1/6P1/8/1r6 b - - 0 53"
+    },
+    {
+     "claim": {
+      "type": "material",
+      "side": "white",
+      "position": "after"
+     },
+     "verdict": true,
+     "why": "material balance +2 for White",
+     "fen": "8/3n1R1P/3k1pB1/5P2/6K1/6P1/8/1r6 b - - 0 53"
+    }
+   ],
+   "score": {
+    "checkable": 4,
+    "true": 2,
+    "false": 2,
+    "faithfulness": 0.5
+   },
+   "completion_tokens": 365,
+   "seconds": 15.5
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "BVzBEglH",
+   "url": "https://lichess.org/BVzBEglH",
+   "ply": 152,
+   "side": "Black",
+   "fen_before": "8/6kP/6B1/5PK1/8/8/8/5r2 b - - 8 76",
+   "played": "Rxf5+",
+   "best": "Rg1+",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "Rxf5+ was a positional error because it allowed White to maintain a solid defensive structure without facing immediate threats. The engine's best move, Rg1+, utilizes a discovered check to disrupt White's king safety and coordinate with Black's remaining pieces. This forcing move creates concrete tactical problems that the passive capture fails to generate. By checking from the first rank, Black increases the pressure on White's limited resources.\n\n```json\n{\n  \"claims\": [\n    {\"type\": \"best_move\", \"move\": \"Rg1+\"},\n    {\"type\": \"position\": \"before\"}\n  ],\n  \"other_claims\": [\n    \"Rxf5+ allows White to maintain a solid defensive structure.\",\n    \"Rg1+ utilizes a discovered check to disrupt White's king safety.\",\n    \"Rg1+ creates concrete tactical problems that Rxf5+ fails to generate.\",\n    \"White has limited resources after Rg1+.\"\n  ]\n}\n```",
+   "commentary": "Rxf5+ was a positional error because it allowed White to maintain a solid defensive structure without facing immediate threats. The engine's best move, Rg1+, utilizes a discovered check to disrupt White's king safety and coordinate with Black's remaining pieces. This forcing move creates concrete tactical problems that the passive capture fails to generate. By checking from the first rank, Black increases the pressure on White's limited resources.",
+   "parse_error": "JSON block does not parse",
+   "claims": [],
+   "other_claims": [],
+   "results": [],
+   "score": {
+    "checkable": 0,
+    "true": 0,
+    "false": 0,
+    "faithfulness": null
+   },
+   "completion_tokens": 209,
+   "seconds": 9.2
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "movw8h7M",
+   "url": "https://lichess.org/movw8h7M",
+   "ply": 36,
+   "side": "Black",
+   "fen_before": "r2q2k1/1b2b1p1/p1n2r1p/1p1p4/8/P2Q1N2/1PB2PPP/R1B2RK1 b - - 1 18",
+   "played": "d4",
+   "best": "Bc8",
+   "grade": "mistake",
+   "call_error": null,
+   "reply": "The move ...d4 is a significant error because it leaves the pawn on d4 hanging and undefended against White's minor pieces. By advancing the pawn, Black fails to address the immediate tactical vulnerability that White can exploit to win material. The engine's preferred response, ...Bc8, is a precise retreat that preserves the bishop's activity while avoiding unnecessary structural weaknesses or tactical traps. This maneuver keeps Black's position solid and maintains counterplay, whereas the pawn push simplifies the position in Black's favor by giving White a free target. Ultimately, ...d4 cedes the initiative and allows White to consolidate a clear advantage through material gain or improved piece coordination.\n\n```json\n{\n\"claims\": [\n{\"type\": \"hanging\", \"square\": \"d4\"},\n{\"type\": \"best_move\", \"move\": \"Bc8\"},\n{\"type\": \"advantage\", \"side\": \"white\"}\n],\n\"other_claims\": [\n\"Black played d4.\",\n\"The engine's best move was Bc8.\"\n]\n}\n```",
+   "commentary": "The move ...d4 is a significant error because it leaves the pawn on d4 hanging and undefended against White's minor pieces. By advancing the pawn, Black fails to address the immediate tactical vulnerability that White can exploit to win material. The engine's preferred response, ...Bc8, is a precise retreat that preserves the bishop's activity while avoiding unnecessary structural weaknesses or tactical traps. This maneuver keeps Black's position solid and maintains counterplay, whereas the pawn push simplifies the position in Black's favor by giving White a free target. Ultimately, ...d4 cedes the initiative and allows White to consolidate a clear advantage through material gain or improved piece coordination.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "hanging",
+     "square": "d4",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "best_move",
+     "move": "Bc8",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "before",
+     "position_defaulted": true
+    }
+   ],
+   "other_claims": [
+    "Black played d4.",
+    "The engine's best move was Bc8."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "d4",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": false,
+     "why": "no piece on d4",
+     "fen": "r2q2k1/1b2b1p1/p1n2r1p/1p1p4/8/P2Q1N2/1PB2PPP/R1B2RK1 b - - 1 18"
+    },
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Bc8",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Bc8', 'Rxf3']",
+     "fen": "r2q2k1/1b2b1p1/p1n2r1p/1p1p4/8/P2Q1N2/1PB2PPP/R1B2RK1 b - - 1 18"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine +2.62 for White",
+     "fen": "r2q2k1/1b2b1p1/p1n2r1p/1p1p4/8/P2Q1N2/1PB2PPP/R1B2RK1 b - - 1 18"
+    }
+   ],
+   "score": {
+    "checkable": 3,
+    "true": 2,
+    "false": 1,
+    "faithfulness": 0.667
+   },
+   "completion_tokens": 223,
+   "seconds": 11.3
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "movw8h7M",
+   "url": "https://lichess.org/movw8h7M",
+   "ply": 45,
+   "side": "White",
+   "fen_before": "r6q/1b1kb1Q1/p1n2r1B/1p6/3p4/PB3N2/1P3PPP/R4RK1 w - - 1 23",
+   "played": "Qxh8",
+   "best": "Qg4+",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "White's choice of Qxh8 misses the tactical opportunity presented by the exposed black king. By playing Qg4+, White would have delivered a check that forces immediate defensive concessions or leads to a decisive material gain. The move Qxh8, while capturing a rook, fails to capitalize on the tactical vulnerability and allows Black to consolidate. The engine's recommendation highlights that initiative and forcing moves are superior to simple piece captures in this specific position.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Qg4+\"\n    },\n    {\n      \"type\": \"position\",\n      \"value\": \"before\"\n    },\n    {\n      \"type\": \"position\",\n      \"value\": \"after\"\n    }\n  ],\n  \"other_claims\": [\n    \"White's move Qxh8 captures a rook.\",\n    \"The engine recommends Qg4+ as the best move.\",\n    \"Qg4+ delivers a check to the black king.\",\n    \"Qxh8 fails to capitalize on the tactical vulnerability.\",\n    \"Qg4+ forces immediate defensive concessions or leads to decisive material gain.\",\n    \"White is ahead on material after Qxh8.\"\n  ]\n}\n```",
+   "commentary": "White's choice of Qxh8 misses the tactical opportunity presented by the exposed black king. By playing Qg4+, White would have delivered a check that forces immediate defensive concessions or leads to a decisive material gain. The move Qxh8, while capturing a rook, fails to capitalize on the tactical vulnerability and allows Black to consolidate. The engine's recommendation highlights that initiative and forcing moves are superior to simple piece captures in this specific position.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Qg4+",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "position",
+     "value": "before",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "position",
+     "value": "after",
+     "position": "before",
+     "position_defaulted": true
+    }
+   ],
+   "other_claims": [
+    "White's move Qxh8 captures a rook.",
+    "The engine recommends Qg4+ as the best move.",
+    "Qg4+ delivers a check to the black king.",
+    "Qxh8 fails to capitalize on the tactical vulnerability.",
+    "Qg4+ forces immediate defensive concessions or leads to decisive material gain.",
+    "White is ahead on material after Qxh8."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Qg4+",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Qg4+', 'Qxh8']",
+     "fen": "r6q/1b1kb1Q1/p1n2r1B/1p6/3p4/PB3N2/1P3PPP/R4RK1 w - - 1 23"
+    },
+    {
+     "claim": {
+      "type": "position",
+      "value": "before",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": null,
+     "why": "unknown claim type 'position'",
+     "fen": "r6q/1b1kb1Q1/p1n2r1B/1p6/3p4/PB3N2/1P3PPP/R4RK1 w - - 1 23"
+    },
+    {
+     "claim": {
+      "type": "position",
+      "value": "after",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": null,
+     "why": "unknown claim type 'position'",
+     "fen": "r6q/1b1kb1Q1/p1n2r1B/1p6/3p4/PB3N2/1P3PPP/R4RK1 w - - 1 23"
+    }
+   ],
+   "score": {
+    "checkable": 1,
+    "true": 1,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 282,
+   "seconds": 13.3
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "movw8h7M",
+   "url": "https://lichess.org/movw8h7M",
+   "ply": 49,
+   "side": "White",
+   "fen_before": "7r/1b1kb1B1/p1n5/1p6/3p4/PB3r2/1P3PPP/R4RK1 w - - 0 25",
+   "played": "gxf3",
+   "best": "Bd5",
+   "grade": "mistake",
+   "call_error": null,
+   "reply": "White's move gxf3 is a mistake because it fails to utilize the strong outpost on d5. By playing Bd5, White would have placed the bishop on a square that is both safe and highly active, threatening key weaknesses in Black's camp. The engine's suggestion improves White's piece coordination and maintains a positional advantage. In contrast, gxf3 simplifies the position unnecessarily and allows Black to consolidate their structure.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Bd5\",\n      \"position\": \"before\"\n    }\n  ],\n  \"other_claims\": [\n    \"The move gxf3 fails to utilize the strong outpost on d5.\",\n    \"Bd5 places the bishop on a safe and highly active square.\",\n    \"Bd5 threatens key weaknesses in Black's camp.\",\n    \"gxf3 simplifies the position unnecessarily.\",\n    \"gxf3 allows Black to consolidate their structure.\"\n  ]\n}\n```",
+   "commentary": "White's move gxf3 is a mistake because it fails to utilize the strong outpost on d5. By playing Bd5, White would have placed the bishop on a square that is both safe and highly active, threatening key weaknesses in Black's camp. The engine's suggestion improves White's piece coordination and maintains a positional advantage. In contrast, gxf3 simplifies the position unnecessarily and allows Black to consolidate their structure.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Bd5",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "The move gxf3 fails to utilize the strong outpost on d5.",
+    "Bd5 places the bishop on a safe and highly active square.",
+    "Bd5 threatens key weaknesses in Black's camp.",
+    "gxf3 simplifies the position unnecessarily.",
+    "gxf3 allows Black to consolidate their structure."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Bd5",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Bd5', 'Bd1']",
+     "fen": "7r/1b1kb1B1/p1n5/1p6/3p4/PB3r2/1P3PPP/R4RK1 w - - 0 25"
+    }
+   ],
+   "score": {
+    "checkable": 1,
+    "true": 1,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 222,
+   "seconds": 10.6
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "movw8h7M",
+   "url": "https://lichess.org/movw8h7M",
+   "ply": 51,
+   "side": "White",
+   "fen_before": "8/1b1kb1B1/p1n5/1p5r/3p4/PB3P2/1P3P1P/R4RK1 w - - 1 26",
+   "played": "f4",
+   "best": "Rad1",
+   "grade": "mistake",
+   "call_error": null,
+   "reply": "White's choice of f4 is a strategic error that unnecessarily weakens the king's shelter and fails to address the tactical vulnerability of the Bishop on g7. This piece is currently hanging, as it is attacked by Black's Rook on h5 and has no defenders, meaning White risks losing significant material for no compensation. The engine's recommendation, Rad1, is superior because it develops the rook to an active file while keeping the bishop safe, maintaining the material advantage. By ignoring the threat to g7, White allows Black to capture the bishop with Rg5, equalizing or gaining an advantage.\n\n```json\n{\n  \"claims\": [\n    {\"type\": \"hanging\", \"square\": \"g7\"},\n    {\"type\": \"best_move\", \"move\": \"Rad1\"}\n  ],\n  \"other_claims\": [\n    \"The move f4 weakens White's king safety.\",\n    \"The Bishop on g7 is attacked by the Rook on h5.\",\n    \"The Bishop on g7 is undefended.\",\n    \"Playing f4 allows Black to capture the bishop with Rg5.\"\n  ]\n}\n```",
+   "commentary": "White's choice of f4 is a strategic error that unnecessarily weakens the king's shelter and fails to address the tactical vulnerability of the Bishop on g7. This piece is currently hanging, as it is attacked by Black's Rook on h5 and has no defenders, meaning White risks losing significant material for no compensation. The engine's recommendation, Rad1, is superior because it develops the rook to an active file while keeping the bishop safe, maintaining the material advantage. By ignoring the threat to g7, White allows Black to capture the bishop with Rg5, equalizing or gaining an advantage.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "hanging",
+     "square": "g7",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "best_move",
+     "move": "Rad1",
+     "position": "before",
+     "position_defaulted": true
+    }
+   ],
+   "other_claims": [
+    "The move f4 weakens White's king safety.",
+    "The Bishop on g7 is attacked by the Rook on h5.",
+    "The Bishop on g7 is undefended.",
+    "Playing f4 allows Black to capture the bishop with Rg5."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "g7",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": false,
+     "why": "computed from attackers and defenders",
+     "fen": "8/1b1kb1B1/p1n5/1p5r/3p4/PB3P2/1P3P1P/R4RK1 w - - 1 26"
+    },
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Rad1",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": false,
+     "why": "engine top 2: ['Rfe1', 'Kh1']",
+     "fen": "8/1b1kb1B1/p1n5/1p5r/3p4/PB3P2/1P3P1P/R4RK1 w - - 1 26"
+    }
+   ],
+   "score": {
+    "checkable": 2,
+    "true": 0,
+    "false": 2,
+    "faithfulness": 0.0
+   },
+   "completion_tokens": 246,
+   "seconds": 12.0
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "movw8h7M",
+   "url": "https://lichess.org/movw8h7M",
+   "ply": 52,
+   "side": "Black",
+   "fen_before": "8/1b1kb1B1/p1n5/1p5r/3p1P2/PB6/1P3P1P/R4RK1 b - - 0 26",
+   "played": "Rh4",
+   "best": "Rh7",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "Rh4 is a significant error as it places the rook on a square where it becomes an easy target for White's bishop on g7, essentially hanging a piece or allowing for immediate tactical exploitation. In contrast, the engine's recommendation, Rh7, actively defends the critical g7 bishop, which is currently under attack by the white bishop and vital for Black's defensive structure. By retreating to h7, Black maintains material balance and prevents White from simplifying the position with a winning exchange or gaining a decisive positional advantage. This move also keeps the rook more flexible for potential counterplay along the seventh rank, whereas Rh4 isolates it and weakens Black's kingside safety.\n\n```json\n{\n  \"claims\": [\n    {\"type\": \"best_move\", \"move\": \"Rh7\", \"position\": \"before\"}\n  ],\n  \"other_claims\": [\n    \"Rh4 places the rook on a square where it is attacked by the white bishop on g7.\",\n    \"The rook on h4 is effectively hanging or tactically vulnerable after Rh4.\",\n    \"The black bishop on g7 is under attack by the white bishop on g7.\",\n    \"Rh7 defends the black bishop on g7.\",\n    \"Rh7 prevents White from capturing the bishop on g7.\",\n    \"Rh7 maintains material balance for Black.\",\n    \"Rh4 isolates the rook and weakens Black's kingside safety.\"\n  ]\n}\n```",
+   "commentary": "Rh4 is a significant error as it places the rook on a square where it becomes an easy target for White's bishop on g7, essentially hanging a piece or allowing for immediate tactical exploitation. In contrast, the engine's recommendation, Rh7, actively defends the critical g7 bishop, which is currently under attack by the white bishop and vital for Black's defensive structure. By retreating to h7, Black maintains material balance and prevents White from simplifying the position with a winning exchange or gaining a decisive positional advantage. This move also keeps the rook more flexible for potential counterplay along the seventh rank, whereas Rh4 isolates it and weakens Black's kingside safety.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Rh7",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "Rh4 places the rook on a square where it is attacked by the white bishop on g7.",
+    "The rook on h4 is effectively hanging or tactically vulnerable after Rh4.",
+    "The black bishop on g7 is under attack by the white bishop on g7.",
+    "Rh7 defends the black bishop on g7.",
+    "Rh7 prevents White from capturing the bishop on g7.",
+    "Rh7 maintains material balance for Black.",
+    "Rh4 isolates the rook and weakens Black's kingside safety."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Rh7",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Rh7', 'Rh4']",
+     "fen": "8/1b1kb1B1/p1n5/1p5r/3p1P2/PB6/1P3P1P/R4RK1 b - - 0 26"
+    }
+   ],
+   "score": {
+    "checkable": 1,
+    "true": 1,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 313,
+   "seconds": 14.0
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "dlymlJeF",
+   "url": "https://lichess.org/dlymlJeF",
+   "ply": 43,
+   "side": "White",
+   "fen_before": "2b2rk1/2q1npbp/4p1p1/2p1P2P/1nPp1PP1/2rP4/3NQ1B1/R1B1RNK1 w - - 1 22",
+   "played": "Ra3",
+   "best": "Ne4",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "Ra3 is a passive rook lift that fails to address the tactical vulnerability on e4, where the engine identifies Ne4 as the best move. By playing Ne4, White places a piece on a square that is currently attacked by Black's pawn on d5 but defended by White's pawn on f3, creating a temporary tension that White can resolve favorably. The move Ra3 neglects this central opportunity and allows Black to maintain a solid, albeit slightly cramped, position without immediate complications. White's knight on e4 would exert strong pressure on d6 and f6, restricting Black's counterplay.\n\n```json\n{\n  \"claims\": [\n    {\"type\": \"best_move\", \"move\": \"Ne4\"},\n    {\"type\": \"attacked_by_cheaper\", \"square\": \"e4\"}\n  ],\n  \"other_claims\": [\n    \"Ra3 is a passive rook lift.\",\n    \"The engine identifies Ne4 as the best move.\",\n    \"White's pawn is on f3.\",\n    \"Black's pawn is on d5.\",\n    \"Ne4 places a piece on e4.\",\n    \"The piece on e4 is attacked by the pawn on d5.\",\n    \"The piece on e4 is defended by the pawn on f3.\",\n    \"Ne4 exerts pressure on d6.\",\n    \"Ne4 exerts pressure on f6.\"\n  ]\n}\n```",
+   "commentary": "Ra3 is a passive rook lift that fails to address the tactical vulnerability on e4, where the engine identifies Ne4 as the best move. By playing Ne4, White places a piece on a square that is currently attacked by Black's pawn on d5 but defended by White's pawn on f3, creating a temporary tension that White can resolve favorably. The move Ra3 neglects this central opportunity and allows Black to maintain a solid, albeit slightly cramped, position without immediate complications. White's knight on e4 would exert strong pressure on d6 and f6, restricting Black's counterplay.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Ne4",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "attacked_by_cheaper",
+     "square": "e4",
+     "position": "before",
+     "position_defaulted": true
+    }
+   ],
+   "other_claims": [
+    "Ra3 is a passive rook lift.",
+    "The engine identifies Ne4 as the best move.",
+    "White's pawn is on f3.",
+    "Black's pawn is on d5.",
+    "Ne4 places a piece on e4.",
+    "The piece on e4 is attacked by the pawn on d5.",
+    "The piece on e4 is defended by the pawn on f3.",
+    "Ne4 exerts pressure on d6.",
+    "Ne4 exerts pressure on f6."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Ne4",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Ne4', 'Nb1']",
+     "fen": "2b2rk1/2q1npbp/4p1p1/2p1P2P/1nPp1PP1/2rP4/3NQ1B1/R1B1RNK1 w - - 1 22"
+    },
+    {
+     "claim": {
+      "type": "attacked_by_cheaper",
+      "square": "e4",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": false,
+     "why": "no piece on e4",
+     "fen": "2b2rk1/2q1npbp/4p1p1/2p1P2P/1nPp1PP1/2rP4/3NQ1B1/R1B1RNK1 w - - 1 22"
+    }
+   ],
+   "score": {
+    "checkable": 2,
+    "true": 1,
+    "false": 1,
+    "faithfulness": 0.5
+   },
+   "completion_tokens": 305,
+   "seconds": 13.9
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "dlymlJeF",
+   "url": "https://lichess.org/dlymlJeF",
+   "ply": 60,
+   "side": "Black",
+   "fen_before": "b5k1/4npbp/2q1p1p1/2B1P2P/2PpNPP1/8/3N2Q1/6K1 b - - 0 30",
+   "played": "Nc8",
+   "best": "Nd5",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "Black's move ...Nc8 is a passive retreat that fails to challenge White's strong central grip. The engine's recommendation, ...Nd5, is superior because it actively occupies the key outpost on d5. This square is currently undefended and serves as a perfect base for Black's knight to influence the game. By playing ...Nd5, Black creates immediate counterplay and disrupts White's coordination. In contrast, ...Nc8 leaves Black's position cramped and reactive.\n\n```json\n{\n  \"claims\": [\n    {\"type\": \"best_move\", \"move\": \"Nd5\"}\n  ],\n  \"other_claims\": [\n    \"The move Nc8 is a passive retreat.\",\n    \"The move Nc8 fails to challenge White's central grip.\",\n    \"The square d5 is currently undefended.\",\n    \"The move Nd5 actively occupies the key outpost on d5.\",\n    \"The move Nd5 serves as a perfect base for Black's knight to influence the game.\",\n    \"The move Nd5 creates immediate counterplay.\",\n    \"The move Nd5 disrupts White's coordination.\",\n    \"The move Nc8 leaves Black's position cramped and reactive.\"\n  ]\n}\n```",
+   "commentary": "Black's move ...Nc8 is a passive retreat that fails to challenge White's strong central grip. The engine's recommendation, ...Nd5, is superior because it actively occupies the key outpost on d5. This square is currently undefended and serves as a perfect base for Black's knight to influence the game. By playing ...Nd5, Black creates immediate counterplay and disrupts White's coordination. In contrast, ...Nc8 leaves Black's position cramped and reactive.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Nd5",
+     "position": "before",
+     "position_defaulted": true
+    }
+   ],
+   "other_claims": [
+    "The move Nc8 is a passive retreat.",
+    "The move Nc8 fails to challenge White's central grip.",
+    "The square d5 is currently undefended.",
+    "The move Nd5 actively occupies the key outpost on d5.",
+    "The move Nd5 serves as a perfect base for Black's knight to influence the game.",
+    "The move Nd5 creates immediate counterplay.",
+    "The move Nd5 disrupts White's coordination.",
+    "The move Nc8 leaves Black's position cramped and reactive."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Nd5",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Nd5', 'Qxc5']",
+     "fen": "b5k1/4npbp/2q1p1p1/2B1P2P/2PpNPP1/8/3N2Q1/6K1 b - - 0 30"
+    }
+   ],
+   "score": {
+    "checkable": 1,
+    "true": 1,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 264,
+   "seconds": 8.8
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "dlymlJeF",
+   "url": "https://lichess.org/dlymlJeF",
+   "ply": 68,
+   "side": "Black",
+   "fen_before": "2n2b2/5pkp/2b1pNp1/4P2P/2PBNPP1/8/8/6K1 b - - 1 34",
+   "played": "Bb4",
+   "best": "Bxe4",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "The move 34...Bb4 is a significant error because it leaves the bishop on b4 undefended and vulnerable to capture, whereas the engine's recommendation 34...Bxe4 actively wins a central pawn. By playing 34...Bb4, Black fails to exploit the tactical opportunity presented by the pinned and overloaded white pieces, specifically the bishop on e4 which is attacked by the black bishop on c6. The engine line 34...Bxe4 removes a strong white piece and improves Black's material balance, creating a more favorable endgame structure compared to the passive and risky 34...Bb4.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"hanging\",\n      \"square\": \"b4\"\n    },\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Bxe4\"\n    }\n  ],\n  \"other_claims\": [\n    \"The move 34...Bb4 leaves the bishop on b4 undefended and vulnerable to capture.\",\n    \"The engine's recommendation 34...Bxe4 actively wins a central pawn.\",\n    \"Black fails to exploit the tactical opportunity presented by the pinned and overloaded white pieces.\",\n    \"The bishop on e4 is attacked by the black bishop on c6.\",\n    \"The engine line 34...Bxe4 removes a strong white piece and improves Black's material balance.\",\n    \"The passive and risky 34...Bb4 creates a less favorable endgame structure compared to 34...Bxe4.\"\n  ]\n}\n```",
+   "commentary": "The move 34...Bb4 is a significant error because it leaves the bishop on b4 undefended and vulnerable to capture, whereas the engine's recommendation 34...Bxe4 actively wins a central pawn. By playing 34...Bb4, Black fails to exploit the tactical opportunity presented by the pinned and overloaded white pieces, specifically the bishop on e4 which is attacked by the black bishop on c6. The engine line 34...Bxe4 removes a strong white piece and improves Black's material balance, creating a more favorable endgame structure compared to the passive and risky 34...Bb4.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "hanging",
+     "square": "b4",
+     "position": "before",
+     "position_defaulted": true
+    },
+    {
+     "type": "best_move",
+     "move": "Bxe4",
+     "position": "before",
+     "position_defaulted": true
+    }
+   ],
+   "other_claims": [
+    "The move 34...Bb4 leaves the bishop on b4 undefended and vulnerable to capture.",
+    "The engine's recommendation 34...Bxe4 actively wins a central pawn.",
+    "Black fails to exploit the tactical opportunity presented by the pinned and overloaded white pieces.",
+    "The bishop on e4 is attacked by the black bishop on c6.",
+    "The engine line 34...Bxe4 removes a strong white piece and improves Black's material balance.",
+    "The passive and risky 34...Bb4 creates a less favorable endgame structure compared to 34...Bxe4."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "hanging",
+      "square": "b4",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": false,
+     "why": "no piece on b4",
+     "fen": "2n2b2/5pkp/2b1pNp1/4P2P/2PBNPP1/8/8/6K1 b - - 1 34"
+    },
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Bxe4",
+      "position": "before",
+      "position_defaulted": true
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Bxe4', 'gxh5']",
+     "fen": "2n2b2/5pkp/2b1pNp1/4P2P/2PBNPP1/8/8/6K1 b - - 1 34"
+    }
+   ],
+   "score": {
+    "checkable": 2,
+    "true": 1,
+    "false": 1,
+    "faithfulness": 0.5
+   },
+   "completion_tokens": 349,
+   "seconds": 8.5
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "dlymlJeF",
+   "url": "https://lichess.org/dlymlJeF",
+   "ply": 69,
+   "side": "White",
+   "fen_before": "2n5/5pkp/2b1pNp1/4P2P/1bPBNPP1/8/8/6K1 w - - 2 35",
+   "played": "Bc5",
+   "best": "h6+",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "White's choice of Bc5 was a passive error that missed the tactical opportunity to open lines against the black king. The engine's best move, h6+, forces a decisive structural weakness by compelling Black to respond with ...gxh6. This sacrifice shatters the pawn shield around the black king, exposing it to immediate mating threats that the bishop on c5 fails to exploit. By allowing the king to remain sheltered, White squanders a clear winning advantage.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"best_move\",\n      \"move\": \"h6+\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"advantage\",\n      \"side\": \"white\",\n      \"position\": \"before\"\n    },\n    {\n      \"type\": \"material\",\n      \"side\": \"white\",\n      \"position\": \"before\"\n    }\n  ],\n  \"other_claims\": [\n    \"Bc5 is a passive move.\",\n    \"h6+ forces Black to play ...gxh6.\",\n    \"gxh6 shatters the pawn shield around the black king.\",\n    \"The exposed black king faces immediate mating threats.\",\n    \"White has a clear winning advantage.\",\n    \"Bc5 fails to exploit the tactical opportunity.\"\n  ]\n}\n```",
+   "commentary": "White's choice of Bc5 was a passive error that missed the tactical opportunity to open lines against the black king. The engine's best move, h6+, forces a decisive structural weakness by compelling Black to respond with ...gxh6. This sacrifice shatters the pawn shield around the black king, exposing it to immediate mating threats that the bishop on c5 fails to exploit. By allowing the king to remain sheltered, White squanders a clear winning advantage.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "h6+",
+     "position": "before"
+    },
+    {
+     "type": "advantage",
+     "side": "white",
+     "position": "before"
+    },
+    {
+     "type": "material",
+     "side": "white",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "Bc5 is a passive move.",
+    "h6+ forces Black to play ...gxh6.",
+    "gxh6 shatters the pawn shield around the black king.",
+    "The exposed black king faces immediate mating threats.",
+    "White has a clear winning advantage.",
+    "Bc5 fails to exploit the tactical opportunity."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "h6+",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['h6+', 'Nd6']",
+     "fen": "2n5/5pkp/2b1pNp1/4P2P/1bPBNPP1/8/8/6K1 w - - 2 35"
+    },
+    {
+     "claim": {
+      "type": "advantage",
+      "side": "white",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine +4.08 for White",
+     "fen": "2n5/5pkp/2b1pNp1/4P2P/1bPBNPP1/8/8/6K1 w - - 2 35"
+    },
+    {
+     "claim": {
+      "type": "material",
+      "side": "white",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "material balance +1 for White",
+     "fen": "2n5/5pkp/2b1pNp1/4P2P/1bPBNPP1/8/8/6K1 w - - 2 35"
+    }
+   ],
+   "score": {
+    "checkable": 3,
+    "true": 3,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 294,
+   "seconds": 7.5
+  },
+  {
+   "condition": "ungrounded",
+   "game_id": "dlymlJeF",
+   "url": "https://lichess.org/dlymlJeF",
+   "ply": 70,
+   "side": "Black",
+   "fen_before": "2n5/5pkp/2b1pNp1/2B1P2P/1bP1NPP1/8/8/6K1 b - - 3 35",
+   "played": "Ba5",
+   "best": "Bxc5+",
+   "grade": "blunder",
+   "call_error": null,
+   "reply": "Ba5 is a passive retreat that fails to address the tactical vulnerability on c5. The engine's best move, Bxc5+, forces an immediate exchange that exposes White's king or simplifies into a favorable endgame. By playing Ba5, Black allows White to maintain a strong bishop on c5 which restricts Black's pieces. The tactical shot Bxc5+ is superior because it utilizes the bishop's activity to create immediate threats. This move highlights the importance of active piece play over passive maneuvering in complex middlegames.\n\n```json\n{\n  \"claims\": [\n    {\n      \"type\": \"best_move\",\n      \"move\": \"Bxc5+\",\n      \"position\": \"before\"\n    }\n  ],\n  \"other_claims\": [\n    \"Ba5 is a passive retreat.\",\n    \"Bxc5+ forces an immediate exchange.\",\n    \"White has a bishop on c5 before Black's move.\",\n    \"Black's bishop was on c6 before the move Ba5.\",\n    \"White's bishop on c5 is attacked by Black's bishop on c6 before the move Ba5.\"\n  ]\n}\n```",
+   "commentary": "Ba5 is a passive retreat that fails to address the tactical vulnerability on c5. The engine's best move, Bxc5+, forces an immediate exchange that exposes White's king or simplifies into a favorable endgame. By playing Ba5, Black allows White to maintain a strong bishop on c5 which restricts Black's pieces. The tactical shot Bxc5+ is superior because it utilizes the bishop's activity to create immediate threats. This move highlights the importance of active piece play over passive maneuvering in complex middlegames.",
+   "parse_error": null,
+   "claims": [
+    {
+     "type": "best_move",
+     "move": "Bxc5+",
+     "position": "before"
+    }
+   ],
+   "other_claims": [
+    "Ba5 is a passive retreat.",
+    "Bxc5+ forces an immediate exchange.",
+    "White has a bishop on c5 before Black's move.",
+    "Black's bishop was on c6 before the move Ba5.",
+    "White's bishop on c5 is attacked by Black's bishop on c6 before the move Ba5."
+   ],
+   "results": [
+    {
+     "claim": {
+      "type": "best_move",
+      "move": "Bxc5+",
+      "position": "before"
+     },
+     "verdict": true,
+     "why": "engine top 2: ['Bxc5+', 'gxh5']",
+     "fen": "2n5/5pkp/2b1pNp1/2B1P2P/1bP1NPP1/8/8/6K1 b - - 3 35"
+    }
+   ],
+   "score": {
+    "checkable": 1,
+    "true": 1,
+    "false": 0,
+    "faithfulness": 1.0
+   },
+   "completion_tokens": 248,
+   "seconds": 7.0
+  }
+ ]
+}

@@ -1,0 +1,4807 @@
+{
+ "about": "Frozen test set for evals/faithfulness.py. Commit before any scored run.",
+ "user": "dr_namer",
+ "site": "lichess",
+ "frozen_at": "2026-10-22T14:25:52",
+ "engine": "Stockfish 19",
+ "seconds_per_move": 0.15,
+ "key_moments_per_game": 5,
+ "games": [
+  {
+   "game_id": "ZRLfDc2e",
+   "url": "https://lichess.org/ZRLfDc2e",
+   "date": "2026.10.20",
+   "white": "hyperreal",
+   "black": "dr_namer",
+   "result": "1-0",
+   "time_control": "180+0",
+   "plies": 39,
+   "key_moments": [
+    {
+     "ply": 28,
+     "side": "Black",
+     "fen_before": "r1b1k2r/1pq1bp2/2pp1npp/p1nPp3/P1B1P2N/BPN4P/2P2PP1/R2QR1K1 b kq - 2 14",
+     "played": "Nxd5",
+     "best": "Nfd7",
+     "grade": "blunder"
+    },
+    {
+     "ply": 34,
+     "side": "Black",
+     "fen_before": "r1b1k2r/1pq2p2/2pP2pp/p1p1p3/P1B4b/1PN4P/2P2PP1/R2QR1K1 b kq - 0 17",
+     "played": "Qd7",
+     "best": "Qd8",
+     "grade": "mistake"
+    }
+   ],
+   "pgn": "[Event \"rated blitz game\"]\n[Site \"https://lichess.org/game/ZRLfDc2e\"]\n[Date \"2026.10.20\"]\n[Round \"-\"]\n[White \"hyperreal\"]\n[Black \"dr_namer\"]\n[Result \"1-0\"]\n[GameId \"ZRLfDc2e\"]\n[UTCDate \"2026.10.20\"]\n[UTCTime \"08:36:41\"]\n[WhiteElo \"2643\"]\n[BlackElo \"2529\"]\n[WhiteRatingDiff \"+4\"]\n[BlackRatingDiff \"-7\"]\n[WhiteTitle \"IM\"]\n[Variant \"Standard\"]\n[TimeControl \"180+0\"]\n[ECO \"C41\"]\n[Opening \"Philidor Defense: Lion Variation\"]\n[Termination \"Time forfeit\"]\n\n1. e4 d6 2. d4 Nf6 3. Nc3 e5 4. Nf3 Nbd7 5. Be2 Be7 6. O-O c6 7. a4 a5 8. Re1 Qc7 9. h3 h6 10. Bc4 Nf8 11. Nh4 g6 12. b3 Ne6 13. d5 Nc5 14. Ba3 Nxd5 15. exd5 Bxh4 16. Bxc5 dxc5 17. d6 Qd7 18. Rxe5+ Kf8 19. Qf3 Rh7 20. Rae1 1-0\n\n\n",
+   "review": {
+    "engine": "Stockfish 19",
+    "seconds_per_move": 0.15,
+    "result": "1-0",
+    "opening": "Philidor Defense: Lion Variation",
+    "summary": {
+     "White": {
+      "player": "hyperreal",
+      "elo": "2643",
+      "average_centipawn_loss": 7,
+      "inaccuracies": 0,
+      "mistakes": 0,
+      "blunders": 0
+     },
+     "Black": {
+      "player": "dr_namer",
+      "elo": "2529",
+      "average_centipawn_loss": 47,
+      "inaccuracies": 0,
+      "mistakes": 1,
+      "blunders": 1
+     }
+    },
+    "key_moments": [
+     {
+      "ply": 28,
+      "move_number": 14,
+      "side": "Black",
+      "played": "Nxd5",
+      "best": "Nfd7",
+      "best_line": "14...Nfd7 15. Nf3 O-O 16. Qd2 Kg7 17. Rad1",
+      "eval_before": "+1.29",
+      "eval_after": "+3.75",
+      "win_chance_drop": 0.365,
+      "grade": "blunder",
+      "fen_before": "r1b1k2r/1pq1bp2/2pp1npp/p1nPp3/P1B1P2N/BPN4P/2P2PP1/R2QR1K1 b kq - 2 14",
+      "facts_before": {
+       "side_to_move": "Black",
+       "in_check": false,
+       "material_white_minus_black": 0,
+       "hanging_pieces": [],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [],
+       "legal_moves": 40
+      }
+     },
+     {
+      "ply": 34,
+      "move_number": 17,
+      "side": "Black",
+      "played": "Qd7",
+      "best": "Qd8",
+      "best_line": "17...Qd8 18. Rxe5+ Kf8 19. Qd2 Kg7 20. Rae1",
+      "eval_before": "+4.17",
+      "eval_after": "+7.01",
+      "win_chance_drop": 0.214,
+      "grade": "mistake",
+      "fen_before": "r1b1k2r/1pq2p2/2pP2pp/p1p1p3/P1B4b/1PN4P/2P2PP1/R2QR1K1 b kq - 0 17",
+      "facts_before": {
+       "side_to_move": "Black",
+       "in_check": false,
+       "material_white_minus_black": -1,
+       "hanging_pieces": [
+        "Black queen on c7",
+        "Black pawn on e5"
+       ],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [
+        "pawn e5"
+       ],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [
+        "Bxf2+"
+       ],
+       "legal_moves": 34
+      }
+     }
+    ],
+    "moves": [
+     {
+      "ply": 1,
+      "side": "White",
+      "played": "e4",
+      "best": "e4",
+      "eval_after": "+0.30",
+      "grade": null
+     },
+     {
+      "ply": 2,
+      "side": "Black",
+      "played": "d6",
+      "best": "e5",
+      "eval_after": "+0.54",
+      "grade": null
+     },
+     {
+      "ply": 3,
+      "side": "White",
+      "played": "d4",
+      "best": "d4",
+      "eval_after": "+0.50",
+      "grade": null
+     },
+     {
+      "ply": 4,
+      "side": "Black",
+      "played": "Nf6",
+      "best": "Nf6",
+      "eval_after": "+0.49",
+      "grade": null
+     },
+     {
+      "ply": 5,
+      "side": "White",
+      "played": "Nc3",
+      "best": "Nc3",
+      "eval_after": "+0.50",
+      "grade": null
+     },
+     {
+      "ply": 6,
+      "side": "Black",
+      "played": "e5",
+      "best": "e5",
+      "eval_after": "+0.44",
+      "grade": null
+     },
+     {
+      "ply": 7,
+      "side": "White",
+      "played": "Nf3",
+      "best": "Nf3",
+      "eval_after": "+0.46",
+      "grade": null
+     },
+     {
+      "ply": 8,
+      "side": "Black",
+      "played": "Nbd7",
+      "best": "Nbd7",
+      "eval_after": "+0.50",
+      "grade": null
+     },
+     {
+      "ply": 9,
+      "side": "White",
+      "played": "Be2",
+      "best": "Bc4",
+      "eval_after": "+0.35",
+      "grade": null
+     },
+     {
+      "ply": 10,
+      "side": "Black",
+      "played": "Be7",
+      "best": "c6",
+      "eval_after": "+0.42",
+      "grade": null
+     },
+     {
+      "ply": 11,
+      "side": "White",
+      "played": "O-O",
+      "best": "g4",
+      "eval_after": "+0.37",
+      "grade": null
+     },
+     {
+      "ply": 12,
+      "side": "Black",
+      "played": "c6",
+      "best": "O-O",
+      "eval_after": "+0.35",
+      "grade": null
+     },
+     {
+      "ply": 13,
+      "side": "White",
+      "played": "a4",
+      "best": "a4",
+      "eval_after": "+0.30",
+      "grade": null
+     },
+     {
+      "ply": 14,
+      "side": "Black",
+      "played": "a5",
+      "best": "a5",
+      "eval_after": "+0.27",
+      "grade": null
+     },
+     {
+      "ply": 15,
+      "side": "White",
+      "played": "Re1",
+      "best": "Be3",
+      "eval_after": "+0.24",
+      "grade": null
+     },
+     {
+      "ply": 16,
+      "side": "Black",
+      "played": "Qc7",
+      "best": "O-O",
+      "eval_after": "+0.56",
+      "grade": null
+     },
+     {
+      "ply": 17,
+      "side": "White",
+      "played": "h3",
+      "best": "h3",
+      "eval_after": "+0.56",
+      "grade": null
+     },
+     {
+      "ply": 18,
+      "side": "Black",
+      "played": "h6",
+      "best": "O-O",
+      "eval_after": "+0.64",
+      "grade": null
+     },
+     {
+      "ply": 19,
+      "side": "White",
+      "played": "Bc4",
+      "best": "Be3",
+      "eval_after": "+0.52",
+      "grade": null
+     },
+     {
+      "ply": 20,
+      "side": "Black",
+      "played": "Nf8",
+      "best": "g5",
+      "eval_after": "+0.71",
+      "grade": null
+     },
+     {
+      "ply": 21,
+      "side": "White",
+      "played": "Nh4",
+      "best": "Be3",
+      "eval_after": "+0.57",
+      "grade": null
+     },
+     {
+      "ply": 22,
+      "side": "Black",
+      "played": "g6",
+      "best": "g5",
+      "eval_after": "+0.72",
+      "grade": null
+     },
+     {
+      "ply": 23,
+      "side": "White",
+      "played": "b3",
+      "best": "b3",
+      "eval_after": "+0.83",
+      "grade": null
+     },
+     {
+      "ply": 24,
+      "side": "Black",
+      "played": "Ne6",
+      "best": "N6h7",
+      "eval_after": "+1.20",
+      "grade": null
+     },
+     {
+      "ply": 25,
+      "side": "White",
+      "played": "d5",
+      "best": "Nf3",
+      "eval_after": "+0.75",
+      "grade": null
+     },
+     {
+      "ply": 26,
+      "side": "Black",
+      "played": "Nc5",
+      "best": "Nd4",
+      "eval_after": "+1.16",
+      "grade": null
+     },
+     {
+      "ply": 27,
+      "side": "White",
+      "played": "Ba3",
+      "best": "Ba3",
+      "eval_after": "+1.29",
+      "grade": null
+     },
+     {
+      "ply": 28,
+      "side": "Black",
+      "played": "Nxd5",
+      "best": "Nfd7",
+      "eval_after": "+3.75",
+      "grade": "blunder"
+     },
+     {
+      "ply": 29,
+      "side": "White",
+      "played": "exd5",
+      "best": "exd5",
+      "eval_after": "+3.80",
+      "grade": null
+     },
+     {
+      "ply": 30,
+      "side": "Black",
+      "played": "Bxh4",
+      "best": "Bxh4",
+      "eval_after": "+4.02",
+      "grade": null
+     },
+     {
+      "ply": 31,
+      "side": "White",
+      "played": "Bxc5",
+      "best": "Qd2",
+      "eval_after": "+4.19",
+      "grade": null
+     },
+     {
+      "ply": 32,
+      "side": "Black",
+      "played": "dxc5",
+      "best": "dxc5",
+      "eval_after": "+4.43",
+      "grade": null
+     },
+     {
+      "ply": 33,
+      "side": "White",
+      "played": "d6",
+      "best": "d6",
+      "eval_after": "+4.17",
+      "grade": null
+     },
+     {
+      "ply": 34,
+      "side": "Black",
+      "played": "Qd7",
+      "best": "Qd8",
+      "eval_after": "+7.01",
+      "grade": "mistake"
+     },
+     {
+      "ply": 35,
+      "side": "White",
+      "played": "Rxe5+",
+      "best": "Rxe5+",
+      "eval_after": "+7.11",
+      "grade": null
+     },
+     {
+      "ply": 36,
+      "side": "Black",
+      "played": "Kf8",
+      "best": "Kd8",
+      "eval_after": "+7.82",
+      "grade": null
+     },
+     {
+      "ply": 37,
+      "side": "White",
+      "played": "Qf3",
+      "best": "Qf3",
+      "eval_after": "+7.85",
+      "grade": null
+     },
+     {
+      "ply": 38,
+      "side": "Black",
+      "played": "Rh7",
+      "best": "f5",
+      "eval_after": "+8.52",
+      "grade": null
+     },
+     {
+      "ply": 39,
+      "side": "White",
+      "played": "Rae1",
+      "best": "Rae1",
+      "eval_after": "+9.01",
+      "grade": null
+     }
+    ]
+   }
+  },
+  {
+   "game_id": "BcAhQn3U",
+   "url": "https://lichess.org/BcAhQn3U",
+   "date": "2026.10.15",
+   "white": "dr_namer",
+   "black": "MimiTheBest",
+   "result": "0-1",
+   "time_control": "180+0",
+   "plies": 106,
+   "key_moments": [
+    {
+     "ply": 33,
+     "side": "White",
+     "fen_before": "2rqr1k1/p4ppp/1pn2bb1/2pp4/3Pn1P1/1P2PN1P/PB1N1PB1/2RQR1K1 w - - 1 17",
+     "played": "Ba1",
+     "best": "Ne5",
+     "grade": "blunder"
+    },
+    {
+     "ply": 60,
+     "side": "Black",
+     "fen_before": "2r1r1k1/p2R2p1/1p6/2p1p2b/4p2q/1P2P3/P2Q1PB1/1R3K2 b - - 1 30",
+     "played": "Bf3",
+     "best": "Rf8",
+     "grade": "blunder"
+    },
+    {
+     "ply": 63,
+     "side": "White",
+     "fen_before": "2r1r2k/p2R2p1/1p6/2pQp3/4p2q/1P2Pb2/P4PB1/1R3K2 w - - 4 32",
+     "played": "Qf7",
+     "best": "Bxf3",
+     "grade": "blunder"
+    },
+    {
+     "ply": 70,
+     "side": "Black",
+     "fen_before": "2r2r1k/p2R2p1/1p6/2p1p3/2Q3q1/1P2Pp2/P4P2/1R2K3 b - - 3 35",
+     "played": "Qxc4",
+     "best": "Qxd7",
+     "grade": "blunder"
+    },
+    {
+     "ply": 85,
+     "side": "White",
+     "fen_before": "8/7k/1R6/2p1pr2/2P3p1/4Pp2/P4P2/4K3 w - - 0 43",
+     "played": "a4",
+     "best": "Kf1",
+     "grade": "blunder"
+    }
+   ],
+   "pgn": "[Event \"rated blitz game\"]\n[Site \"https://lichess.org/game/BcAhQn3U\"]\n[Date \"2026.10.15\"]\n[Round \"-\"]\n[White \"dr_namer\"]\n[Black \"MimiTheBest\"]\n[Result \"0-1\"]\n[GameId \"BcAhQn3U\"]\n[UTCDate \"2026.10.15\"]\n[UTCTime \"19:40:42\"]\n[WhiteElo \"2541\"]\n[BlackElo \"2466\"]\n[WhiteRatingDiff \"-12\"]\n[BlackRatingDiff \"+7\"]\n[Variant \"Standard\"]\n[TimeControl \"180+0\"]\n[ECO \"A00\"]\n[Opening \"Mieses Opening\"]\n[Termination \"Time forfeit\"]\n\n1. d3 Nf6 2. Nd2 e6 3. Ngf3 d5 4. g3 Be7 5. Bg2 O-O 6. O-O c5 7. c4 Nc6 8. cxd5 exd5 9. b3 Re8 10. Bb2 Bg4 11. Rc1 Rc8 12. h3 Bh5 13. Re1 b6 14. d4 Ne4 15. g4 Bg6 16. e3 Bf6 17. Ba1 Nb4 18. Nxe4 dxe4 19. Ne5 Bxe5 20. dxe5 Nd3 21. Qc2 Qh4 22. Red1 h5 23. Rb1 hxg4 24. hxg4 Qxg4 25. Qc3 Nxe5 26. Kf1 Bh5 27. Rd5 f6 28. Qd2 Qh4 29. Bxe5 fxe5 30. Rd7 Bf3 31. Qd5+ Kh8 32. Qf7 Qg4 33. Bxf3 exf3 34. Ke1 Rf8 35. Qc4 Qxc4 36. bxc4 Rcd8 37. Rbd1 Rxd7 38. Rxd7 Kh7 39. Rxa7 Rf6 40. Re7 Rf5 41. Re6 g5 42. Rxb6 g4 43. a4 Rh5 44. Re6 Rh1+ 45. Kd2 Rf1 46. Rxe5 Rxf2+ 47. Ke1 g3 48. Rg5 Re2+ 49. Kd1 g2 50. a5 Ra2 51. a6 Rxa6 52. Ke1 Ra2 53. e4 f2+ 0-1\n\n\n",
+   "review": {
+    "engine": "Stockfish 19",
+    "seconds_per_move": 0.15,
+    "result": "0-1",
+    "opening": "Mieses Opening",
+    "summary": {
+     "White": {
+      "player": "dr_namer",
+      "elo": "2541",
+      "average_centipawn_loss": 385,
+      "inaccuracies": 1,
+      "mistakes": 1,
+      "blunders": 3
+     },
+     "Black": {
+      "player": "MimiTheBest",
+      "elo": "2466",
+      "average_centipawn_loss": 216,
+      "inaccuracies": 2,
+      "mistakes": 1,
+      "blunders": 4
+     }
+    },
+    "key_moments": [
+     {
+      "ply": 33,
+      "move_number": 17,
+      "side": "White",
+      "played": "Ba1",
+      "best": "Ne5",
+      "best_line": "17. Ne5 Bxe5 18. dxe5 Qh4 19. Rf1 Ng5",
+      "eval_before": "-0.56",
+      "eval_after": "-3.25",
+      "win_chance_drop": 0.433,
+      "grade": "blunder",
+      "fen_before": "2rqr1k1/p4ppp/1pn2bb1/2pp4/3Pn1P1/1P2PN1P/PB1N1PB1/2RQR1K1 w - - 1 17",
+      "facts_before": {
+       "side_to_move": "White",
+       "in_check": false,
+       "material_white_minus_black": 0,
+       "hanging_pieces": [],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [],
+       "legal_moves": 32
+      }
+     },
+     {
+      "ply": 60,
+      "move_number": 30,
+      "side": "Black",
+      "played": "Bf3",
+      "best": "Rf8",
+      "best_line": "30...Rf8 31. Rb2 Bf3 32. Qd6 Qg4 33. Bxf3",
+      "eval_before": "-5.16",
+      "eval_after": "-1.21",
+      "win_chance_drop": 0.521,
+      "grade": "blunder",
+      "fen_before": "2r1r1k1/p2R2p1/1p6/2p1p2b/4p2q/1P2P3/P2Q1PB1/1R3K2 b - - 1 30",
+      "facts_before": {
+       "side_to_move": "Black",
+       "in_check": false,
+       "material_white_minus_black": -2,
+       "hanging_pieces": [
+        "Black pawn on a7"
+       ],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [
+        "Be2+",
+        "Qxf2+",
+        "Qh1+"
+       ],
+       "legal_moves": 35
+      }
+     },
+     {
+      "ply": 63,
+      "move_number": 32,
+      "side": "White",
+      "played": "Qf7",
+      "best": "Bxf3",
+      "best_line": "32. Bxf3 exf3",
+      "eval_before": "-1.10",
+      "eval_after": "-6.26",
+      "win_chance_drop": 0.619,
+      "grade": "blunder",
+      "fen_before": "2r1r2k/p2R2p1/1p6/2pQp3/4p2q/1P2Pb2/P4PB1/1R3K2 w - - 4 32",
+      "facts_before": {
+       "side_to_move": "White",
+       "in_check": false,
+       "material_white_minus_black": -2,
+       "hanging_pieces": [
+        "Black pawn on a7"
+       ],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [
+        "Qg8+"
+       ],
+       "legal_moves": 36
+      }
+     },
+     {
+      "ply": 70,
+      "move_number": 35,
+      "side": "Black",
+      "played": "Qxc4",
+      "best": "Qxd7",
+      "best_line": "35...Qxd7 36. Qh4+ Kg8 37. Rd1 Qb5 38. Rd2",
+      "eval_before": "-8.73",
+      "eval_after": "-2.52",
+      "win_chance_drop": 0.489,
+      "grade": "blunder",
+      "fen_before": "2r2r1k/p2R2p1/1p6/2p1p3/2Q3q1/1P2Pp2/P4P2/1R2K3 b - - 3 35",
+      "facts_before": {
+       "side_to_move": "Black",
+       "in_check": false,
+       "material_white_minus_black": -2,
+       "hanging_pieces": [
+        "White rook on d7",
+        "Black pawn on a7",
+        "Black queen on g4"
+       ],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [
+        "Qg1+"
+       ],
+       "legal_moves": 35
+      }
+     },
+     {
+      "ply": 85,
+      "move_number": 43,
+      "side": "White",
+      "played": "a4",
+      "best": "Kf1",
+      "best_line": "43. Kf1 Rf7 44. Kg1 Rd7 45. Kh2 Rd1",
+      "eval_before": "-0.06",
+      "eval_after": "-5.06",
+      "win_chance_drop": 0.72,
+      "grade": "blunder",
+      "fen_before": "8/7k/1R6/2p1pr2/2P3p1/4Pp2/P4P2/4K3 w - - 0 43",
+      "facts_before": {
+       "side_to_move": "White",
+       "in_check": false,
+       "material_white_minus_black": 0,
+       "hanging_pieces": [],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [
+        "Rb7+",
+        "Rh6+"
+       ],
+       "legal_moves": 20
+      }
+     }
+    ],
+    "moves": [
+     {
+      "ply": 1,
+      "side": "White",
+      "played": "d3",
+      "best": "e4",
+      "eval_after": "-0.07",
+      "grade": null
+     },
+     {
+      "ply": 2,
+      "side": "Black",
+      "played": "Nf6",
+      "best": "d5",
+      "eval_after": "+0.04",
+      "grade": null
+     },
+     {
+      "ply": 3,
+      "side": "White",
+      "played": "Nd2",
+      "best": "e4",
+      "eval_after": "-0.30",
+      "grade": null
+     },
+     {
+      "ply": 4,
+      "side": "Black",
+      "played": "e6",
+      "best": "c5",
+      "eval_after": "-0.01",
+      "grade": null
+     },
+     {
+      "ply": 5,
+      "side": "White",
+      "played": "Ngf3",
+      "best": "Ngf3",
+      "eval_after": "-0.03",
+      "grade": null
+     },
+     {
+      "ply": 6,
+      "side": "Black",
+      "played": "d5",
+      "best": "d5",
+      "eval_after": "-0.03",
+      "grade": null
+     },
+     {
+      "ply": 7,
+      "side": "White",
+      "played": "g3",
+      "best": "e4",
+      "eval_after": "-0.08",
+      "grade": null
+     },
+     {
+      "ply": 8,
+      "side": "Black",
+      "played": "Be7",
+      "best": "a5",
+      "eval_after": "-0.06",
+      "grade": null
+     },
+     {
+      "ply": 9,
+      "side": "White",
+      "played": "Bg2",
+      "best": "Bg2",
+      "eval_after": "-0.08",
+      "grade": null
+     },
+     {
+      "ply": 10,
+      "side": "Black",
+      "played": "O-O",
+      "best": "a5",
+      "eval_after": "-0.03",
+      "grade": null
+     },
+     {
+      "ply": 11,
+      "side": "White",
+      "played": "O-O",
+      "best": "e4",
+      "eval_after": "+0.03",
+      "grade": null
+     },
+     {
+      "ply": 12,
+      "side": "Black",
+      "played": "c5",
+      "best": "a5",
+      "eval_after": "+0.06",
+      "grade": null
+     },
+     {
+      "ply": 13,
+      "side": "White",
+      "played": "c4",
+      "best": "e4",
+      "eval_after": "-0.32",
+      "grade": null
+     },
+     {
+      "ply": 14,
+      "side": "Black",
+      "played": "Nc6",
+      "best": "Nc6",
+      "eval_after": "-0.29",
+      "grade": null
+     },
+     {
+      "ply": 15,
+      "side": "White",
+      "played": "cxd5",
+      "best": "e3",
+      "eval_after": "-0.52",
+      "grade": null
+     },
+     {
+      "ply": 16,
+      "side": "Black",
+      "played": "exd5",
+      "best": "exd5",
+      "eval_after": "-0.59",
+      "grade": null
+     },
+     {
+      "ply": 17,
+      "side": "White",
+      "played": "b3",
+      "best": "e4",
+      "eval_after": "-0.74",
+      "grade": null
+     },
+     {
+      "ply": 18,
+      "side": "Black",
+      "played": "Re8",
+      "best": "d4",
+      "eval_after": "-0.42",
+      "grade": null
+     },
+     {
+      "ply": 19,
+      "side": "White",
+      "played": "Bb2",
+      "best": "e4",
+      "eval_after": "-0.70",
+      "grade": null
+     },
+     {
+      "ply": 20,
+      "side": "Black",
+      "played": "Bg4",
+      "best": "d4",
+      "eval_after": "-0.30",
+      "grade": null
+     },
+     {
+      "ply": 21,
+      "side": "White",
+      "played": "Rc1",
+      "best": "d4",
+      "eval_after": "-0.57",
+      "grade": null
+     },
+     {
+      "ply": 22,
+      "side": "Black",
+      "played": "Rc8",
+      "best": "d4",
+      "eval_after": "-0.26",
+      "grade": null
+     },
+     {
+      "ply": 23,
+      "side": "White",
+      "played": "h3",
+      "best": "h3",
+      "eval_after": "-0.24",
+      "grade": null
+     },
+     {
+      "ply": 24,
+      "side": "Black",
+      "played": "Bh5",
+      "best": "Be6",
+      "eval_after": "-0.19",
+      "grade": null
+     },
+     {
+      "ply": 25,
+      "side": "White",
+      "played": "Re1",
+      "best": "Bxf6",
+      "eval_after": "-0.69",
+      "grade": null
+     },
+     {
+      "ply": 26,
+      "side": "Black",
+      "played": "b6",
+      "best": "d4",
+      "eval_after": "-0.28",
+      "grade": null
+     },
+     {
+      "ply": 27,
+      "side": "White",
+      "played": "d4",
+      "best": "Nf1",
+      "eval_after": "-0.17",
+      "grade": null
+     },
+     {
+      "ply": 28,
+      "side": "Black",
+      "played": "Ne4",
+      "best": "Ne4",
+      "eval_after": "-0.17",
+      "grade": null
+     },
+     {
+      "ply": 29,
+      "side": "White",
+      "played": "g4",
+      "best": "Ne5",
+      "eval_after": "-0.58",
+      "grade": null
+     },
+     {
+      "ply": 30,
+      "side": "Black",
+      "played": "Bg6",
+      "best": "Bg6",
+      "eval_after": "-0.52",
+      "grade": null
+     },
+     {
+      "ply": 31,
+      "side": "White",
+      "played": "e3",
+      "best": "Ne5",
+      "eval_after": "-1.44",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 32,
+      "side": "Black",
+      "played": "Bf6",
+      "best": "Nb4",
+      "eval_after": "-0.56",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 33,
+      "side": "White",
+      "played": "Ba1",
+      "best": "Ne5",
+      "eval_after": "-3.25",
+      "grade": "blunder"
+     },
+     {
+      "ply": 34,
+      "side": "Black",
+      "played": "Nb4",
+      "best": "Nb4",
+      "eval_after": "-3.36",
+      "grade": null
+     },
+     {
+      "ply": 35,
+      "side": "White",
+      "played": "Nxe4",
+      "best": "Nxe4",
+      "eval_after": "-3.26",
+      "grade": null
+     },
+     {
+      "ply": 36,
+      "side": "Black",
+      "played": "dxe4",
+      "best": "dxe4",
+      "eval_after": "-3.37",
+      "grade": null
+     },
+     {
+      "ply": 37,
+      "side": "White",
+      "played": "Ne5",
+      "best": "Ne5",
+      "eval_after": "-3.33",
+      "grade": null
+     },
+     {
+      "ply": 38,
+      "side": "Black",
+      "played": "Bxe5",
+      "best": "Bxe5",
+      "eval_after": "-3.25",
+      "grade": null
+     },
+     {
+      "ply": 39,
+      "side": "White",
+      "played": "dxe5",
+      "best": "dxe5",
+      "eval_after": "-3.28",
+      "grade": null
+     },
+     {
+      "ply": 40,
+      "side": "Black",
+      "played": "Nd3",
+      "best": "Nd3",
+      "eval_after": "-3.06",
+      "grade": null
+     },
+     {
+      "ply": 41,
+      "side": "White",
+      "played": "Qc2",
+      "best": "Bf1",
+      "eval_after": "-4.96",
+      "grade": "mistake"
+     },
+     {
+      "ply": 42,
+      "side": "Black",
+      "played": "Qh4",
+      "best": "h5",
+      "eval_after": "-5.04",
+      "grade": null
+     },
+     {
+      "ply": 43,
+      "side": "White",
+      "played": "Red1",
+      "best": "Qe2",
+      "eval_after": "-5.40",
+      "grade": null
+     },
+     {
+      "ply": 44,
+      "side": "Black",
+      "played": "h5",
+      "best": "h5",
+      "eval_after": "-5.43",
+      "grade": null
+     },
+     {
+      "ply": 45,
+      "side": "White",
+      "played": "Rb1",
+      "best": "Qe2",
+      "eval_after": "-7.00",
+      "grade": null
+     },
+     {
+      "ply": 46,
+      "side": "Black",
+      "played": "hxg4",
+      "best": "hxg4",
+      "eval_after": "-7.05",
+      "grade": null
+     },
+     {
+      "ply": 47,
+      "side": "White",
+      "played": "hxg4",
+      "best": "hxg4",
+      "eval_after": "-7.05",
+      "grade": null
+     },
+     {
+      "ply": 48,
+      "side": "Black",
+      "played": "Qxg4",
+      "best": "Qxg4",
+      "eval_after": "-7.02",
+      "grade": null
+     },
+     {
+      "ply": 49,
+      "side": "White",
+      "played": "Qc3",
+      "best": "Rxd3",
+      "eval_after": "-7.43",
+      "grade": null
+     },
+     {
+      "ply": 50,
+      "side": "Black",
+      "played": "Nxe5",
+      "best": "Bf5",
+      "eval_after": "-7.21",
+      "grade": null
+     },
+     {
+      "ply": 51,
+      "side": "White",
+      "played": "Kf1",
+      "best": "Qxe5",
+      "eval_after": "-7.62",
+      "grade": null
+     },
+     {
+      "ply": 52,
+      "side": "Black",
+      "played": "Bh5",
+      "best": "f6",
+      "eval_after": "-6.93",
+      "grade": null
+     },
+     {
+      "ply": 53,
+      "side": "White",
+      "played": "Rd5",
+      "best": "Rd6",
+      "eval_after": "-7.53",
+      "grade": null
+     },
+     {
+      "ply": 54,
+      "side": "Black",
+      "played": "f6",
+      "best": "f6",
+      "eval_after": "-7.86",
+      "grade": null
+     },
+     {
+      "ply": 55,
+      "side": "White",
+      "played": "Qd2",
+      "best": "Qc2",
+      "eval_after": "-8.31",
+      "grade": null
+     },
+     {
+      "ply": 56,
+      "side": "Black",
+      "played": "Qh4",
+      "best": "Nf3",
+      "eval_after": "-4.60",
+      "grade": "mistake"
+     },
+     {
+      "ply": 57,
+      "side": "White",
+      "played": "Bxe5",
+      "best": "Bxe5",
+      "eval_after": "-4.87",
+      "grade": null
+     },
+     {
+      "ply": 58,
+      "side": "Black",
+      "played": "fxe5",
+      "best": "fxe5",
+      "eval_after": "-5.00",
+      "grade": null
+     },
+     {
+      "ply": 59,
+      "side": "White",
+      "played": "Rd7",
+      "best": "Ke1",
+      "eval_after": "-5.16",
+      "grade": null
+     },
+     {
+      "ply": 60,
+      "side": "Black",
+      "played": "Bf3",
+      "best": "Rf8",
+      "eval_after": "-1.21",
+      "grade": "blunder"
+     },
+     {
+      "ply": 61,
+      "side": "White",
+      "played": "Qd5+",
+      "best": "Qd5+",
+      "eval_after": "-1.79",
+      "grade": null
+     },
+     {
+      "ply": 62,
+      "side": "Black",
+      "played": "Kh8",
+      "best": "Kh7",
+      "eval_after": "-1.10",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 63,
+      "side": "White",
+      "played": "Qf7",
+      "best": "Bxf3",
+      "eval_after": "-6.26",
+      "grade": "blunder"
+     },
+     {
+      "ply": 64,
+      "side": "Black",
+      "played": "Qg4",
+      "best": "Bxg2+",
+      "eval_after": "-5.41",
+      "grade": null
+     },
+     {
+      "ply": 65,
+      "side": "White",
+      "played": "Bxf3",
+      "best": "Bxf3",
+      "eval_after": "-5.76",
+      "grade": null
+     },
+     {
+      "ply": 66,
+      "side": "Black",
+      "played": "exf3",
+      "best": "exf3",
+      "eval_after": "-6.38",
+      "grade": null
+     },
+     {
+      "ply": 67,
+      "side": "White",
+      "played": "Ke1",
+      "best": "Rc1",
+      "eval_after": "-7.89",
+      "grade": null
+     },
+     {
+      "ply": 68,
+      "side": "Black",
+      "played": "Rf8",
+      "best": "Rf8",
+      "eval_after": "-7.94",
+      "grade": null
+     },
+     {
+      "ply": 69,
+      "side": "White",
+      "played": "Qc4",
+      "best": "Qd5",
+      "eval_after": "-8.73",
+      "grade": null
+     },
+     {
+      "ply": 70,
+      "side": "Black",
+      "played": "Qxc4",
+      "best": "Qxd7",
+      "eval_after": "-2.52",
+      "grade": "blunder"
+     },
+     {
+      "ply": 71,
+      "side": "White",
+      "played": "bxc4",
+      "best": "bxc4",
+      "eval_after": "-2.78",
+      "grade": null
+     },
+     {
+      "ply": 72,
+      "side": "Black",
+      "played": "Rcd8",
+      "best": "Kh7",
+      "eval_after": "-3.23",
+      "grade": null
+     },
+     {
+      "ply": 73,
+      "side": "White",
+      "played": "Rbd1",
+      "best": "Rbd1",
+      "eval_after": "-3.54",
+      "grade": null
+     },
+     {
+      "ply": 74,
+      "side": "Black",
+      "played": "Rxd7",
+      "best": "Rxd7",
+      "eval_after": "-4.02",
+      "grade": null
+     },
+     {
+      "ply": 75,
+      "side": "White",
+      "played": "Rxd7",
+      "best": "Rxd7",
+      "eval_after": "-4.08",
+      "grade": null
+     },
+     {
+      "ply": 76,
+      "side": "Black",
+      "played": "Kh7",
+      "best": "Kh7",
+      "eval_after": "-4.22",
+      "grade": null
+     },
+     {
+      "ply": 77,
+      "side": "White",
+      "played": "Rxa7",
+      "best": "Rd5",
+      "eval_after": "-5.00",
+      "grade": null
+     },
+     {
+      "ply": 78,
+      "side": "Black",
+      "played": "Rf6",
+      "best": "Kg6",
+      "eval_after": "-2.20",
+      "grade": "blunder"
+     },
+     {
+      "ply": 79,
+      "side": "White",
+      "played": "Re7",
+      "best": "Re7",
+      "eval_after": "-2.46",
+      "grade": null
+     },
+     {
+      "ply": 80,
+      "side": "Black",
+      "played": "Rf5",
+      "best": "Kh6",
+      "eval_after": "-0.17",
+      "grade": "blunder"
+     },
+     {
+      "ply": 81,
+      "side": "White",
+      "played": "Re6",
+      "best": "e4",
+      "eval_after": "-0.61",
+      "grade": null
+     },
+     {
+      "ply": 82,
+      "side": "Black",
+      "played": "g5",
+      "best": "Rf8",
+      "eval_after": "-0.12",
+      "grade": null
+     },
+     {
+      "ply": 83,
+      "side": "White",
+      "played": "Rxb6",
+      "best": "Kf1",
+      "eval_after": "-0.23",
+      "grade": null
+     },
+     {
+      "ply": 84,
+      "side": "Black",
+      "played": "g4",
+      "best": "g4",
+      "eval_after": "-0.06",
+      "grade": null
+     },
+     {
+      "ply": 85,
+      "side": "White",
+      "played": "a4",
+      "best": "Kf1",
+      "eval_after": "-5.06",
+      "grade": "blunder"
+     },
+     {
+      "ply": 86,
+      "side": "Black",
+      "played": "Rh5",
+      "best": "Rh5",
+      "eval_after": "-6.19",
+      "grade": null
+     },
+     {
+      "ply": 87,
+      "side": "White",
+      "played": "Re6",
+      "best": "Rb7+",
+      "eval_after": "-6.49",
+      "grade": null
+     },
+     {
+      "ply": 88,
+      "side": "Black",
+      "played": "Rh1+",
+      "best": "Rh1+",
+      "eval_after": "-6.91",
+      "grade": null
+     },
+     {
+      "ply": 89,
+      "side": "White",
+      "played": "Kd2",
+      "best": "Kd2",
+      "eval_after": "-7.03",
+      "grade": null
+     },
+     {
+      "ply": 90,
+      "side": "Black",
+      "played": "Rf1",
+      "best": "g3",
+      "eval_after": "-6.51",
+      "grade": null
+     },
+     {
+      "ply": 91,
+      "side": "White",
+      "played": "Rxe5",
+      "best": "Kd3",
+      "eval_after": "-6.89",
+      "grade": null
+     },
+     {
+      "ply": 92,
+      "side": "Black",
+      "played": "Rxf2+",
+      "best": "Rxf2+",
+      "eval_after": "-7.09",
+      "grade": null
+     },
+     {
+      "ply": 93,
+      "side": "White",
+      "played": "Ke1",
+      "best": "Kd3",
+      "eval_after": "-8.95",
+      "grade": null
+     },
+     {
+      "ply": 94,
+      "side": "Black",
+      "played": "g3",
+      "best": "Re2+",
+      "eval_after": "-8.21",
+      "grade": null
+     },
+     {
+      "ply": 95,
+      "side": "White",
+      "played": "Rg5",
+      "best": "Rh5+",
+      "eval_after": "-11.94",
+      "grade": null
+     },
+     {
+      "ply": 96,
+      "side": "Black",
+      "played": "Re2+",
+      "best": "Re2+",
+      "eval_after": "-18.32",
+      "grade": null
+     },
+     {
+      "ply": 97,
+      "side": "White",
+      "played": "Kd1",
+      "best": "Kf1",
+      "eval_after": "Black mates in 12",
+      "grade": null
+     },
+     {
+      "ply": 98,
+      "side": "Black",
+      "played": "g2",
+      "best": "g2",
+      "eval_after": "Black mates in 9",
+      "grade": null
+     },
+     {
+      "ply": 99,
+      "side": "White",
+      "played": "a5",
+      "best": "Rxg2",
+      "eval_after": "Black mates in 7",
+      "grade": null
+     },
+     {
+      "ply": 100,
+      "side": "Black",
+      "played": "Ra2",
+      "best": "Ra2",
+      "eval_after": "Black mates in 6",
+      "grade": null
+     },
+     {
+      "ply": 101,
+      "side": "White",
+      "played": "a6",
+      "best": "Rg3",
+      "eval_after": "Black mates in 4",
+      "grade": null
+     },
+     {
+      "ply": 102,
+      "side": "Black",
+      "played": "Rxa6",
+      "best": "f2",
+      "eval_after": "-12.19",
+      "grade": null
+     },
+     {
+      "ply": 103,
+      "side": "White",
+      "played": "Ke1",
+      "best": "Kc2",
+      "eval_after": "Black mates in 5",
+      "grade": null
+     },
+     {
+      "ply": 104,
+      "side": "Black",
+      "played": "Ra2",
+      "best": "Ra2",
+      "eval_after": "Black mates in 4",
+      "grade": null
+     },
+     {
+      "ply": 105,
+      "side": "White",
+      "played": "e4",
+      "best": "Kd1",
+      "eval_after": "Black mates in 2",
+      "grade": null
+     },
+     {
+      "ply": 106,
+      "side": "Black",
+      "played": "f2+",
+      "best": "f2+",
+      "eval_after": "Black mates in 1",
+      "grade": null
+     }
+    ]
+   }
+  },
+  {
+   "game_id": "BVzBEglH",
+   "url": "https://lichess.org/BVzBEglH",
+   "date": "2026.10.15",
+   "white": "Boreminator",
+   "black": "dr_namer",
+   "result": "0-1",
+   "time_control": "180+0",
+   "plies": 152,
+   "key_moments": [
+    {
+     "ply": 64,
+     "side": "Black",
+     "fen_before": "1r6/4k1pp/1rBn1p2/8/p4P2/4PK2/1PRR2PP/8 b - - 2 32",
+     "played": "a3",
+     "best": "Rb4",
+     "grade": "blunder"
+    },
+    {
+     "ply": 79,
+     "side": "White",
+     "fen_before": "1r3k2/3R2pp/1n3p2/8/P4P2/3B1K2/6PP/8 w - - 3 40",
+     "played": "Rd6",
+     "best": "Ra7",
+     "grade": "blunder"
+    },
+    {
+     "ply": 94,
+     "side": "Black",
+     "fen_before": "8/3nk1p1/2R2pB1/7P/5PK1/6P1/1r6/8 b - - 0 47",
+     "played": "Nf8",
+     "best": "Rb7",
+     "grade": "blunder"
+    },
+    {
+     "ply": 105,
+     "side": "White",
+     "fen_before": "8/3n1R2/3k1pBP/5P2/6K1/6P1/8/1r6 w - - 3 53",
+     "played": "h7",
+     "best": "Rxd7+",
+     "grade": "blunder"
+    },
+    {
+     "ply": 152,
+     "side": "Black",
+     "fen_before": "8/6kP/6B1/5PK1/8/8/8/5r2 b - - 8 76",
+     "played": "Rxf5+",
+     "best": "Rg1+",
+     "grade": "blunder"
+    }
+   ],
+   "pgn": "[Event \"rated blitz game\"]\n[Site \"https://lichess.org/game/BVzBEglH\"]\n[Date \"2026.10.15\"]\n[Round \"-\"]\n[White \"Boreminator\"]\n[Black \"dr_namer\"]\n[Result \"0-1\"]\n[GameId \"BVzBEglH\"]\n[UTCDate \"2026.10.15\"]\n[UTCTime \"19:34:08\"]\n[WhiteElo \"2563\"]\n[BlackElo \"2529\"]\n[WhiteRatingDiff \"-6\"]\n[BlackRatingDiff \"+12\"]\n[Variant \"Standard\"]\n[TimeControl \"180+0\"]\n[ECO \"A40\"]\n[Opening \"Queen's Pawn Game\"]\n[Termination \"Time forfeit\"]\n\n1. d4 c6 2. Nf3 d5 3. Bf4 Bg4 4. e3 e6 5. c4 Bd6 6. Bxd6 Qxd6 7. Qb3 Nd7 8. Nbd2 Ngf6 9. Bd3 O-O 10. O-O Bxf3 11. Nxf3 dxc4 12. Bxc4 b5 13. Be2 e5 14. dxe5 Nxe5 15. Rfd1 Qc7 16. Rac1 Rac8 17. Rc5 Nfd7 18. Rc2 Nxf3+ 19. Bxf3 Ne5 20. Be2 a6 21. a4 Qa5 22. Qc3 Qxc3 23. Rxc3 bxa4 24. Bxa6 Rb8 25. Rc2 Rb6 26. Be2 Rfb8 27. Rdd2 f6 28. f4 Nf7 29. Kf2 Kf8 30. Bf3 Ke7 31. Bxc6 Nd6 32. Kf3 a3 33. bxa3 Rb3 34. a4 Nf5 35. Bb5 Nxe3 36. Rc7+ Kf8 37. Rd3 Rxd3 38. Bxd3 Nd5 39. Rd7 Nb6 40. Rd6 Nxa4 41. Bxh7 Nc5 42. h4 Rb3+ 43. Kg4 Kf7 44. h5 Rb2 45. Bg6+ Ke7 46. Rc6 Nd7 47. g3 Nf8 48. Rc7+ Ke6 49. Rxg7 Rb5 50. h6 Rb1 51. f5+ Kd6 52. Rf7 Nd7 53. h7 Ne5+ 54. Kf4 Nxf7 55. Bxf7 Rh1 56. Bg6 Ke7 57. Kg4 Rh6 58. Kf4 Kf8 59. g4 Kg7 60. g5 Rh4+ 61. Kg3 fxg5 62. Kf3 Kf6 63. Kg3 Rh6 64. Kf3 Kg7 65. Kg3 Rh4 66. Kf3 Ra4 67. Kg3 Kh8 68. Kf3 Rb4 69. Kg3 Kg7 70. Kf3 Rb3+ 71. Kg4 Rb4+ 72. Kxg5 Rb1 73. Kf4 Rf1+ 74. Ke5 Re1+ 75. Kf4 Rf1+ 76. Kg5 Rxf5+ 0-1\n\n\n",
+   "review": {
+    "engine": "Stockfish 19",
+    "seconds_per_move": 0.15,
+    "result": "0-1",
+    "opening": "Queen's Pawn Game",
+    "summary": {
+     "White": {
+      "player": "Boreminator",
+      "elo": "2563",
+      "average_centipawn_loss": 38,
+      "inaccuracies": 5,
+      "mistakes": 1,
+      "blunders": 2
+     },
+     "Black": {
+      "player": "dr_namer",
+      "elo": "2529",
+      "average_centipawn_loss": 42,
+      "inaccuracies": 7,
+      "mistakes": 2,
+      "blunders": 3
+     }
+    },
+    "key_moments": [
+     {
+      "ply": 64,
+      "move_number": 32,
+      "side": "Black",
+      "played": "a3",
+      "best": "Rb4",
+      "best_line": "32...Rb4 33. Bd5 Rc8 34. Rxc8 Nxc8 35. Rd4",
+      "eval_before": "+1.23",
+      "eval_after": "+4.04",
+      "win_chance_drop": 0.409,
+      "grade": "blunder",
+      "fen_before": "1r6/4k1pp/1rBn1p2/8/p4P2/4PK2/1PRR2PP/8 b - - 2 32",
+      "facts_before": {
+       "side_to_move": "Black",
+       "in_check": false,
+       "material_white_minus_black": 1,
+       "hanging_pieces": [
+        "Black pawn on a4"
+       ],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [],
+       "legal_moves": 33
+      }
+     },
+     {
+      "ply": 79,
+      "move_number": 40,
+      "side": "White",
+      "played": "Rd6",
+      "best": "Ra7",
+      "best_line": "40. Ra7 Nc8 41. Rc7 Ne7 42. a5 Rb3",
+      "eval_before": "+4.27",
+      "eval_after": "+0.69",
+      "win_chance_drop": 0.53,
+      "grade": "blunder",
+      "fen_before": "1r3k2/3R2pp/1n3p2/8/P4P2/3B1K2/6PP/8 w - - 3 40",
+      "facts_before": {
+       "side_to_move": "White",
+       "in_check": false,
+       "material_white_minus_black": 1,
+       "hanging_pieces": [
+        "Black pawn on h7",
+        "White rook on d7",
+        "White pawn on a4"
+       ],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [
+        "Rd8+",
+        "Rf7+"
+       ],
+       "legal_moves": 33
+      }
+     },
+     {
+      "ply": 94,
+      "move_number": 47,
+      "side": "Black",
+      "played": "Nf8",
+      "best": "Rb7",
+      "best_line": "47...Rb7 48. Rc8 Nb6 49. Rg8 Ke6 50. Bb1",
+      "eval_before": "+2.98",
+      "eval_after": "+6.74",
+      "win_chance_drop": 0.346,
+      "grade": "blunder",
+      "fen_before": "8/3nk1p1/2R2pB1/7P/5PK1/6P1/1r6/8 b - - 0 47",
+      "facts_before": {
+       "side_to_move": "Black",
+       "in_check": false,
+       "material_white_minus_black": 1,
+       "hanging_pieces": [],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [
+        "Ne5+",
+        "f5+"
+       ],
+       "legal_moves": 22
+      }
+     },
+     {
+      "ply": 105,
+      "move_number": 53,
+      "side": "White",
+      "played": "h7",
+      "best": "Rxd7+",
+      "best_line": "53. Rxd7+ Kxd7 54. h7 Rb8 55. Kh5 Kd6",
+      "eval_before": "+7.97",
+      "eval_after": "+0.00",
+      "win_chance_drop": 0.899,
+      "grade": "blunder",
+      "fen_before": "8/3n1R2/3k1pBP/5P2/6K1/6P1/8/1r6 w - - 3 53",
+      "facts_before": {
+       "side_to_move": "White",
+       "in_check": false,
+       "material_white_minus_black": 2,
+       "hanging_pieces": [],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [
+        "Rxd7+",
+        "Rxf6+"
+       ],
+       "legal_moves": 14
+      }
+     },
+     {
+      "ply": 152,
+      "move_number": 76,
+      "side": "Black",
+      "played": "Rxf5+",
+      "best": "Rg1+",
+      "best_line": "76...Rg1+ 77. Kh5 Rh1+ 78. Kg4 Kf6 79. Bh5",
+      "eval_before": "+0.00",
+      "eval_after": "+4.15",
+      "win_chance_drop": 0.643,
+      "grade": "blunder",
+      "fen_before": "8/6kP/6B1/5PK1/8/8/8/5r2 b - - 8 76",
+      "facts_before": {
+       "side_to_move": "Black",
+       "in_check": false,
+       "material_white_minus_black": 0,
+       "hanging_pieces": [],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [
+        "Rxf5+",
+        "Rg1+"
+       ],
+       "legal_moves": 13
+      }
+     }
+    ],
+    "moves": [
+     {
+      "ply": 1,
+      "side": "White",
+      "played": "d4",
+      "best": "e4",
+      "eval_after": "+0.16",
+      "grade": null
+     },
+     {
+      "ply": 2,
+      "side": "Black",
+      "played": "c6",
+      "best": "Nf6",
+      "eval_after": "+0.31",
+      "grade": null
+     },
+     {
+      "ply": 3,
+      "side": "White",
+      "played": "Nf3",
+      "best": "e4",
+      "eval_after": "+0.28",
+      "grade": null
+     },
+     {
+      "ply": 4,
+      "side": "Black",
+      "played": "d5",
+      "best": "d5",
+      "eval_after": "+0.23",
+      "grade": null
+     },
+     {
+      "ply": 5,
+      "side": "White",
+      "played": "Bf4",
+      "best": "c4",
+      "eval_after": "+0.36",
+      "grade": null
+     },
+     {
+      "ply": 6,
+      "side": "Black",
+      "played": "Bg4",
+      "best": "Nf6",
+      "eval_after": "+0.47",
+      "grade": null
+     },
+     {
+      "ply": 7,
+      "side": "White",
+      "played": "e3",
+      "best": "Ne5",
+      "eval_after": "+0.32",
+      "grade": null
+     },
+     {
+      "ply": 8,
+      "side": "Black",
+      "played": "e6",
+      "best": "e6",
+      "eval_after": "+0.37",
+      "grade": null
+     },
+     {
+      "ply": 9,
+      "side": "White",
+      "played": "c4",
+      "best": "h3",
+      "eval_after": "+0.23",
+      "grade": null
+     },
+     {
+      "ply": 10,
+      "side": "Black",
+      "played": "Bd6",
+      "best": "Bd6",
+      "eval_after": "+0.26",
+      "grade": null
+     },
+     {
+      "ply": 11,
+      "side": "White",
+      "played": "Bxd6",
+      "best": "Bxd6",
+      "eval_after": "+0.19",
+      "grade": null
+     },
+     {
+      "ply": 12,
+      "side": "Black",
+      "played": "Qxd6",
+      "best": "Qxd6",
+      "eval_after": "+0.23",
+      "grade": null
+     },
+     {
+      "ply": 13,
+      "side": "White",
+      "played": "Qb3",
+      "best": "Qb3",
+      "eval_after": "+0.28",
+      "grade": null
+     },
+     {
+      "ply": 14,
+      "side": "Black",
+      "played": "Nd7",
+      "best": "Qc7",
+      "eval_after": "+1.02",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 15,
+      "side": "White",
+      "played": "Nbd2",
+      "best": "Qxb7",
+      "eval_after": "+0.17",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 16,
+      "side": "Black",
+      "played": "Ngf6",
+      "best": "Bxf3",
+      "eval_after": "+0.47",
+      "grade": null
+     },
+     {
+      "ply": 17,
+      "side": "White",
+      "played": "Bd3",
+      "best": "Qxb7",
+      "eval_after": "+0.16",
+      "grade": null
+     },
+     {
+      "ply": 18,
+      "side": "Black",
+      "played": "O-O",
+      "best": "O-O",
+      "eval_after": "+0.14",
+      "grade": null
+     },
+     {
+      "ply": 19,
+      "side": "White",
+      "played": "O-O",
+      "best": "O-O",
+      "eval_after": "+0.17",
+      "grade": null
+     },
+     {
+      "ply": 20,
+      "side": "Black",
+      "played": "Bxf3",
+      "best": "a5",
+      "eval_after": "+0.21",
+      "grade": null
+     },
+     {
+      "ply": 21,
+      "side": "White",
+      "played": "Nxf3",
+      "best": "Nxf3",
+      "eval_after": "+0.22",
+      "grade": null
+     },
+     {
+      "ply": 22,
+      "side": "Black",
+      "played": "dxc4",
+      "best": "a5",
+      "eval_after": "+0.19",
+      "grade": null
+     },
+     {
+      "ply": 23,
+      "side": "White",
+      "played": "Bxc4",
+      "best": "Bxc4",
+      "eval_after": "+0.16",
+      "grade": null
+     },
+     {
+      "ply": 24,
+      "side": "Black",
+      "played": "b5",
+      "best": "c5",
+      "eval_after": "+0.39",
+      "grade": null
+     },
+     {
+      "ply": 25,
+      "side": "White",
+      "played": "Be2",
+      "best": "Be2",
+      "eval_after": "+0.45",
+      "grade": null
+     },
+     {
+      "ply": 26,
+      "side": "Black",
+      "played": "e5",
+      "best": "a5",
+      "eval_after": "+1.36",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 27,
+      "side": "White",
+      "played": "dxe5",
+      "best": "dxe5",
+      "eval_after": "+1.40",
+      "grade": null
+     },
+     {
+      "ply": 28,
+      "side": "Black",
+      "played": "Nxe5",
+      "best": "Nxe5",
+      "eval_after": "+1.55",
+      "grade": null
+     },
+     {
+      "ply": 29,
+      "side": "White",
+      "played": "Rfd1",
+      "best": "Rfd1",
+      "eval_after": "+1.61",
+      "grade": null
+     },
+     {
+      "ply": 30,
+      "side": "Black",
+      "played": "Qc7",
+      "best": "Qe7",
+      "eval_after": "+1.63",
+      "grade": null
+     },
+     {
+      "ply": 31,
+      "side": "White",
+      "played": "Rac1",
+      "best": "Rac1",
+      "eval_after": "+1.77",
+      "grade": null
+     },
+     {
+      "ply": 32,
+      "side": "Black",
+      "played": "Rac8",
+      "best": "Rac8",
+      "eval_after": "+1.70",
+      "grade": null
+     },
+     {
+      "ply": 33,
+      "side": "White",
+      "played": "Rc5",
+      "best": "Nxe5",
+      "eval_after": "+1.15",
+      "grade": null
+     },
+     {
+      "ply": 34,
+      "side": "Black",
+      "played": "Nfd7",
+      "best": "Ned7",
+      "eval_after": "+1.22",
+      "grade": null
+     },
+     {
+      "ply": 35,
+      "side": "White",
+      "played": "Rc2",
+      "best": "Rcc1",
+      "eval_after": "+0.95",
+      "grade": null
+     },
+     {
+      "ply": 36,
+      "side": "Black",
+      "played": "Nxf3+",
+      "best": "Nxf3+",
+      "eval_after": "+0.89",
+      "grade": null
+     },
+     {
+      "ply": 37,
+      "side": "White",
+      "played": "Bxf3",
+      "best": "Bxf3",
+      "eval_after": "+0.90",
+      "grade": null
+     },
+     {
+      "ply": 38,
+      "side": "Black",
+      "played": "Ne5",
+      "best": "Ne5",
+      "eval_after": "+0.88",
+      "grade": null
+     },
+     {
+      "ply": 39,
+      "side": "White",
+      "played": "Be2",
+      "best": "Be2",
+      "eval_after": "+1.13",
+      "grade": null
+     },
+     {
+      "ply": 40,
+      "side": "Black",
+      "played": "a6",
+      "best": "Qe7",
+      "eval_after": "+0.87",
+      "grade": null
+     },
+     {
+      "ply": 41,
+      "side": "White",
+      "played": "a4",
+      "best": "Qa3",
+      "eval_after": "+0.59",
+      "grade": null
+     },
+     {
+      "ply": 42,
+      "side": "Black",
+      "played": "Qa5",
+      "best": "Qa5",
+      "eval_after": "+0.56",
+      "grade": null
+     },
+     {
+      "ply": 43,
+      "side": "White",
+      "played": "Qc3",
+      "best": "Rc5",
+      "eval_after": "+0.40",
+      "grade": null
+     },
+     {
+      "ply": 44,
+      "side": "Black",
+      "played": "Qxc3",
+      "best": "Qxc3",
+      "eval_after": "+0.48",
+      "grade": null
+     },
+     {
+      "ply": 45,
+      "side": "White",
+      "played": "Rxc3",
+      "best": "Rxc3",
+      "eval_after": "+0.38",
+      "grade": null
+     },
+     {
+      "ply": 46,
+      "side": "Black",
+      "played": "bxa4",
+      "best": "bxa4",
+      "eval_after": "+0.27",
+      "grade": null
+     },
+     {
+      "ply": 47,
+      "side": "White",
+      "played": "Bxa6",
+      "best": "Rc2",
+      "eval_after": "+0.09",
+      "grade": null
+     },
+     {
+      "ply": 48,
+      "side": "Black",
+      "played": "Rb8",
+      "best": "Rb8",
+      "eval_after": "+0.04",
+      "grade": null
+     },
+     {
+      "ply": 49,
+      "side": "White",
+      "played": "Rc2",
+      "best": "Rc5",
+      "eval_after": "+0.04",
+      "grade": null
+     },
+     {
+      "ply": 50,
+      "side": "Black",
+      "played": "Rb6",
+      "best": "Rb4",
+      "eval_after": "+0.02",
+      "grade": null
+     },
+     {
+      "ply": 51,
+      "side": "White",
+      "played": "Be2",
+      "best": "Bf1",
+      "eval_after": "-0.03",
+      "grade": null
+     },
+     {
+      "ply": 52,
+      "side": "Black",
+      "played": "Rfb8",
+      "best": "g5",
+      "eval_after": "+0.01",
+      "grade": null
+     },
+     {
+      "ply": 53,
+      "side": "White",
+      "played": "Rdd2",
+      "best": "f4",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 54,
+      "side": "Black",
+      "played": "f6",
+      "best": "g5",
+      "eval_after": "+0.15",
+      "grade": null
+     },
+     {
+      "ply": 55,
+      "side": "White",
+      "played": "f4",
+      "best": "h4",
+      "eval_after": "+0.09",
+      "grade": null
+     },
+     {
+      "ply": 56,
+      "side": "Black",
+      "played": "Nf7",
+      "best": "Ng6",
+      "eval_after": "+0.64",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 57,
+      "side": "White",
+      "played": "Kf2",
+      "best": "Bf3",
+      "eval_after": "+0.32",
+      "grade": null
+     },
+     {
+      "ply": 58,
+      "side": "Black",
+      "played": "Kf8",
+      "best": "Rd8",
+      "eval_after": "+0.20",
+      "grade": null
+     },
+     {
+      "ply": 59,
+      "side": "White",
+      "played": "Bf3",
+      "best": "h4",
+      "eval_after": "+0.10",
+      "grade": null
+     },
+     {
+      "ply": 60,
+      "side": "Black",
+      "played": "Ke7",
+      "best": "c5",
+      "eval_after": "+1.24",
+      "grade": "mistake"
+     },
+     {
+      "ply": 61,
+      "side": "White",
+      "played": "Bxc6",
+      "best": "Bxc6",
+      "eval_after": "+1.16",
+      "grade": null
+     },
+     {
+      "ply": 62,
+      "side": "Black",
+      "played": "Nd6",
+      "best": "Nd6",
+      "eval_after": "+1.32",
+      "grade": null
+     },
+     {
+      "ply": 63,
+      "side": "White",
+      "played": "Kf3",
+      "best": "Kf3",
+      "eval_after": "+1.23",
+      "grade": null
+     },
+     {
+      "ply": 64,
+      "side": "Black",
+      "played": "a3",
+      "best": "Rb4",
+      "eval_after": "+4.04",
+      "grade": "blunder"
+     },
+     {
+      "ply": 65,
+      "side": "White",
+      "played": "bxa3",
+      "best": "bxa3",
+      "eval_after": "+4.26",
+      "grade": null
+     },
+     {
+      "ply": 66,
+      "side": "Black",
+      "played": "Rb3",
+      "best": "Rb1",
+      "eval_after": "+4.81",
+      "grade": null
+     },
+     {
+      "ply": 67,
+      "side": "White",
+      "played": "a4",
+      "best": "Ba4",
+      "eval_after": "+4.01",
+      "grade": null
+     },
+     {
+      "ply": 68,
+      "side": "Black",
+      "played": "Nf5",
+      "best": "Ra3",
+      "eval_after": "+5.07",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 69,
+      "side": "White",
+      "played": "Bb5",
+      "best": "Kf2",
+      "eval_after": "+3.88",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 70,
+      "side": "Black",
+      "played": "Nxe3",
+      "best": "Rxe3+",
+      "eval_after": "+7.83",
+      "grade": "mistake"
+     },
+     {
+      "ply": 71,
+      "side": "White",
+      "played": "Rc7+",
+      "best": "Re2",
+      "eval_after": "+4.01",
+      "grade": "mistake"
+     },
+     {
+      "ply": 72,
+      "side": "Black",
+      "played": "Kf8",
+      "best": "Kf8",
+      "eval_after": "+4.45",
+      "grade": null
+     },
+     {
+      "ply": 73,
+      "side": "White",
+      "played": "Rd3",
+      "best": "Rd3",
+      "eval_after": "+4.69",
+      "grade": null
+     },
+     {
+      "ply": 74,
+      "side": "Black",
+      "played": "Rxd3",
+      "best": "Nd5",
+      "eval_after": "+4.64",
+      "grade": null
+     },
+     {
+      "ply": 75,
+      "side": "White",
+      "played": "Bxd3",
+      "best": "Bxd3",
+      "eval_after": "+4.51",
+      "grade": null
+     },
+     {
+      "ply": 76,
+      "side": "Black",
+      "played": "Nd5",
+      "best": "Nd5",
+      "eval_after": "+4.85",
+      "grade": null
+     },
+     {
+      "ply": 77,
+      "side": "White",
+      "played": "Rd7",
+      "best": "Rc5",
+      "eval_after": "+3.75",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 78,
+      "side": "Black",
+      "played": "Nb6",
+      "best": "Ne7",
+      "eval_after": "+4.27",
+      "grade": null
+     },
+     {
+      "ply": 79,
+      "side": "White",
+      "played": "Rd6",
+      "best": "Ra7",
+      "eval_after": "+0.69",
+      "grade": "blunder"
+     },
+     {
+      "ply": 80,
+      "side": "Black",
+      "played": "Nxa4",
+      "best": "Nxa4",
+      "eval_after": "+0.77",
+      "grade": null
+     },
+     {
+      "ply": 81,
+      "side": "White",
+      "played": "Bxh7",
+      "best": "Bxh7",
+      "eval_after": "+0.83",
+      "grade": null
+     },
+     {
+      "ply": 82,
+      "side": "Black",
+      "played": "Nc5",
+      "best": "Rb3+",
+      "eval_after": "+1.22",
+      "grade": null
+     },
+     {
+      "ply": 83,
+      "side": "White",
+      "played": "h4",
+      "best": "Bf5",
+      "eval_after": "+0.85",
+      "grade": null
+     },
+     {
+      "ply": 84,
+      "side": "Black",
+      "played": "Rb3+",
+      "best": "Ke7",
+      "eval_after": "+1.93",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 85,
+      "side": "White",
+      "played": "Kg4",
+      "best": "Kg4",
+      "eval_after": "+1.93",
+      "grade": null
+     },
+     {
+      "ply": 86,
+      "side": "Black",
+      "played": "Kf7",
+      "best": "Nb7",
+      "eval_after": "+2.94",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 87,
+      "side": "White",
+      "played": "h5",
+      "best": "Rc6",
+      "eval_after": "+1.76",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 88,
+      "side": "Black",
+      "played": "Rb2",
+      "best": "Rb7",
+      "eval_after": "+2.02",
+      "grade": null
+     },
+     {
+      "ply": 89,
+      "side": "White",
+      "played": "Bg6+",
+      "best": "g3",
+      "eval_after": "+1.70",
+      "grade": null
+     },
+     {
+      "ply": 90,
+      "side": "Black",
+      "played": "Ke7",
+      "best": "Ke7",
+      "eval_after": "+1.81",
+      "grade": null
+     },
+     {
+      "ply": 91,
+      "side": "White",
+      "played": "Rc6",
+      "best": "Rc6",
+      "eval_after": "+1.76",
+      "grade": null
+     },
+     {
+      "ply": 92,
+      "side": "Black",
+      "played": "Nd7",
+      "best": "Ne6",
+      "eval_after": "+2.71",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 93,
+      "side": "White",
+      "played": "g3",
+      "best": "g3",
+      "eval_after": "+2.98",
+      "grade": null
+     },
+     {
+      "ply": 94,
+      "side": "Black",
+      "played": "Nf8",
+      "best": "Rb7",
+      "eval_after": "+6.74",
+      "grade": "blunder"
+     },
+     {
+      "ply": 95,
+      "side": "White",
+      "played": "Rc7+",
+      "best": "Rc7+",
+      "eval_after": "+7.01",
+      "grade": null
+     },
+     {
+      "ply": 96,
+      "side": "Black",
+      "played": "Ke6",
+      "best": "Kd6",
+      "eval_after": "+7.17",
+      "grade": null
+     },
+     {
+      "ply": 97,
+      "side": "White",
+      "played": "Rxg7",
+      "best": "Bf5+",
+      "eval_after": "+6.45",
+      "grade": null
+     },
+     {
+      "ply": 98,
+      "side": "Black",
+      "played": "Rb5",
+      "best": "Nxg6",
+      "eval_after": "+7.36",
+      "grade": null
+     },
+     {
+      "ply": 99,
+      "side": "White",
+      "played": "h6",
+      "best": "Bd3",
+      "eval_after": "+7.04",
+      "grade": null
+     },
+     {
+      "ply": 100,
+      "side": "Black",
+      "played": "Rb1",
+      "best": "Nxg6",
+      "eval_after": "+10.38",
+      "grade": null
+     },
+     {
+      "ply": 101,
+      "side": "White",
+      "played": "f5+",
+      "best": "Bxb1",
+      "eval_after": "+6.84",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 102,
+      "side": "Black",
+      "played": "Kd6",
+      "best": "Kd6",
+      "eval_after": "+7.30",
+      "grade": null
+     },
+     {
+      "ply": 103,
+      "side": "White",
+      "played": "Rf7",
+      "best": "h7",
+      "eval_after": "+7.36",
+      "grade": null
+     },
+     {
+      "ply": 104,
+      "side": "Black",
+      "played": "Nd7",
+      "best": "Rb4+",
+      "eval_after": "+7.97",
+      "grade": null
+     },
+     {
+      "ply": 105,
+      "side": "White",
+      "played": "h7",
+      "best": "Rxd7+",
+      "eval_after": "+0.00",
+      "grade": "blunder"
+     },
+     {
+      "ply": 106,
+      "side": "Black",
+      "played": "Ne5+",
+      "best": "Ne5+",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 107,
+      "side": "White",
+      "played": "Kf4",
+      "best": "Kf4",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 108,
+      "side": "Black",
+      "played": "Nxf7",
+      "best": "Rf1+",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 109,
+      "side": "White",
+      "played": "Bxf7",
+      "best": "Bxf7",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 110,
+      "side": "Black",
+      "played": "Rh1",
+      "best": "Rh1",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 111,
+      "side": "White",
+      "played": "Bg6",
+      "best": "Bg6",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 112,
+      "side": "Black",
+      "played": "Ke7",
+      "best": "Ke7",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 113,
+      "side": "White",
+      "played": "Kg4",
+      "best": "Kf3",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 114,
+      "side": "Black",
+      "played": "Rh6",
+      "best": "Kf8",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 115,
+      "side": "White",
+      "played": "Kf4",
+      "best": "Kf3",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 116,
+      "side": "Black",
+      "played": "Kf8",
+      "best": "Kf8",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 117,
+      "side": "White",
+      "played": "g4",
+      "best": "Kf3",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 118,
+      "side": "Black",
+      "played": "Kg7",
+      "best": "Kg7",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 119,
+      "side": "White",
+      "played": "g5",
+      "best": "Kf3",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 120,
+      "side": "Black",
+      "played": "Rh4+",
+      "best": "Rh4+",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 121,
+      "side": "White",
+      "played": "Kg3",
+      "best": "Kg3",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 122,
+      "side": "Black",
+      "played": "fxg5",
+      "best": "fxg5",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 123,
+      "side": "White",
+      "played": "Kf3",
+      "best": "Kf3",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 124,
+      "side": "Black",
+      "played": "Kf6",
+      "best": "Ra4",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 125,
+      "side": "White",
+      "played": "Kg3",
+      "best": "Kg2",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 126,
+      "side": "Black",
+      "played": "Rh6",
+      "best": "Rh6",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 127,
+      "side": "White",
+      "played": "Kf3",
+      "best": "Kg4",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 128,
+      "side": "Black",
+      "played": "Kg7",
+      "best": "Rh3+",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 129,
+      "side": "White",
+      "played": "Kg3",
+      "best": "Kg4",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 130,
+      "side": "Black",
+      "played": "Rh4",
+      "best": "Kf6",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 131,
+      "side": "White",
+      "played": "Kf3",
+      "best": "Kf3",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 132,
+      "side": "Black",
+      "played": "Ra4",
+      "best": "Rh2",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 133,
+      "side": "White",
+      "played": "Kg3",
+      "best": "f6+",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 134,
+      "side": "Black",
+      "played": "Kh8",
+      "best": "Kh8",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 135,
+      "side": "White",
+      "played": "Kf3",
+      "best": "f6",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 136,
+      "side": "Black",
+      "played": "Rb4",
+      "best": "Kg7",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 137,
+      "side": "White",
+      "played": "Kg3",
+      "best": "Kf2",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 138,
+      "side": "Black",
+      "played": "Kg7",
+      "best": "Rf4",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 139,
+      "side": "White",
+      "played": "Kf3",
+      "best": "f6+",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 140,
+      "side": "Black",
+      "played": "Rb3+",
+      "best": "Rh4",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 141,
+      "side": "White",
+      "played": "Kg4",
+      "best": "Kg4",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 142,
+      "side": "Black",
+      "played": "Rb4+",
+      "best": "Rb4+",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 143,
+      "side": "White",
+      "played": "Kxg5",
+      "best": "Kxg5",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 144,
+      "side": "Black",
+      "played": "Rb1",
+      "best": "Rb1",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 145,
+      "side": "White",
+      "played": "Kf4",
+      "best": "f6+",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 146,
+      "side": "Black",
+      "played": "Rf1+",
+      "best": "Rb8",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 147,
+      "side": "White",
+      "played": "Ke5",
+      "best": "Kg5",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 148,
+      "side": "Black",
+      "played": "Re1+",
+      "best": "Re1+",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 149,
+      "side": "White",
+      "played": "Kf4",
+      "best": "Kd6",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 150,
+      "side": "Black",
+      "played": "Rf1+",
+      "best": "Rd1",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 151,
+      "side": "White",
+      "played": "Kg5",
+      "best": "Kg4",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 152,
+      "side": "Black",
+      "played": "Rxf5+",
+      "best": "Rg1+",
+      "eval_after": "+4.15",
+      "grade": "blunder"
+     }
+    ]
+   }
+  },
+  {
+   "game_id": "movw8h7M",
+   "url": "https://lichess.org/movw8h7M",
+   "date": "2026.10.12",
+   "white": "ChimpandoIfo",
+   "black": "dr_namer",
+   "result": "1-0",
+   "time_control": "180+0",
+   "plies": 107,
+   "key_moments": [
+    {
+     "ply": 36,
+     "side": "Black",
+     "fen_before": "r2q2k1/1b2b1p1/p1n2r1p/1p1p4/8/P2Q1N2/1PB2PPP/R1B2RK1 b - - 1 18",
+     "played": "d4",
+     "best": "Bc8",
+     "grade": "mistake"
+    },
+    {
+     "ply": 45,
+     "side": "White",
+     "fen_before": "r6q/1b1kb1Q1/p1n2r1B/1p6/3p4/PB3N2/1P3PPP/R4RK1 w - - 1 23",
+     "played": "Qxh8",
+     "best": "Qg4+",
+     "grade": "blunder"
+    },
+    {
+     "ply": 49,
+     "side": "White",
+     "fen_before": "7r/1b1kb1B1/p1n5/1p6/3p4/PB3r2/1P3PPP/R4RK1 w - - 0 25",
+     "played": "gxf3",
+     "best": "Bd5",
+     "grade": "mistake"
+    },
+    {
+     "ply": 51,
+     "side": "White",
+     "fen_before": "8/1b1kb1B1/p1n5/1p5r/3p4/PB3P2/1P3P1P/R4RK1 w - - 1 26",
+     "played": "f4",
+     "best": "Rad1",
+     "grade": "mistake"
+    },
+    {
+     "ply": 52,
+     "side": "Black",
+     "fen_before": "8/1b1kb1B1/p1n5/1p5r/3p1P2/PB6/1P3P1P/R4RK1 b - - 0 26",
+     "played": "Rh4",
+     "best": "Rh7",
+     "grade": "blunder"
+    }
+   ],
+   "pgn": "[Event \"rated blitz game\"]\n[Site \"https://lichess.org/game/movw8h7M\"]\n[Date \"2026.10.12\"]\n[Round \"-\"]\n[White \"ChimpandoIfo\"]\n[Black \"dr_namer\"]\n[Result \"1-0\"]\n[GameId \"movw8h7M\"]\n[UTCDate \"2026.10.12\"]\n[UTCTime \"23:15:48\"]\n[WhiteElo \"2469\"]\n[BlackElo \"2542\"]\n[WhiteRatingDiff \"+7\"]\n[BlackRatingDiff \"-13\"]\n[Variant \"Standard\"]\n[TimeControl \"180+0\"]\n[ECO \"B00\"]\n[Opening \"St. George Defense: Polish Variation\"]\n[Termination \"Time forfeit\"]\n\n1. e4 a6 2. d4 b5 3. Nf3 Bb7 4. Bd3 e6 5. O-O c5 6. c3 Nf6 7. Qe2 cxd4 8. cxd4 Nc6 9. a3 Be7 10. Nc3 O-O 11. e5 Nd5 12. Nxd5 exd5 13. Qc2 h6 14. Qe2 d6 15. Bc2 dxe5 16. dxe5 f5 17. exf6 Rxf6 18. Qd3 d4 19. Qh7+ Kf7 20. Bb3+ Ke8 21. Qxg7 Kd7 22. Bxh6 Qh8 23. Qxh8 Rxh8 24. Bg7 Rxf3 25. gxf3 Rh5 26. f4 Rh4 27. f3 Rxf4 28. Rae1 Na5 29. Be6+ Kd8 30. Be5 Rf8 31. Bxd4 Bxf3 32. Bb6+ Ke8 33. Bxa5 Bc5+ 34. Rf2 Bc6 35. Bd5+ Kd7 36. Bxc6+ Kxc6 37. Re2 Bxf2+ 38. Rxf2 Re8 39. Rc2+ Kd5 40. h4 Rg8+ 41. Kh2 Ke4 42. Kh3 Kf3 43. Rc3+ Kf2 44. h5 Rg5 45. Kh4 Rg8 46. Bb6+ Ke2 47. h6 Rg6 48. Be3 a5 49. Kh5 Rg2 50. h7 Rh2+ 51. Kg6 b4 52. axb4 axb4 53. Rb3 Rg2+ 54. Bg5 1-0\n\n\n",
+   "review": {
+    "engine": "Stockfish 19",
+    "seconds_per_move": 0.15,
+    "result": "1-0",
+    "opening": "St. George Defense: Polish Variation",
+    "summary": {
+     "White": {
+      "player": "ChimpandoIfo",
+      "elo": "2469",
+      "average_centipawn_loss": 388,
+      "inaccuracies": 1,
+      "mistakes": 2,
+      "blunders": 1
+     },
+     "Black": {
+      "player": "dr_namer",
+      "elo": "2542",
+      "average_centipawn_loss": 410,
+      "inaccuracies": 3,
+      "mistakes": 3,
+      "blunders": 1
+     }
+    },
+    "key_moments": [
+     {
+      "ply": 36,
+      "move_number": 18,
+      "side": "Black",
+      "played": "d4",
+      "best": "Bc8",
+      "best_line": "18...Bc8 19. Nh4 Kf7 20. Re1 Be6 21. b4",
+      "eval_before": "+2.54",
+      "eval_after": "+4.96",
+      "win_chance_drop": 0.286,
+      "grade": "mistake",
+      "fen_before": "r2q2k1/1b2b1p1/p1n2r1p/1p1p4/8/P2Q1N2/1PB2PPP/R1B2RK1 b - - 1 18",
+      "facts_before": {
+       "side_to_move": "Black",
+       "in_check": false,
+       "material_white_minus_black": 0,
+       "hanging_pieces": [],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [],
+       "legal_moves": 41
+      }
+     },
+     {
+      "ply": 45,
+      "move_number": 23,
+      "side": "White",
+      "played": "Qxh8",
+      "best": "Qg4+",
+      "best_line": "23. Qg4+ Kc7 24. Bg7 Qc8 25. Qe4 Qf5",
+      "eval_before": "+6.00",
+      "eval_after": "-0.26",
+      "win_chance_drop": 0.85,
+      "grade": "blunder",
+      "fen_before": "r6q/1b1kb1Q1/p1n2r1B/1p6/3p4/PB3N2/1P3PPP/R4RK1 w - - 1 23",
+      "facts_before": {
+       "side_to_move": "White",
+       "in_check": false,
+       "material_white_minus_black": 2,
+       "hanging_pieces": [],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [
+        "bishop e7"
+       ],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [
+        "Qxe7+",
+        "Qg4+",
+        "Ne5+",
+        "Be6+"
+       ],
+       "legal_moves": 46
+      }
+     },
+     {
+      "ply": 49,
+      "move_number": 25,
+      "side": "White",
+      "played": "gxf3",
+      "best": "Bd5",
+      "best_line": "25. Bd5 Rff8",
+      "eval_before": "-0.42",
+      "eval_after": "-2.15",
+      "win_chance_drop": 0.299,
+      "grade": "mistake",
+      "fen_before": "7r/1b1kb1B1/p1n5/1p6/3p4/PB3r2/1P3PPP/R4RK1 w - - 0 25",
+      "facts_before": {
+       "side_to_move": "White",
+       "in_check": false,
+       "material_white_minus_black": -1,
+       "hanging_pieces": [
+        "Black rook on h8",
+        "Black rook on f3",
+        "White bishop on b3"
+       ],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [
+        "Be6+"
+       ],
+       "legal_moves": 31
+      }
+     },
+     {
+      "ply": 51,
+      "move_number": 26,
+      "side": "White",
+      "played": "f4",
+      "best": "Rad1",
+      "best_line": "26. Rad1 Rg5+ 27. Kh1 Rxg7 28. Rg1 Bf6",
+      "eval_before": "-1.31",
+      "eval_after": "-2.90",
+      "win_chance_drop": 0.252,
+      "grade": "mistake",
+      "fen_before": "8/1b1kb1B1/p1n5/1p5r/3p4/PB3P2/1P3P1P/R4RK1 w - - 1 26",
+      "facts_before": {
+       "side_to_move": "White",
+       "in_check": false,
+       "material_white_minus_black": 4,
+       "hanging_pieces": [],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [
+        "Be6+"
+       ],
+       "legal_moves": 30
+      }
+     },
+     {
+      "ply": 52,
+      "move_number": 26,
+      "side": "Black",
+      "played": "Rh4",
+      "best": "Rh7",
+      "best_line": "26...Rh7 27. Bh8 Rxh8 28. Rfe1 Nd8 29. Rad1",
+      "eval_before": "-2.90",
+      "eval_after": "+2.89",
+      "win_chance_drop": 0.975,
+      "grade": "blunder",
+      "fen_before": "8/1b1kb1B1/p1n5/1p5r/3p1P2/PB6/1P3P1P/R4RK1 b - - 0 26",
+      "facts_before": {
+       "side_to_move": "Black",
+       "in_check": false,
+       "material_white_minus_black": 4,
+       "hanging_pieces": [],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [
+        "Rg5+"
+       ],
+       "legal_moves": 36
+      }
+     }
+    ],
+    "moves": [
+     {
+      "ply": 1,
+      "side": "White",
+      "played": "e4",
+      "best": "e4",
+      "eval_after": "+0.30",
+      "grade": null
+     },
+     {
+      "ply": 2,
+      "side": "Black",
+      "played": "a6",
+      "best": "e5",
+      "eval_after": "+0.66",
+      "grade": null
+     },
+     {
+      "ply": 3,
+      "side": "White",
+      "played": "d4",
+      "best": "d4",
+      "eval_after": "+0.59",
+      "grade": null
+     },
+     {
+      "ply": 4,
+      "side": "Black",
+      "played": "b5",
+      "best": "e6",
+      "eval_after": "+1.20",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 5,
+      "side": "White",
+      "played": "Nf3",
+      "best": "a4",
+      "eval_after": "+0.85",
+      "grade": null
+     },
+     {
+      "ply": 6,
+      "side": "Black",
+      "played": "Bb7",
+      "best": "e6",
+      "eval_after": "+1.06",
+      "grade": null
+     },
+     {
+      "ply": 7,
+      "side": "White",
+      "played": "Bd3",
+      "best": "Bd3",
+      "eval_after": "+0.96",
+      "grade": null
+     },
+     {
+      "ply": 8,
+      "side": "Black",
+      "played": "e6",
+      "best": "e6",
+      "eval_after": "+0.93",
+      "grade": null
+     },
+     {
+      "ply": 9,
+      "side": "White",
+      "played": "O-O",
+      "best": "O-O",
+      "eval_after": "+0.90",
+      "grade": null
+     },
+     {
+      "ply": 10,
+      "side": "Black",
+      "played": "c5",
+      "best": "c5",
+      "eval_after": "+0.86",
+      "grade": null
+     },
+     {
+      "ply": 11,
+      "side": "White",
+      "played": "c3",
+      "best": "c3",
+      "eval_after": "+0.81",
+      "grade": null
+     },
+     {
+      "ply": 12,
+      "side": "Black",
+      "played": "Nf6",
+      "best": "Nf6",
+      "eval_after": "+0.82",
+      "grade": null
+     },
+     {
+      "ply": 13,
+      "side": "White",
+      "played": "Qe2",
+      "best": "Re1",
+      "eval_after": "+0.67",
+      "grade": null
+     },
+     {
+      "ply": 14,
+      "side": "Black",
+      "played": "cxd4",
+      "best": "cxd4",
+      "eval_after": "+0.65",
+      "grade": null
+     },
+     {
+      "ply": 15,
+      "side": "White",
+      "played": "cxd4",
+      "best": "cxd4",
+      "eval_after": "+0.59",
+      "grade": null
+     },
+     {
+      "ply": 16,
+      "side": "Black",
+      "played": "Nc6",
+      "best": "Be7",
+      "eval_after": "+1.08",
+      "grade": null
+     },
+     {
+      "ply": 17,
+      "side": "White",
+      "played": "a3",
+      "best": "Nc3",
+      "eval_after": "+0.58",
+      "grade": null
+     },
+     {
+      "ply": 18,
+      "side": "Black",
+      "played": "Be7",
+      "best": "Na5",
+      "eval_after": "+0.60",
+      "grade": null
+     },
+     {
+      "ply": 19,
+      "side": "White",
+      "played": "Nc3",
+      "best": "Be3",
+      "eval_after": "+0.59",
+      "grade": null
+     },
+     {
+      "ply": 20,
+      "side": "Black",
+      "played": "O-O",
+      "best": "b4",
+      "eval_after": "+1.75",
+      "grade": "mistake"
+     },
+     {
+      "ply": 21,
+      "side": "White",
+      "played": "e5",
+      "best": "e5",
+      "eval_after": "+1.84",
+      "grade": null
+     },
+     {
+      "ply": 22,
+      "side": "Black",
+      "played": "Nd5",
+      "best": "Nd5",
+      "eval_after": "+1.76",
+      "grade": null
+     },
+     {
+      "ply": 23,
+      "side": "White",
+      "played": "Nxd5",
+      "best": "Nxd5",
+      "eval_after": "+1.67",
+      "grade": null
+     },
+     {
+      "ply": 24,
+      "side": "Black",
+      "played": "exd5",
+      "best": "exd5",
+      "eval_after": "+1.76",
+      "grade": null
+     },
+     {
+      "ply": 25,
+      "side": "White",
+      "played": "Qc2",
+      "best": "Qc2",
+      "eval_after": "+1.74",
+      "grade": null
+     },
+     {
+      "ply": 26,
+      "side": "Black",
+      "played": "h6",
+      "best": "h6",
+      "eval_after": "+1.94",
+      "grade": null
+     },
+     {
+      "ply": 27,
+      "side": "White",
+      "played": "Qe2",
+      "best": "Re1",
+      "eval_after": "+1.85",
+      "grade": null
+     },
+     {
+      "ply": 28,
+      "side": "Black",
+      "played": "d6",
+      "best": "f5",
+      "eval_after": "+2.30",
+      "grade": null
+     },
+     {
+      "ply": 29,
+      "side": "White",
+      "played": "Bc2",
+      "best": "Bb1",
+      "eval_after": "+2.58",
+      "grade": null
+     },
+     {
+      "ply": 30,
+      "side": "Black",
+      "played": "dxe5",
+      "best": "dxe5",
+      "eval_after": "+2.49",
+      "grade": null
+     },
+     {
+      "ply": 31,
+      "side": "White",
+      "played": "dxe5",
+      "best": "dxe5",
+      "eval_after": "+2.71",
+      "grade": null
+     },
+     {
+      "ply": 32,
+      "side": "Black",
+      "played": "f5",
+      "best": "f5",
+      "eval_after": "+2.48",
+      "grade": null
+     },
+     {
+      "ply": 33,
+      "side": "White",
+      "played": "exf6",
+      "best": "exf6",
+      "eval_after": "+2.68",
+      "grade": null
+     },
+     {
+      "ply": 34,
+      "side": "Black",
+      "played": "Rxf6",
+      "best": "Rxf6",
+      "eval_after": "+2.54",
+      "grade": null
+     },
+     {
+      "ply": 35,
+      "side": "White",
+      "played": "Qd3",
+      "best": "Qd3",
+      "eval_after": "+2.54",
+      "grade": null
+     },
+     {
+      "ply": 36,
+      "side": "Black",
+      "played": "d4",
+      "best": "Bc8",
+      "eval_after": "+4.96",
+      "grade": "mistake"
+     },
+     {
+      "ply": 37,
+      "side": "White",
+      "played": "Qh7+",
+      "best": "Qh7+",
+      "eval_after": "+5.24",
+      "grade": null
+     },
+     {
+      "ply": 38,
+      "side": "Black",
+      "played": "Kf7",
+      "best": "Kf7",
+      "eval_after": "+5.67",
+      "grade": null
+     },
+     {
+      "ply": 39,
+      "side": "White",
+      "played": "Bb3+",
+      "best": "Re1",
+      "eval_after": "+5.25",
+      "grade": null
+     },
+     {
+      "ply": 40,
+      "side": "Black",
+      "played": "Ke8",
+      "best": "Ke8",
+      "eval_after": "+5.54",
+      "grade": null
+     },
+     {
+      "ply": 41,
+      "side": "White",
+      "played": "Qxg7",
+      "best": "Qxg7",
+      "eval_after": "+5.47",
+      "grade": null
+     },
+     {
+      "ply": 42,
+      "side": "Black",
+      "played": "Kd7",
+      "best": "Kd7",
+      "eval_after": "+5.39",
+      "grade": null
+     },
+     {
+      "ply": 43,
+      "side": "White",
+      "played": "Bxh6",
+      "best": "Bxh6",
+      "eval_after": "+5.79",
+      "grade": null
+     },
+     {
+      "ply": 44,
+      "side": "Black",
+      "played": "Qh8",
+      "best": "Kc7",
+      "eval_after": "+6.00",
+      "grade": null
+     },
+     {
+      "ply": 45,
+      "side": "White",
+      "played": "Qxh8",
+      "best": "Qg4+",
+      "eval_after": "-0.26",
+      "grade": "blunder"
+     },
+     {
+      "ply": 46,
+      "side": "Black",
+      "played": "Rxh8",
+      "best": "Rxh8",
+      "eval_after": "-0.33",
+      "grade": null
+     },
+     {
+      "ply": 47,
+      "side": "White",
+      "played": "Bg7",
+      "best": "Bg7",
+      "eval_after": "-0.33",
+      "grade": null
+     },
+     {
+      "ply": 48,
+      "side": "Black",
+      "played": "Rxf3",
+      "best": "Rxf3",
+      "eval_after": "-0.42",
+      "grade": null
+     },
+     {
+      "ply": 49,
+      "side": "White",
+      "played": "gxf3",
+      "best": "Bd5",
+      "eval_after": "-2.15",
+      "grade": "mistake"
+     },
+     {
+      "ply": 50,
+      "side": "Black",
+      "played": "Rh5",
+      "best": "Rh7",
+      "eval_after": "-1.31",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 51,
+      "side": "White",
+      "played": "f4",
+      "best": "Rad1",
+      "eval_after": "-2.90",
+      "grade": "mistake"
+     },
+     {
+      "ply": 52,
+      "side": "Black",
+      "played": "Rh4",
+      "best": "Rh7",
+      "eval_after": "+2.89",
+      "grade": "blunder"
+     },
+     {
+      "ply": 53,
+      "side": "White",
+      "played": "f3",
+      "best": "Bd1",
+      "eval_after": "+2.56",
+      "grade": null
+     },
+     {
+      "ply": 54,
+      "side": "Black",
+      "played": "Rxf4",
+      "best": "Rh7",
+      "eval_after": "+4.40",
+      "grade": "mistake"
+     },
+     {
+      "ply": 55,
+      "side": "White",
+      "played": "Rae1",
+      "best": "Rae1",
+      "eval_after": "+4.59",
+      "grade": null
+     },
+     {
+      "ply": 56,
+      "side": "Black",
+      "played": "Na5",
+      "best": "Bc5",
+      "eval_after": "+5.71",
+      "grade": null
+     },
+     {
+      "ply": 57,
+      "side": "White",
+      "played": "Be6+",
+      "best": "Be6+",
+      "eval_after": "+5.59",
+      "grade": null
+     },
+     {
+      "ply": 58,
+      "side": "Black",
+      "played": "Kd8",
+      "best": "Kd8",
+      "eval_after": "+5.87",
+      "grade": null
+     },
+     {
+      "ply": 59,
+      "side": "White",
+      "played": "Be5",
+      "best": "Be5",
+      "eval_after": "+5.65",
+      "grade": null
+     },
+     {
+      "ply": 60,
+      "side": "Black",
+      "played": "Rf8",
+      "best": "Rh4",
+      "eval_after": "+6.05",
+      "grade": null
+     },
+     {
+      "ply": 61,
+      "side": "White",
+      "played": "Bxd4",
+      "best": "Bxd4",
+      "eval_after": "+6.11",
+      "grade": null
+     },
+     {
+      "ply": 62,
+      "side": "Black",
+      "played": "Bxf3",
+      "best": "Kc7",
+      "eval_after": "+7.77",
+      "grade": null
+     },
+     {
+      "ply": 63,
+      "side": "White",
+      "played": "Bb6+",
+      "best": "Re3",
+      "eval_after": "+7.90",
+      "grade": null
+     },
+     {
+      "ply": 64,
+      "side": "Black",
+      "played": "Ke8",
+      "best": "Ke8",
+      "eval_after": "+7.88",
+      "grade": null
+     },
+     {
+      "ply": 65,
+      "side": "White",
+      "played": "Bxa5",
+      "best": "Re3",
+      "eval_after": "+5.67",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 66,
+      "side": "Black",
+      "played": "Bc5+",
+      "best": "Bc5+",
+      "eval_after": "+5.90",
+      "grade": null
+     },
+     {
+      "ply": 67,
+      "side": "White",
+      "played": "Rf2",
+      "best": "Rf2",
+      "eval_after": "+6.13",
+      "grade": null
+     },
+     {
+      "ply": 68,
+      "side": "Black",
+      "played": "Bc6",
+      "best": "Be4",
+      "eval_after": "+10.67",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 69,
+      "side": "White",
+      "played": "Bd5+",
+      "best": "Bg4+",
+      "eval_after": "+8.03",
+      "grade": null
+     },
+     {
+      "ply": 70,
+      "side": "Black",
+      "played": "Kd7",
+      "best": "Kd7",
+      "eval_after": "+8.11",
+      "grade": null
+     },
+     {
+      "ply": 71,
+      "side": "White",
+      "played": "Bxc6+",
+      "best": "Be6+",
+      "eval_after": "+7.27",
+      "grade": null
+     },
+     {
+      "ply": 72,
+      "side": "Black",
+      "played": "Kxc6",
+      "best": "Kxc6",
+      "eval_after": "+7.30",
+      "grade": null
+     },
+     {
+      "ply": 73,
+      "side": "White",
+      "played": "Re2",
+      "best": "Rc1",
+      "eval_after": "+7.13",
+      "grade": null
+     },
+     {
+      "ply": 74,
+      "side": "Black",
+      "played": "Bxf2+",
+      "best": "Kd5",
+      "eval_after": "+6.90",
+      "grade": null
+     },
+     {
+      "ply": 75,
+      "side": "White",
+      "played": "Rxf2",
+      "best": "Rxf2",
+      "eval_after": "+6.73",
+      "grade": null
+     },
+     {
+      "ply": 76,
+      "side": "Black",
+      "played": "Re8",
+      "best": "Rg8+",
+      "eval_after": "+6.64",
+      "grade": null
+     },
+     {
+      "ply": 77,
+      "side": "White",
+      "played": "Rc2+",
+      "best": "h3",
+      "eval_after": "+6.58",
+      "grade": null
+     },
+     {
+      "ply": 78,
+      "side": "Black",
+      "played": "Kd5",
+      "best": "Kb7",
+      "eval_after": "+6.58",
+      "grade": null
+     },
+     {
+      "ply": 79,
+      "side": "White",
+      "played": "h4",
+      "best": "h3",
+      "eval_after": "+6.79",
+      "grade": null
+     },
+     {
+      "ply": 80,
+      "side": "Black",
+      "played": "Rg8+",
+      "best": "Re4",
+      "eval_after": "+6.72",
+      "grade": null
+     },
+     {
+      "ply": 81,
+      "side": "White",
+      "played": "Kh2",
+      "best": "Rg2",
+      "eval_after": "+6.68",
+      "grade": null
+     },
+     {
+      "ply": 82,
+      "side": "Black",
+      "played": "Ke4",
+      "best": "Rg4",
+      "eval_after": "+6.89",
+      "grade": null
+     },
+     {
+      "ply": 83,
+      "side": "White",
+      "played": "Kh3",
+      "best": "Kh3",
+      "eval_after": "+6.95",
+      "grade": null
+     },
+     {
+      "ply": 84,
+      "side": "Black",
+      "played": "Kf3",
+      "best": "Rg1",
+      "eval_after": "+7.00",
+      "grade": null
+     },
+     {
+      "ply": 85,
+      "side": "White",
+      "played": "Rc3+",
+      "best": "Rc3+",
+      "eval_after": "+7.14",
+      "grade": null
+     },
+     {
+      "ply": 86,
+      "side": "Black",
+      "played": "Kf2",
+      "best": "Ke4",
+      "eval_after": "+7.43",
+      "grade": null
+     },
+     {
+      "ply": 87,
+      "side": "White",
+      "played": "h5",
+      "best": "h5",
+      "eval_after": "+7.49",
+      "grade": null
+     },
+     {
+      "ply": 88,
+      "side": "Black",
+      "played": "Rg5",
+      "best": "Ke2",
+      "eval_after": "+7.70",
+      "grade": null
+     },
+     {
+      "ply": 89,
+      "side": "White",
+      "played": "Kh4",
+      "best": "Kh4",
+      "eval_after": "+7.73",
+      "grade": null
+     },
+     {
+      "ply": 90,
+      "side": "Black",
+      "played": "Rg8",
+      "best": "Rg7",
+      "eval_after": "+7.90",
+      "grade": null
+     },
+     {
+      "ply": 91,
+      "side": "White",
+      "played": "Bb6+",
+      "best": "h6",
+      "eval_after": "+7.72",
+      "grade": null
+     },
+     {
+      "ply": 92,
+      "side": "Black",
+      "played": "Ke2",
+      "best": "Ke2",
+      "eval_after": "+7.74",
+      "grade": null
+     },
+     {
+      "ply": 93,
+      "side": "White",
+      "played": "h6",
+      "best": "Ba5",
+      "eval_after": "+7.77",
+      "grade": null
+     },
+     {
+      "ply": 94,
+      "side": "Black",
+      "played": "Rg6",
+      "best": "a5",
+      "eval_after": "+7.90",
+      "grade": null
+     },
+     {
+      "ply": 95,
+      "side": "White",
+      "played": "Be3",
+      "best": "Be3",
+      "eval_after": "+8.13",
+      "grade": null
+     },
+     {
+      "ply": 96,
+      "side": "Black",
+      "played": "a5",
+      "best": "Rd6",
+      "eval_after": "+9.26",
+      "grade": null
+     },
+     {
+      "ply": 97,
+      "side": "White",
+      "played": "Kh5",
+      "best": "h7",
+      "eval_after": "+7.85",
+      "grade": null
+     },
+     {
+      "ply": 98,
+      "side": "Black",
+      "played": "Rg2",
+      "best": "Re6",
+      "eval_after": "+15.94",
+      "grade": null
+     },
+     {
+      "ply": 99,
+      "side": "White",
+      "played": "h7",
+      "best": "Rc2+",
+      "eval_after": "+8.54",
+      "grade": null
+     },
+     {
+      "ply": 100,
+      "side": "Black",
+      "played": "Rh2+",
+      "best": "Rh2+",
+      "eval_after": "+9.26",
+      "grade": null
+     },
+     {
+      "ply": 101,
+      "side": "White",
+      "played": "Kg6",
+      "best": "Kg6",
+      "eval_after": "+9.75",
+      "grade": null
+     },
+     {
+      "ply": 102,
+      "side": "Black",
+      "played": "b4",
+      "best": "Rg2+",
+      "eval_after": "White mates in 8",
+      "grade": null
+     },
+     {
+      "ply": 103,
+      "side": "White",
+      "played": "axb4",
+      "best": "Rc2+",
+      "eval_after": "+9.19",
+      "grade": null
+     },
+     {
+      "ply": 104,
+      "side": "Black",
+      "played": "axb4",
+      "best": "Rh3",
+      "eval_after": "White mates in 8",
+      "grade": null
+     },
+     {
+      "ply": 105,
+      "side": "White",
+      "played": "Rb3",
+      "best": "Rc2+",
+      "eval_after": "+8.61",
+      "grade": null
+     },
+     {
+      "ply": 106,
+      "side": "Black",
+      "played": "Rg2+",
+      "best": "Rh3",
+      "eval_after": "+10.47",
+      "grade": null
+     },
+     {
+      "ply": 107,
+      "side": "White",
+      "played": "Bg5",
+      "best": "Bg5",
+      "eval_after": "+11.92",
+      "grade": null
+     }
+    ]
+   }
+  },
+  {
+   "game_id": "dlymlJeF",
+   "url": "https://lichess.org/dlymlJeF",
+   "date": "2026.10.12",
+   "white": "dr_namer",
+   "black": "JoseGarciaMolina",
+   "result": "1-0",
+   "time_control": "180+0",
+   "plies": 73,
+   "key_moments": [
+    {
+     "ply": 43,
+     "side": "White",
+     "fen_before": "2b2rk1/2q1npbp/4p1p1/2p1P2P/1nPp1PP1/2rP4/3NQ1B1/R1B1RNK1 w - - 1 22",
+     "played": "Ra3",
+     "best": "Ne4",
+     "grade": "blunder"
+    },
+    {
+     "ply": 60,
+     "side": "Black",
+     "fen_before": "b5k1/4npbp/2q1p1p1/2B1P2P/2PpNPP1/8/3N2Q1/6K1 b - - 0 30",
+     "played": "Nc8",
+     "best": "Nd5",
+     "grade": "blunder"
+    },
+    {
+     "ply": 68,
+     "side": "Black",
+     "fen_before": "2n2b2/5pkp/2b1pNp1/4P2P/2PBNPP1/8/8/6K1 b - - 1 34",
+     "played": "Bb4",
+     "best": "Bxe4",
+     "grade": "blunder"
+    },
+    {
+     "ply": 69,
+     "side": "White",
+     "fen_before": "2n5/5pkp/2b1pNp1/4P2P/1bPBNPP1/8/8/6K1 w - - 2 35",
+     "played": "Bc5",
+     "best": "h6+",
+     "grade": "blunder"
+    },
+    {
+     "ply": 70,
+     "side": "Black",
+     "fen_before": "2n5/5pkp/2b1pNp1/2B1P2P/1bP1NPP1/8/8/6K1 b - - 3 35",
+     "played": "Ba5",
+     "best": "Bxc5+",
+     "grade": "blunder"
+    }
+   ],
+   "pgn": "[Event \"rated blitz game\"]\n[Site \"https://lichess.org/game/dlymlJeF\"]\n[Date \"2026.10.12\"]\n[Round \"-\"]\n[White \"dr_namer\"]\n[Black \"JoseGarciaMolina\"]\n[Result \"1-0\"]\n[GameId \"dlymlJeF\"]\n[UTCDate \"2026.10.12\"]\n[UTCTime \"07:38:31\"]\n[WhiteElo \"2532\"]\n[BlackElo \"2523\"]\n[WhiteRatingDiff \"+10\"]\n[BlackRatingDiff \"-5\"]\n[Variant \"Standard\"]\n[TimeControl \"180+0\"]\n[ECO \"A00\"]\n[Opening \"Mieses Opening\"]\n[Termination \"Normal\"]\n\n1. d3 g6 2. Nd2 Bg7 3. Ngf3 c5 4. e4 Nc6 5. a4 e6 6. g3 Nge7 7. Bg2 O-O 8. O-O d5 9. Re1 Rb8 10. h4 a6 11. h5 b5 12. axb5 axb5 13. e5 Qc7 14. Qe2 b4 15. Nf1 Nf5 16. c3 bxc3 17. bxc3 d4 18. g4 Nfe7 19. c4 Rb3 20. N3d2 Rc3 21. f4 Nb4 22. Ra3 Nxd3 23. Rxc3 Nxe1 24. Rh3 Nxg2 25. Qxg2 Bb7 26. Ne4 Qc6 27. Nfd2 Ra8 28. Ra3 Rxa3 29. Bxa3 Ba8 30. Bxc5 Nc8 31. Bxd4 Bf8 32. Nf6+ Kg7 33. Qxc6 Bxc6 34. Nde4 Bb4 35. Bc5 Ba5 36. h6+ Kh8 37. Ng5 1-0\n\n\n",
+   "review": {
+    "engine": "Stockfish 19",
+    "seconds_per_move": 0.15,
+    "result": "1-0",
+    "opening": "Mieses Opening",
+    "summary": {
+     "White": {
+      "player": "dr_namer",
+      "elo": "2532",
+      "average_centipawn_loss": 67,
+      "inaccuracies": 4,
+      "mistakes": 2,
+      "blunders": 6
+     },
+     "Black": {
+      "player": "JoseGarciaMolina",
+      "elo": "2523",
+      "average_centipawn_loss": 345,
+      "inaccuracies": 2,
+      "mistakes": 3,
+      "blunders": 7
+     }
+    },
+    "key_moments": [
+     {
+      "ply": 43,
+      "move_number": 22,
+      "side": "White",
+      "played": "Ra3",
+      "best": "Ne4",
+      "best_line": "22. Ne4 gxh5 23. Nfg3 hxg4 24. Bd2 Rxd3",
+      "eval_before": "+1.33",
+      "eval_after": "-4.45",
+      "win_chance_drop": 0.915,
+      "grade": "blunder",
+      "fen_before": "2b2rk1/2q1npbp/4p1p1/2p1P2P/1nPp1PP1/2rP4/3NQ1B1/R1B1RNK1 w - - 1 22",
+      "facts_before": {
+       "side_to_move": "White",
+       "in_check": false,
+       "material_white_minus_black": 0,
+       "hanging_pieces": [],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [],
+       "legal_moves": 38
+      }
+     },
+     {
+      "ply": 60,
+      "move_number": 30,
+      "side": "Black",
+      "played": "Nc8",
+      "best": "Nd5",
+      "best_line": "30...Nd5 31. Qf3 Ne3 32. Kf2 gxh5 33. gxh5",
+      "eval_before": "+0.02",
+      "eval_after": "+2.34",
+      "win_chance_drop": 0.402,
+      "grade": "blunder",
+      "fen_before": "b5k1/4npbp/2q1p1p1/2B1P2P/2PpNPP1/8/3N2Q1/6K1 b - - 0 30",
+      "facts_before": {
+       "side_to_move": "Black",
+       "in_check": false,
+       "material_white_minus_black": 0,
+       "hanging_pieces": [
+        "Black knight on e7",
+        "Black pawn on d4"
+       ],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [],
+       "legal_moves": 30
+      }
+     },
+     {
+      "ply": 68,
+      "move_number": 34,
+      "side": "Black",
+      "played": "Bb4",
+      "best": "Bxe4",
+      "best_line": "34...Bxe4 35. Nxe4 gxh5 36. Nd6 Ne7 37. gxh5",
+      "eval_before": "+0.61",
+      "eval_after": "+3.49",
+      "win_chance_drop": 0.455,
+      "grade": "blunder",
+      "fen_before": "2n2b2/5pkp/2b1pNp1/4P2P/2PBNPP1/8/8/6K1 b - - 1 34",
+      "facts_before": {
+       "side_to_move": "Black",
+       "in_check": false,
+       "material_white_minus_black": 1,
+       "hanging_pieces": [],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [],
+       "legal_moves": 22
+      }
+     },
+     {
+      "ply": 69,
+      "move_number": 35,
+      "side": "White",
+      "played": "Bc5",
+      "best": "h6+",
+      "best_line": "35. h6+ Kxh6 36. Nd6 Ne7 37. Nxf7+ Kg7",
+      "eval_before": "+3.49",
+      "eval_after": "+0.30",
+      "win_chance_drop": 0.511,
+      "grade": "blunder",
+      "fen_before": "2n5/5pkp/2b1pNp1/4P2P/1bPBNPP1/8/8/6K1 w - - 2 35",
+      "facts_before": {
+       "side_to_move": "White",
+       "in_check": false,
+       "material_white_minus_black": 1,
+       "hanging_pieces": [],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [
+        "Ne8+",
+        "h6+"
+       ],
+       "legal_moves": 30
+      }
+     },
+     {
+      "ply": 70,
+      "move_number": 35,
+      "side": "Black",
+      "played": "Ba5",
+      "best": "Bxc5+",
+      "best_line": "35...Bxc5+ 36. Nxc5 Nb6 37. Nce4 Nxc4 38. Nd6",
+      "eval_before": "+0.30",
+      "eval_after": "White mates in 4",
+      "win_chance_drop": 0.945,
+      "grade": "blunder",
+      "fen_before": "2n5/5pkp/2b1pNp1/2B1P2P/1bP1NPP1/8/8/6K1 b - - 3 35",
+      "facts_before": {
+       "side_to_move": "Black",
+       "in_check": false,
+       "material_white_minus_black": 1,
+       "hanging_pieces": [
+        "Black bishop on b4"
+       ],
+       "attacked_by_a_cheaper_piece": [],
+       "pinned_pieces": [],
+       "mate_in_one_for_side_to_move": [],
+       "checks_available": [
+        "Bxc5+"
+       ],
+       "legal_moves": 23
+      }
+     }
+    ],
+    "moves": [
+     {
+      "ply": 1,
+      "side": "White",
+      "played": "d3",
+      "best": "e4",
+      "eval_after": "+0.02",
+      "grade": null
+     },
+     {
+      "ply": 2,
+      "side": "Black",
+      "played": "g6",
+      "best": "d5",
+      "eval_after": "+0.02",
+      "grade": null
+     },
+     {
+      "ply": 3,
+      "side": "White",
+      "played": "Nd2",
+      "best": "e4",
+      "eval_after": "-0.11",
+      "grade": null
+     },
+     {
+      "ply": 4,
+      "side": "Black",
+      "played": "Bg7",
+      "best": "c5",
+      "eval_after": "-0.18",
+      "grade": null
+     },
+     {
+      "ply": 5,
+      "side": "White",
+      "played": "Ngf3",
+      "best": "e4",
+      "eval_after": "-0.14",
+      "grade": null
+     },
+     {
+      "ply": 6,
+      "side": "Black",
+      "played": "c5",
+      "best": "c5",
+      "eval_after": "-0.20",
+      "grade": null
+     },
+     {
+      "ply": 7,
+      "side": "White",
+      "played": "e4",
+      "best": "e4",
+      "eval_after": "-0.20",
+      "grade": null
+     },
+     {
+      "ply": 8,
+      "side": "Black",
+      "played": "Nc6",
+      "best": "Nf6",
+      "eval_after": "-0.11",
+      "grade": null
+     },
+     {
+      "ply": 9,
+      "side": "White",
+      "played": "a4",
+      "best": "c3",
+      "eval_after": "-0.35",
+      "grade": null
+     },
+     {
+      "ply": 10,
+      "side": "Black",
+      "played": "e6",
+      "best": "e5",
+      "eval_after": "-0.14",
+      "grade": null
+     },
+     {
+      "ply": 11,
+      "side": "White",
+      "played": "g3",
+      "best": "c3",
+      "eval_after": "-0.18",
+      "grade": null
+     },
+     {
+      "ply": 12,
+      "side": "Black",
+      "played": "Nge7",
+      "best": "Nge7",
+      "eval_after": "-0.06",
+      "grade": null
+     },
+     {
+      "ply": 13,
+      "side": "White",
+      "played": "Bg2",
+      "best": "Bg2",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 14,
+      "side": "Black",
+      "played": "O-O",
+      "best": "O-O",
+      "eval_after": "-0.06",
+      "grade": null
+     },
+     {
+      "ply": 15,
+      "side": "White",
+      "played": "O-O",
+      "best": "O-O",
+      "eval_after": "-0.01",
+      "grade": null
+     },
+     {
+      "ply": 16,
+      "side": "Black",
+      "played": "d5",
+      "best": "d6",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 17,
+      "side": "White",
+      "played": "Re1",
+      "best": "c3",
+      "eval_after": "+0.02",
+      "grade": null
+     },
+     {
+      "ply": 18,
+      "side": "Black",
+      "played": "Rb8",
+      "best": "b6",
+      "eval_after": "+0.21",
+      "grade": null
+     },
+     {
+      "ply": 19,
+      "side": "White",
+      "played": "h4",
+      "best": "e5",
+      "eval_after": "+0.05",
+      "grade": null
+     },
+     {
+      "ply": 20,
+      "side": "Black",
+      "played": "a6",
+      "best": "e5",
+      "eval_after": "+0.71",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 21,
+      "side": "White",
+      "played": "h5",
+      "best": "c3",
+      "eval_after": "+0.01",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 22,
+      "side": "Black",
+      "played": "b5",
+      "best": "gxh5",
+      "eval_after": "+0.95",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 23,
+      "side": "White",
+      "played": "axb5",
+      "best": "Nb3",
+      "eval_after": "+0.59",
+      "grade": null
+     },
+     {
+      "ply": 24,
+      "side": "Black",
+      "played": "axb5",
+      "best": "Rxb5",
+      "eval_after": "+1.03",
+      "grade": null
+     },
+     {
+      "ply": 25,
+      "side": "White",
+      "played": "e5",
+      "best": "Nb3",
+      "eval_after": "+0.92",
+      "grade": null
+     },
+     {
+      "ply": 26,
+      "side": "Black",
+      "played": "Qc7",
+      "best": "gxh5",
+      "eval_after": "+1.32",
+      "grade": null
+     },
+     {
+      "ply": 27,
+      "side": "White",
+      "played": "Qe2",
+      "best": "Nb3",
+      "eval_after": "+0.00",
+      "grade": "mistake"
+     },
+     {
+      "ply": 28,
+      "side": "Black",
+      "played": "b4",
+      "best": "gxh5",
+      "eval_after": "+0.22",
+      "grade": null
+     },
+     {
+      "ply": 29,
+      "side": "White",
+      "played": "Nf1",
+      "best": "Nb3",
+      "eval_after": "-0.10",
+      "grade": null
+     },
+     {
+      "ply": 30,
+      "side": "Black",
+      "played": "Nf5",
+      "best": "gxh5",
+      "eval_after": "+0.35",
+      "grade": null
+     },
+     {
+      "ply": 31,
+      "side": "White",
+      "played": "c3",
+      "best": "hxg6",
+      "eval_after": "+0.23",
+      "grade": null
+     },
+     {
+      "ply": 32,
+      "side": "Black",
+      "played": "bxc3",
+      "best": "gxh5",
+      "eval_after": "+0.49",
+      "grade": null
+     },
+     {
+      "ply": 33,
+      "side": "White",
+      "played": "bxc3",
+      "best": "bxc3",
+      "eval_after": "+0.58",
+      "grade": null
+     },
+     {
+      "ply": 34,
+      "side": "Black",
+      "played": "d4",
+      "best": "gxh5",
+      "eval_after": "+2.71",
+      "grade": "blunder"
+     },
+     {
+      "ply": 35,
+      "side": "White",
+      "played": "g4",
+      "best": "g4",
+      "eval_after": "+3.04",
+      "grade": null
+     },
+     {
+      "ply": 36,
+      "side": "Black",
+      "played": "Nfe7",
+      "best": "Nfe7",
+      "eval_after": "+3.00",
+      "grade": null
+     },
+     {
+      "ply": 37,
+      "side": "White",
+      "played": "c4",
+      "best": "h6",
+      "eval_after": "+1.09",
+      "grade": "blunder"
+     },
+     {
+      "ply": 38,
+      "side": "Black",
+      "played": "Rb3",
+      "best": "gxh5",
+      "eval_after": "+3.21",
+      "grade": "blunder"
+     },
+     {
+      "ply": 39,
+      "side": "White",
+      "played": "N3d2",
+      "best": "h6",
+      "eval_after": "+1.04",
+      "grade": "blunder"
+     },
+     {
+      "ply": 40,
+      "side": "Black",
+      "played": "Rc3",
+      "best": "Rb8",
+      "eval_after": "+1.58",
+      "grade": null
+     },
+     {
+      "ply": 41,
+      "side": "White",
+      "played": "f4",
+      "best": "Ne4",
+      "eval_after": "+0.86",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 42,
+      "side": "Black",
+      "played": "Nb4",
+      "best": "f5",
+      "eval_after": "+1.33",
+      "grade": null
+     },
+     {
+      "ply": 43,
+      "side": "White",
+      "played": "Ra3",
+      "best": "Ne4",
+      "eval_after": "-4.45",
+      "grade": "blunder"
+     },
+     {
+      "ply": 44,
+      "side": "Black",
+      "played": "Nxd3",
+      "best": "Nxd3",
+      "eval_after": "-4.46",
+      "grade": null
+     },
+     {
+      "ply": 45,
+      "side": "White",
+      "played": "Rxc3",
+      "best": "Rxc3",
+      "eval_after": "-4.51",
+      "grade": null
+     },
+     {
+      "ply": 46,
+      "side": "Black",
+      "played": "Nxe1",
+      "best": "Nxf4",
+      "eval_after": "-1.68",
+      "grade": "blunder"
+     },
+     {
+      "ply": 47,
+      "side": "White",
+      "played": "Rh3",
+      "best": "Rb3",
+      "eval_after": "-2.31",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 48,
+      "side": "Black",
+      "played": "Nxg2",
+      "best": "Nxg2",
+      "eval_after": "-2.51",
+      "grade": null
+     },
+     {
+      "ply": 49,
+      "side": "White",
+      "played": "Qxg2",
+      "best": "Qxg2",
+      "eval_after": "-2.46",
+      "grade": null
+     },
+     {
+      "ply": 50,
+      "side": "Black",
+      "played": "Bb7",
+      "best": "Bb7",
+      "eval_after": "-2.64",
+      "grade": null
+     },
+     {
+      "ply": 51,
+      "side": "White",
+      "played": "Ne4",
+      "best": "Ne4",
+      "eval_after": "-2.71",
+      "grade": null
+     },
+     {
+      "ply": 52,
+      "side": "Black",
+      "played": "Qc6",
+      "best": "gxh5",
+      "eval_after": "-0.46",
+      "grade": "blunder"
+     },
+     {
+      "ply": 53,
+      "side": "White",
+      "played": "Nfd2",
+      "best": "Nfd2",
+      "eval_after": "-0.32",
+      "grade": null
+     },
+     {
+      "ply": 54,
+      "side": "Black",
+      "played": "Ra8",
+      "best": "Ra8",
+      "eval_after": "-0.26",
+      "grade": null
+     },
+     {
+      "ply": 55,
+      "side": "White",
+      "played": "Ra3",
+      "best": "h6",
+      "eval_after": "-1.51",
+      "grade": "mistake"
+     },
+     {
+      "ply": 56,
+      "side": "Black",
+      "played": "Rxa3",
+      "best": "Kh8",
+      "eval_after": "+0.00",
+      "grade": "mistake"
+     },
+     {
+      "ply": 57,
+      "side": "White",
+      "played": "Bxa3",
+      "best": "Bxa3",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 58,
+      "side": "Black",
+      "played": "Ba8",
+      "best": "gxh5",
+      "eval_after": "+0.00",
+      "grade": null
+     },
+     {
+      "ply": 59,
+      "side": "White",
+      "played": "Bxc5",
+      "best": "Bxc5",
+      "eval_after": "+0.02",
+      "grade": null
+     },
+     {
+      "ply": 60,
+      "side": "Black",
+      "played": "Nc8",
+      "best": "Nd5",
+      "eval_after": "+2.34",
+      "grade": "blunder"
+     },
+     {
+      "ply": 61,
+      "side": "White",
+      "played": "Bxd4",
+      "best": "Qf2",
+      "eval_after": "+0.52",
+      "grade": "blunder"
+     },
+     {
+      "ply": 62,
+      "side": "Black",
+      "played": "Bf8",
+      "best": "Qa4",
+      "eval_after": "+1.85",
+      "grade": "mistake"
+     },
+     {
+      "ply": 63,
+      "side": "White",
+      "played": "Nf6+",
+      "best": "Nf6+",
+      "eval_after": "+1.90",
+      "grade": null
+     },
+     {
+      "ply": 64,
+      "side": "Black",
+      "played": "Kg7",
+      "best": "Kh8",
+      "eval_after": "+3.99",
+      "grade": "mistake"
+     },
+     {
+      "ply": 65,
+      "side": "White",
+      "played": "Qxc6",
+      "best": "h6+",
+      "eval_after": "+1.65",
+      "grade": "blunder"
+     },
+     {
+      "ply": 66,
+      "side": "Black",
+      "played": "Bxc6",
+      "best": "Bxc6",
+      "eval_after": "+1.71",
+      "grade": null
+     },
+     {
+      "ply": 67,
+      "side": "White",
+      "played": "Nde4",
+      "best": "Kf2",
+      "eval_after": "+0.61",
+      "grade": "inaccuracy"
+     },
+     {
+      "ply": 68,
+      "side": "Black",
+      "played": "Bb4",
+      "best": "Bxe4",
+      "eval_after": "+3.49",
+      "grade": "blunder"
+     },
+     {
+      "ply": 69,
+      "side": "White",
+      "played": "Bc5",
+      "best": "h6+",
+      "eval_after": "+0.30",
+      "grade": "blunder"
+     },
+     {
+      "ply": 70,
+      "side": "Black",
+      "played": "Ba5",
+      "best": "Bxc5+",
+      "eval_after": "White mates in 4",
+      "grade": "blunder"
+     },
+     {
+      "ply": 71,
+      "side": "White",
+      "played": "h6+",
+      "best": "h6+",
+      "eval_after": "White mates in 3",
+      "grade": null
+     },
+     {
+      "ply": 72,
+      "side": "Black",
+      "played": "Kh8",
+      "best": "Kh8",
+      "eval_after": "White mates in 3",
+      "grade": null
+     },
+     {
+      "ply": 73,
+      "side": "White",
+      "played": "Ng5",
+      "best": "Bf8",
+      "eval_after": "White mates in 3",
+      "grade": null
+     }
+    ]
+   }
+  }
+ ]
+}
