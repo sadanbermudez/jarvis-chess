@@ -51,3 +51,11 @@ jarvis-chess --http          # Streamable HTTP on 127.0.0.1:8772
 - An interactive board on my site replaying a reviewed game with each AI claim marked true or false.
 
 Built with AI assistance (Claude Code), directed and reviewed by Sergio Adan Bermudez.
+
+## Master games and strategic facts
+
+`scripts/master_games.py` builds the "learn from the masters" games on the portfolio chess page: twelve classic games, from Morphy's Opera Game (1858) to Kasparov against Topalov (1999), each chosen for one idea.
+
+- Moves come from the [PGN Mentor](https://www.pgnmentor.com/files.html) player collections and are checked by python-chess. Every move a lesson names must be in the game at that point, or the build fails. The exact games used are in `data/master-games.pgn`.
+- Stockfish evaluates every position, with two lines each. The key moments are found, not chosen: a sacrifice that still leaves the mover down material after its next move while the evaluation holds; an only move, where the next best gives away a large share of the winning chances; and the losing side's turning point.
+- `src/jarvis_chess/strategy.py` computes the positional facts a coach talks about, from the board alone: open and half-open files with rooks on them, passed, isolated and doubled pawns, outposts, pieces deep in enemy territory that no pawn can attack, the bishop pair, development and king cover. `ideas(board, move)` names what a move changed, for example "Nd3 gives Black a knight deep in the enemy camp on d3, where no enemy pawn can ever attack it". As everywhere here, the language model never decides a fact.
