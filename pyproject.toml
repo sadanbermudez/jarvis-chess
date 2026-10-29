@@ -17,3 +17,8 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
+
+
+[tool.setuptools.package-data]
+
+jarvis_chess = ["openings.tsv"]
