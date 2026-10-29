@@ -4,7 +4,7 @@ import pytest
 
 from jarvis_chess import analysis
 from jarvis_chess.analysis import Analyst
-from jarvis_chess.patterns import analyse_game, drills, phase, summarise
+from jarvis_chess.patterns import analyse_game, chesscom_game, drills, move_url, opening_name, phase, summarise
 
 
 def _have_engine():
@@ -82,3 +82,23 @@ def test_summary_counts_tilt_and_rates():
     assert s["openings"][0] == {"opening": "Sicilian Defense", "color": "white", "games": 4, "score": 38, "errors_per_game": 0.75}
     assert s["by_game_in_session"]["1-3"]["games"] == 4
     assert len(drills(games)) == 3
+
+
+def test_chesscom_game_has_the_lichess_shape():
+    pgn = ('[Event "Live Chess"]\n[UTCDate "2026.10.28"]\n[UTCTime "16:18:31"]\n[Result "0-1"]\n\n'
+           '1. f3 {[%clk 0:02:59.9]} 1... e5 {[%clk 0:02:58]} 2. g4 {[%clk 0:02:59.8]} 2... Qh4# {[%clk 0:02:57.4]} 0-1\n')
+    g = chesscom_game({"url": "https://www.chess.com/game/live/42", "rules": "chess", "time_class": "blitz",
+                       "time_control": "180+2", "pgn": pgn,
+                       "white": {"username": "Them", "rating": 2600, "result": "checkmated"},
+                       "black": {"username": "Me", "rating": 2700, "result": "win"}})
+    assert g["id"] == "cc42" and g["site"] == "chess.com" and g["winner"] == "black"
+    assert g["moves"] == "f3 e5 g4 Qh4#" and g["clocks"] == [17990, 17800, 17980, 17740]
+    assert g["clock"]["initial"] == 180 and g["players"]["black"]["user"]["id"] == "me"
+    assert g["createdAt"] == 1793204311000
+    assert g["opening"]["name"].startswith("Barnes Opening")
+    assert move_url({"site": "chess.com", "url": g["url"]}, 4) == "https://www.chess.com/game/live/42?move=4"
+    assert chesscom_game({**{"rules": "chess960"}, "pgn": pgn}) is None
+
+
+def test_opening_names_follow_the_lichess_table():
+    assert opening_name("e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6".split()) == "Sicilian Defense: Najdorf Variation"

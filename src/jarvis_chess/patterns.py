@@ -1,6 +1,7 @@
 """Patterns across all of a player's games: where the mistakes repeat, and positions to train on.
 
-One game review says what went wrong in that game. This looks at every game a player has on Lichess and asks
+One game review says what went wrong in that game. This looks at every game a player has on Lichess and
+Chess.com and asks
 which mistakes keep coming back: in which phase, under how much clock pressure, of which kind, in which
 openings, and at what time of day. Every number comes from Stockfish and the rules of chess; nothing here
 calls a language model.
@@ -18,19 +19,27 @@ blunder also gets tags, each decided by the rules or the engine:
 
 Games are analysed once and kept in a cache, so a nightly run only analyses new games.
 
-Run: python -m jarvis_chess.patterns --user dr_namer --cache games.json --out patterns.json
+Chess.com games are turned into the same shape as Lichess games and named with the Lichess opening table
+(openings.tsv, from github.com/lichess-org/chess-openings, CC0), so both sites share opening names.
+
+Run: python -m jarvis_chess.patterns --user dr_namer --chesscom dr_namer --since 2026-07-01 \
+         --cache games.json --out patterns.json
 """
 from __future__ import annotations
 
 import argparse
+import io
 import json
+import re
 import urllib.request
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timezone
+from functools import lru_cache
 from pathlib import Path
 
 import chess
 import chess.engine
+import chess.pgn
 
 from .analysis import MATE_CP, Analyst, cp_white, facts, grade, win_chances
 
@@ -47,6 +56,80 @@ def fetch(user: str, since_ms: int | None = None) -> list[dict]:
     with urllib.request.urlopen(req, timeout=300) as r:
         lines = r.read().decode("utf-8").splitlines()
     return [g for g in map(json.loads, filter(None, lines)) if g.get("variant") == "standard" and g.get("moves")]
+
+
+@lru_cache(maxsize=1)
+def _openings() -> dict[str, str]:
+    """Position (EPD) -> opening name, from the Lichess opening table."""
+    names = {}
+    for line in Path(__file__).with_name("openings.tsv").read_text(encoding="utf-8").splitlines()[1:]:
+        _, name, pgn = line.split("\t")
+        board = chess.Board()
+        for tok in pgn.split():
+            if not tok[0].isdigit():
+                board.push_san(tok)
+        names[board.epd()] = name
+    return names
+
+
+def opening_name(sans: list[str]) -> str:
+    """Name of the last known opening position the game passes through."""
+    table, board, name = _openings(), chess.Board(), "?"
+    for san in sans[:40]:
+        board.push_san(san)
+        name = table.get(board.epd(), name)
+    return name
+
+
+def _clock(comment: str) -> int | None:
+    m = re.search(r"\[%clk (\d+):(\d+):(\d+(?:\.\d+)?)\]", comment)
+    return round(100 * (int(m[1]) * 3600 + int(m[2]) * 60 + float(m[3]))) if m else None
+
+
+def chesscom_game(g: dict) -> dict | None:
+    """One Chess.com game in the shape of a Lichess game (centisecond clocks, winner, opening name)."""
+    if g.get("rules") != "chess" or g.get("time_class") == "daily" or not g.get("pgn"):
+        return None
+    pgn = chess.pgn.read_game(io.StringIO(g["pgn"]))
+    if pgn is None or pgn.headers.get("SetUp") == "1":
+        return None
+    sans, clocks, board = [], [], pgn.board()
+    for node in pgn.mainline():
+        sans.append(board.san(node.move))
+        board.push(node.move)
+        clocks.append(_clock(node.comment))
+    if not sans:
+        return None
+    h = pgn.headers
+    start = datetime.strptime(f"{h.get('UTCDate', h.get('Date'))} {h.get('UTCTime', '00:00:00')}", "%Y.%m.%d %H:%M:%S")
+    winner = next((c for c in ("white", "black") if g[c]["result"] == "win"), None)
+    game = {"id": "cc" + g["url"].rstrip("/").rsplit("/", 1)[-1], "site": "chess.com", "url": g["url"],
+            "players": {c: {"user": {"id": g[c]["username"].lower()}, "rating": g[c].get("rating")} for c in ("white", "black")},
+            "moves": " ".join(sans), "speed": g["time_class"],
+            "createdAt": int(start.replace(tzinfo=timezone.utc).timestamp() * 1000),
+            "clock": {"initial": int(g["time_control"].split("+")[0])},
+            "clocks": clocks if None not in clocks else [], "opening": {"name": opening_name(sans)}}
+    if winner:
+        game["winner"] = winner
+    return game
+
+
+def fetch_chesscom(user: str, since_ms: int | None = None) -> list[dict]:
+    """Every live standard game of `user` on Chess.com after `since_ms` (from the monthly archives), newest first."""
+    def get(url):
+        with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
+            return json.loads(r.read())
+    archives = get(f"https://api.chess.com/pub/player/{user.lower()}/games/archives")["archives"]
+    if since_ms:
+        first = datetime.fromtimestamp(since_ms / 1000, timezone.utc).strftime("%Y/%m")
+        archives = [a for a in archives if a[-7:] >= first]
+    games = []
+    for a in archives:
+        for g in get(a)["games"]:
+            c = chesscom_game(g)
+            if c and (since_ms is None or c["createdAt"] > since_ms):
+                games.append(c)
+    return sorted(games, key=lambda g: -g["createdAt"])
 
 
 def phase(board: chess.Board, ply: int) -> str:
@@ -126,7 +209,8 @@ def analyse_game(engine: chess.engine.SimpleEngine, game: dict, user: str, nodes
         if over:
             break
     winner = game.get("winner")
-    return {"id": game["id"], "v": VERSION, "url": f"https://lichess.org/{game['id']}", "color": me,
+    return {"id": game["id"], "v": VERSION, "site": game.get("site", "lichess"),
+            "url": game.get("url", f"https://lichess.org/{game['id']}"), "color": me,
             "speed": game.get("speed"), "created": game["createdAt"], "initial": initial,
             "opening": game.get("opening", {}).get("name", "?"),
             "result": 1.0 if winner == me else 0.0 if winner else 0.5,
@@ -191,6 +275,8 @@ def summarise(games: list[dict], min_games: int = 5) -> dict:
 
     return {
         "games": len(games), "first": games[0]["created"] if games else None, "last": games[-1]["created"] if games else None,
+        "by_site": {s: score([g for g in games if g.get("site", "lichess") == s])
+                    for s in sorted({g.get("site", "lichess") for g in games})},
         "by_speed": {s: score([g for g in games if g["speed"] == s]) for s in sorted({g["speed"] for g in games})},
         "by_color": {c: score([g for g in games if g["color"] == c]) for c in ("white", "black")},
         "errors": len(errs), "per_40_moves": _rate(len(errs), len(allm)),
@@ -204,6 +290,11 @@ def summarise(games: list[dict], min_games: int = 5) -> dict:
     }
 
 
+def move_url(game: dict, ply: int) -> str:
+    sep = "?move=" if game.get("site") == "chess.com" else "#"
+    return f"{game['url']}{sep}{ply}"
+
+
 def drills(games: list[dict], limit: int = 60) -> list[dict]:
     """The player's own mistakes as training positions: not in time trouble, not already lost, worst first."""
     out = []
@@ -212,22 +303,27 @@ def drills(games: list[dict], limit: int = 60) -> list[dict]:
             if m["grade"] in ("mistake", "blunder") and "time_trouble" not in m["tags"] and m["chances_before"] > -0.6:
                 out.append({"fen": m["fen"], "best": m["best"], "best_line": m["best_line"], "played": m["played"],
                             "drop": m["drop"], "tags": m["tags"], "phase": m["phase"], "opening": g["opening"],
-                            "url": f"{g['url']}#{m['ply']}", "created": g["created"]})
+                            "url": move_url(g, m["ply"]), "created": g["created"]})
     return sorted(out, key=lambda d: -d["drop"])[:limit]
 
 
-def update(user: str, cache: Path, nodes: int = 250_000, threads: int = 8, log=print) -> list[dict]:
+def update(user: str | None, cache: Path, nodes: int = 250_000, threads: int = 8, log=print,
+           chesscom: str | None = None, since_ms: int | None = None) -> list[dict]:
     games = {}
     if cache.exists():
         games = {g["id"]: g for g in json.loads(cache.read_text(encoding="utf-8")) if g.get("v") == VERSION}
-    newest = max((g["created"] for g in games.values()), default=None)
-    fresh = [g for g in fetch(user, newest) if g["id"] not in games]
+    fresh = []
+    for site, name, get in (("lichess", user, fetch), ("chess.com", chesscom, fetch_chesscom)):
+        if name:
+            newest = max((g["created"] for g in games.values() if g.get("site", "lichess") == site), default=since_ms)
+            fresh += [g for g in get(name, newest) if g["id"] not in games]
+    fresh.sort(key=lambda g: -g["createdAt"])
     log(f"{len(games)} games cached, {len(fresh)} new")
     if fresh:
         a = Analyst(threads=threads)
         try:
             for i, g in enumerate(reversed(fresh), 1):                # oldest first, saved as it goes
-                games[g["id"]] = analyse_game(a.engine, g, user, nodes)
+                games[g["id"]] = analyse_game(a.engine, g, chesscom if g.get("site") == "chess.com" else user, nodes)
                 if i % 10 == 0 or i == len(fresh):
                     cache.write_text(json.dumps(list(games.values())), encoding="utf-8")
                     log(f"analysed {i}/{len(fresh)}")
@@ -238,14 +334,21 @@ def update(user: str, cache: Path, nodes: int = 250_000, threads: int = 8, log=p
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    ap.add_argument("--user", required=True)
+    ap.add_argument("--user", help="Lichess username")
+    ap.add_argument("--chesscom", help="Chess.com username")
+    ap.add_argument("--since", help="only games from this date (YYYY-MM-DD)")
     ap.add_argument("--cache", type=Path, required=True)
     ap.add_argument("--out", type=Path, required=True)
     ap.add_argument("--nodes", type=int, default=250_000)
     ap.add_argument("--threads", type=int, default=8)
     args = ap.parse_args()
-    games = update(args.user, args.cache, args.nodes, args.threads)
-    report = {"user": args.user, "made": datetime.now().isoformat(timespec="seconds"), "nodes_per_position": args.nodes,
+    if not (args.user or args.chesscom):
+        ap.error("give --user, --chesscom or both")
+    since = int(datetime.fromisoformat(args.since).replace(tzinfo=timezone.utc).timestamp() * 1000) if args.since else None
+    games = update(args.user, args.cache, args.nodes, args.threads, chesscom=args.chesscom, since_ms=since)
+    if since:
+        games = [g for g in games if g["created"] >= since]
+    report = {"user": args.user, "chesscom": args.chesscom, "made": datetime.now().isoformat(timespec="seconds"), "nodes_per_position": args.nodes,
               "summary": summarise(games), "drills": drills(games)}
     args.out.write_text(json.dumps(report, indent=1), encoding="utf-8")
     print(f"{report['summary']['games']} games, {report['summary']['errors']} mistakes and blunders -> {args.out}")
