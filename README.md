@@ -44,6 +44,10 @@ jarvis-chess --http          # Streamable HTTP on 127.0.0.1:8772
 
 `CHESS_USERNAME` sets the default player for `recent_games`.
 
+## Patterns across all games
+
+`python -m jarvis_chess.patterns --user <lichess name> --cache games.json --out patterns.json` reviews every Lichess game a player has (new games only on later runs) and reports where the mistakes repeat: by phase, under clock pressure, by kind (hung piece, missed tactic, spoiled win, allowed or missed mate), by opening, by time of day, after a loss and late in a session. It also picks drills: the player's own worst errors made with time on the clock in a game still open. Stockfish and the rules decide every tag; no language model is involved. First run on my own 307 games (blitz and bullet, July to October 2026, 250,000 nodes a position): about 6 s a game, errors per 40 moves 1.05 in the opening, 4.69 in the middlegame, 2.74 in the endgame.
+
 ## Next
 
 - Faithfulness eval, next steps: label the free-text statements by hand, audit the model's own claim extraction, and run the same frozen set on other models.
